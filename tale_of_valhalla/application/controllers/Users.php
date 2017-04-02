@@ -10,7 +10,7 @@ class Users extends CI_Controller {
             redirect('home/sign_in');
         }
         
-        if ($this->session->selected_character == null) {
+        if ($this->session->selected_character == 0) {
             redirect('characters');
         }
         

@@ -58,7 +58,7 @@
         <!-- Custom Theme JavaScript -->
         <script src="<?= base_url('assets/dist/js/sb-admin-2.js') ?>"></script>
 
-        <!-- Administrators AJAX -->
+        <!-- Users AJAX -->
         <script src="<?= base_url('assets/js/ajax/users.js') ?>"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

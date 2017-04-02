@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="<?= base_url('characters/select_character/' . $warrior->class_id . '') ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Selecionar
                                 </a>
                             </div>
@@ -52,7 +52,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
                                     Criar
                                 </a>
                             </div>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="<?= base_url('characters/select_character/' . $archer->class_id . '') ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Selecionar
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
                                     Criar
                                 </a>
                             </div>
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="<?= base_url('characters/select_character/' . $mage->class_id . '') ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Selecionar
                                 </a>
                             </div>
@@ -164,7 +164,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
                                     Criar
                                 </a>
                             </div>
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="<?= base_url('characters/select_character/' . $assassin->class_id . '') ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Selecionar
                                 </a>
                             </div>
@@ -220,7 +220,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
+                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
                                     Criar
                                 </a>
                             </div>

@@ -24,19 +24,19 @@
                 foreach ($items as $item) {
                     $id = $item->id;
 
-                    if ($item->type == 1) {
+                    if ($item->type_id == 1) {
                         $type = "Elmo";
                         $icon_type = "helmet";
-                    } else if ($item->type == 2) {
+                    } else if ($item->type_id == 2) {
                         $type = "Armadura";
                         $icon_type = "armor";
-                    } else if ($item->type == 3) {
+                    } else if ($item->type_id == 3) {
                         $type = "Calça";
                         $icon_type = "pants";
-                    } else if ($item->type == 4) {
+                    } else if ($item->type_id == 4) {
                         $type = "Luvas";
                         $icon_type = "gloves";
-                    } else if ($item->type == 5) {
+                    } else if ($item->type_id == 5) {
                         $type = "Botas";
                         $icon_type = "boots";
                     } else {
@@ -72,7 +72,7 @@
                                 <strong><?= $item->name ?></strong>
                             </div>
                             <div class="panel-body panel-custom">
-                                <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/images/<?= $item->image ?>" class="img-rounded img-thumbnail" style="width: 115px; height: 95px;"> </center>
+                                <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $item->image ?>" class="img-rounded img-thumbnail" style="width: 115px; height: 95px;"> </center>
 
                                 <hr>
 

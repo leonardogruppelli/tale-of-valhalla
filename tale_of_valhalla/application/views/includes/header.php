@@ -91,6 +91,7 @@
                 <!-- /.navbar-header -->
 
                 <ul class="nav navbar-top-links navbar-right">
+                    <?= $this->session->selected_character ?>
                     <img src="<?= base_url('/icons/gold.png') ?>" style="margin-right: 5px" width="20px" height="20px"><strong>Ouro: </strong> <?= $this->session->gold ?> &nbsp; &nbsp;
                     <img src="<?= base_url('/icons/gems.png') ?>" style="margin-right: 5px" width="20px" height="20px"><strong>Gemas: </strong> <?= $this->session->gems ?>
                     <!-- /.dropdown -->

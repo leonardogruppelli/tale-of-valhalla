@@ -9,7 +9,7 @@ class Home extends CI_Controller {
             redirect('home/sign_in');
         }
 
-        if ($this->session->selected_character == null) {
+        if ($this->session->selected_character == 0) {
             redirect('characters');
         }
     }
@@ -39,6 +39,7 @@ class Home extends CI_Controller {
             $session['logged'] = true;
             $session['gold'] = $verify->gold;
             $session['gems'] = $verify->gems;
+            $session['selected_character'] = 0;
             $this->session->set_userdata($session);
         }
 
