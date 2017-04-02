@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Woodwarrior;
+    src: url('./fonts/Woodwarrior-Regular.otf');
+}
+@font-face {
+    font-family: Woodwarrior;
+    font-weight: bold;
+    src: url('./fonts/Woodwarrior-Bold.otf');
+}
+.logo-header {
+    width: 30px;
+    height: 30px;
+    float: left; 
+    margin-right: 15px;
+    margin-top: -5px;
+}
+.logo-login {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.center-row {
+    min-height: 85%;
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+}
+.login-body {
+    overflow: auto;
+    position: relative;
+}
+.login-body::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background: url("../../backgrounds/valhalla_gates.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1x);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+.tittle {
+    font-family: Woodwarrior;
+    margin-left: -100px
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.btn-form {
+    width: 50%;
+}
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;               
+  background-color: #EAEAEA;
+  height: 1px;
+}
