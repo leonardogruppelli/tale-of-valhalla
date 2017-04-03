@@ -52,7 +52,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
+                                <a href="<?= base_url('characters/create_warrior/' . $this->session->id . '/' . 1) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Criar
                                 </a>
                             </div>
@@ -108,7 +108,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
+                                <a href="<?= base_url('characters/create_archer/' . $this->session->id . '/' . 2) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Criar
                                 </a>
                             </div>
@@ -164,7 +164,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
+                                <a href="<?= base_url('characters/create_mage/' . $this->session->id . '/' . 3) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Criar
                                 </a>
                             </div>
@@ -220,7 +220,7 @@
                                 <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
                             </div>
                             <div class="panel-footer">
-                                <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" disabled>
+                                <a href="<?= base_url('characters/create_assassin/' . $this->session->id . '/' . 4) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
                                     Criar
                                 </a>
                             </div>

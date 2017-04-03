@@ -22,6 +22,30 @@ class Characters extends CI_Controller {
         $this->load->view('Characters/characters_view', $data);
         $this->load->view('includes/footer');
     }
+    
+    public function create_warrior($user_id, $class_id) {
+        $this->characters->create_warrior($user_id, $class_id);
+        
+        redirect('characters');
+    }
+    
+    public function create_archer($user_id, $class_id) {
+        $this->characters->create_archer($user_id, $class_id);
+        
+        redirect('characters');
+    }
+    
+    public function create_mage($user_id, $class_id) {
+        $this->characters->create_mage($user_id, $class_id);
+        
+        redirect('characters');
+    }
+    
+    public function create_assassin($user_id, $class_id) {
+        $this->characters->create_assassin($user_id, $class_id);
+        
+        redirect('characters');
+    }
 
     public function select_character($class_id) {
         $session['selected_character'] = $class_id;

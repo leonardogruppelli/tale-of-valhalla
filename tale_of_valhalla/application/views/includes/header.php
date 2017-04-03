@@ -28,7 +28,7 @@
 
         <!-- Font Awesome Fonts -->
         <link href="<?= base_url('assets/vendor/font-awesome/css/font-awesome.css') ?>" rel="stylesheet" type="text/css">
-        
+
         <!-- WebHostingHub Fonts -->
         <link href="<?= base_url('assets/vendor/webhostinghub/css/whhg.css') ?>" rel="stylesheet" type="text/css">
 
@@ -91,7 +91,15 @@
                 <!-- /.navbar-header -->
 
                 <ul class="nav navbar-top-links navbar-right">
-                    <?= $this->session->selected_character ?>
+                    <?php if ($this->session->selected_character == 1) { ?>
+                        <img src="<?= base_url('/icons/weapon.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Guerreiro </strong> &nbsp; &nbsp;
+                    <?php } else if ($this->session->selected_character == 2) { ?>
+                        <img src="<?= base_url('/icons/bow.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Arqueiro </strong> &nbsp; &nbsp;
+                    <?php } else if ($this->session->selected_character == 3) { ?>
+                        <img src="<?= base_url('/icons/staff.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Mago </strong> &nbsp; &nbsp;
+                    <?php } else if ($this->session->selected_character == 4) { ?>
+                        <img src="<?= base_url('/icons/dagger.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Assassino </strong> &nbsp; &nbsp;
+                    <?php } ?>
                     <img src="<?= base_url('/icons/gold.png') ?>" style="margin-right: 5px" width="20px" height="20px"><strong>Ouro: </strong> <?= $this->session->gold ?> &nbsp; &nbsp;
                     <img src="<?= base_url('/icons/gems.png') ?>" style="margin-right: 5px" width="20px" height="20px"><strong>Gemas: </strong> <?= $this->session->gems ?>
                     <!-- /.dropdown -->
@@ -122,7 +130,7 @@
                                 <a href="<?= base_url('characters') ?>"><i class="fa fa-male fa-fw"></i> Personagens</a>
                             </li>
                             <li>
-                                <a href="<?= base_url('items') ?>"><i class="fa fa-bar-chart-o fa-fw"></i> Itens</a>
+                                <a href="<?= base_url('items') ?>"><i class="fa fa-dollar fa-fw"></i> Itens</a>
                             </li>
                         </ul>
                     </div>
