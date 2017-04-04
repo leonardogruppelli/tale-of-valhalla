@@ -1,9 +1,9 @@
 <div class="row" style="padding-top: 20px;">
     <div class="col-lg-12">
-        <div class="panel panel-default">
+        <div class="panel panel-base panel-default">
             <div class="panel-heading">
                 Tabela de Inimigos
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -5px">
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
                     <span class="glyphicon glyphicon-plus"></span> Novo Inimigo
                 </button>
             </div>

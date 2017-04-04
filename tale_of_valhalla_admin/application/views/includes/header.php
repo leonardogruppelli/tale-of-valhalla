@@ -149,4 +149,4 @@
                 <!-- /.navbar-static-side -->
             </nav>
 
-            <div id="page-wrapper">
+            <div id="page-wrapper" style="min-height: 850px">

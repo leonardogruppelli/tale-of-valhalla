@@ -73,3 +73,16 @@ hr {
   background-color: #EAEAEA;
   height: 1px;
 }
+.number-circle {
+    border-radius: 50%;
+    
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+    margin-bottom: 20px;
+    
+    background: white;
+    border: 2px solid #eaeaea;
+    font-weight: bold;
+    text-align: center;
+}

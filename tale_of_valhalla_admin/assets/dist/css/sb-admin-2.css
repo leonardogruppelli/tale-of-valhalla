@@ -69,6 +69,7 @@ body {
     left: auto;
 }
 .sidebar .sidebar-nav.navbar-collapse {
+    height: 100%;
     padding-left: 0;
     padding-right: 0;
 }

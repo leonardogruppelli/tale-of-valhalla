@@ -36,7 +36,7 @@ if (url.includes('items')) {
 
         // Verifies if name is valid
         function validate_name(name) {
-            var validate_name = /^[a-zA-Z\s]*$/;
+            var validate_name = /^[a-zA-ZÀ-ú\s]*$/;
             return validate_name.test(name);
         }
 

@@ -57,7 +57,7 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="<?= base_url('assets/dist/js/sb-admin-2.js') ?>"></script>
-
+        
         <!-- Users AJAX -->
         <script src="<?= base_url('assets/js/ajax/users.js') ?>"></script>
 
@@ -139,4 +139,4 @@
                 <!-- /.navbar-static-side -->
             </nav>
 
-            <div id="page-wrapper">
+            <div id="page-wrapper" style="min-height: 950px">

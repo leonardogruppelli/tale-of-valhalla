@@ -1,10 +1,10 @@
 <div class="row" style="padding-top: 20px;">
     <div class="col-lg-12">
-        <div class="panel panel-default">
+        <div class="panel panel-base panel-default">
             <div class="panel-heading">
                 Itens
             </div>
-            <div class="panel-body">
+            <div class="panel-body panel-custom">
                 <?php
                 if ($this->session->has_userdata('message')) {
                     $message = $this->session->flashdata('message');
@@ -65,7 +65,7 @@
                     }
                     ?>
 
-                    <div class="col-sm-3">
+                    <div class="col-sm-6">
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">
                                 <a class="rarity"><img src="<?= base_url('/icons/' . $icon_rarity . '.png') ?>" style="width: 25px; height: 25px; margin-bottom: 5px"></a> <br>
