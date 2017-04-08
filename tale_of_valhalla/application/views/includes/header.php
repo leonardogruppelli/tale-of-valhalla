@@ -91,13 +91,13 @@
                 <!-- /.navbar-header -->
 
                 <ul class="nav navbar-top-links navbar-right">
-                    <?php if ($this->session->selected_character == 1) { ?>
+                    <?php if ($this->session->selected_class == 1) { ?>
                         <img src="<?= base_url('/icons/weapon.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Guerreiro </strong> &nbsp; &nbsp;
-                    <?php } else if ($this->session->selected_character == 2) { ?>
+                    <?php } else if ($this->session->selected_class == 2) { ?>
                         <img src="<?= base_url('/icons/bow.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Arqueiro </strong> &nbsp; &nbsp;
-                    <?php } else if ($this->session->selected_character == 3) { ?>
+                    <?php } else if ($this->session->selected_class == 3) { ?>
                         <img src="<?= base_url('/icons/staff.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Mago </strong> &nbsp; &nbsp;
-                    <?php } else if ($this->session->selected_character == 4) { ?>
+                    <?php } else if ($this->session->selected_class == 4) { ?>
                         <img src="<?= base_url('/icons/dagger.png') ?>" style="margin-right: 5px" width="20px" height="20px"> <strong> Assassino </strong> &nbsp; &nbsp;
                     <?php } ?>
                     <img src="<?= base_url('/icons/gold.png') ?>" style="margin-right: 5px" width="20px" height="20px"><strong>Ouro: </strong> <?= $this->session->gold ?> &nbsp; &nbsp;
@@ -130,7 +130,10 @@
                                 <a href="<?= base_url('characters') ?>"><i class="fa fa-male fa-fw"></i> Personagens</a>
                             </li>
                             <li>
-                                <a href="<?= base_url('items') ?>"><i class="fa fa-dollar fa-fw"></i> Itens</a>
+                                <a href="<?= base_url('inventory') ?>"><i class="fa fa-briefcase fa-fw"></i> Inventário</a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url('items') ?>"><i class="fa fa-dollar fa-fw"></i> Loja</a>
                             </li>
                         </ul>
                     </div>
@@ -139,4 +142,4 @@
                 <!-- /.navbar-static-side -->
             </nav>
 
-            <div id="page-wrapper" style="min-height: 950px">
+            <div id="page-wrapper" style="min-height: 850px">

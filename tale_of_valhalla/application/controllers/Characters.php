@@ -13,10 +13,10 @@ class Characters extends CI_Controller {
     }
 
     public function index() {
-        $data['warrior'] = $this->characters->select_warrior($this->session->id);
-        $data['archer'] = $this->characters->select_archer($this->session->id);
-        $data['mage'] = $this->characters->select_mage($this->session->id);
-        $data['assassin'] = $this->characters->select_assassin($this->session->id);
+        $data['warrior'] = $this->characters->select_character($this->session->id, 1);
+        $data['archer'] = $this->characters->select_character($this->session->id, 2);
+        $data['mage'] = $this->characters->select_character($this->session->id, 3);
+        $data['assassin'] = $this->characters->select_character($this->session->id, 4);
 
         $this->load->view('includes/header');
         $this->load->view('Characters/characters_view', $data);
@@ -47,8 +47,11 @@ class Characters extends CI_Controller {
         redirect('characters');
     }
 
-    public function select_character($class_id) {
-        $session['selected_character'] = $class_id;
+    public function select_character($user_id, $class_id) {
+        $data['character'] = $this->characters->select_character($user_id, $class_id);
+        
+        $session['selected_character'] = $data['character']->id;
+        $session['selected_class'] = $class_id;
         $this->session->set_userdata($session);
 
         redirect('items');

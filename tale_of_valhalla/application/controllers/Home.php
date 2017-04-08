@@ -40,6 +40,7 @@ class Home extends CI_Controller {
             $session['gold'] = $verify->gold;
             $session['gems'] = $verify->gems;
             $session['selected_character'] = 0;
+            $session['selected_class'] = 0;
             $this->session->set_userdata($session);
         }
 

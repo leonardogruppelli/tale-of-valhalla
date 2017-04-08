@@ -5463,6 +5463,8 @@ button.list-group-item-danger.active:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 .panel-base {
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 70px;
 }
 .panel-body {

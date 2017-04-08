@@ -16,17 +16,6 @@ if (url.includes('items')) {
             }
         });
 
-        $('.buy-button').click(function () {
-            if ($('.buy-button').is('disabled')) {
-                alert("Adwa");
-            
-                $('.buy-button').popover({
-                    trigger: 'hover',
-                    placement: 'top',
-                    content: 'Você não tem Ouro ou Gemas suficientes para comprar este item'
-                });
-            }
-        });
     });
 
 }

@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="panel panel-base panel-default">
             <div class="panel-heading">
-                Itens
+                Inventário
             </div>
             <div class="panel-body panel-custom">
                 <?php
@@ -21,13 +21,13 @@
                     }
                 }
                 ?>
-                
-                <?php if (!$items) { ?>
-                <h5 style="margin-left: 15px; margin-right: 15px;">Nenhum item disponível.</h5>
+
+                <?php if (!$inventory) { ?>
+                    <h5 style="margin-left: 15px; margin-right: 15px;">Você não possui nenhum item no inventário.</h5>
                 <?php } ?>
 
                 <?php
-                foreach ($items as $item) {
+                foreach ($inventory as $item) {
                     $id = $item->id;
 
                     if ($item->unique == 0) {
@@ -95,58 +95,36 @@
                                 </div>
                             </div>
                             <div class="panel-footer">
-                                <?php if ($item->class_id != $this->session->selected_class) { ?>
-                                    <a href="#" class="btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Item indisponível para a classe selecionada." disabled>
-                                        Comprar
-                                    </a>
-                                    <?php
-                                } else {
-                                    if ($item->unique == 0) {
-                                        if ($this->session->gold < $item->buy_price) {
-                                            ?>
-                                            <a href="#" class="btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Ouro suficiente." disabled>
-                                                Comprar
-                                            </a>
-                                        <?php } else { ?>
-                                            <a href="<?= base_url('/items/buy_item/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="buy-button btn btn-lg btn-success btn-fill" data-toggle="confirmation"
-                                               data-title="Comprar Item?"
-                                               data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-share-alt"
-                                               data-btn-ok-class="btn-success"
-                                               data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
-                                               data-btn-cancel-class="btn-danger"
-                                               data-popout="true"
-                                               data-singleton="true"
-                                               role="button">
-                                                Comprar
-                                            </a>
-                                            <?php
-                                        }
-                                    } else {
-                                        if ($this->session->gems < $item->buy_price) {
-                                            ?>
-                                            <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Gemas suficientes." disabled>
-                                                Comprar
-                                            </a>
-                                            <?php
-                                        } else {
-                                            ?>
-                                            <a href="<?= base_url('/items/buy_item_unique/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="buy-button btn btn-lg btn-success btn-fill" data-toggle="confirmation"
-                                               data-title="Comprar Item?"
-                                               data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-share-alt"
-                                               data-btn-ok-class="btn-success"
-                                               data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
-                                               data-btn-cancel-class="btn-danger"
-                                               data-popout="true"
-                                               data-singleton="true"
-                                               role="button">
-                                                Comprar
-                                            </a>
-                                            <?php
-                                        }
+                                <div class="btn-group btn-block">
+                                    <a href="#" class="btn btn-lg btn-info btn-form" role="button">Equipar</a>
+                                    <?php if ($item->unique == 0) { ?>
+                                        <a href="<?= base_url('/inventory/sell_item/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="btn btn-lg btn-danger btn-form" data-toggle="confirmation"
+                                           data-title="Vender Item?"
+                                           data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+                                           data-btn-ok-class="btn-success"
+                                           data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                           data-btn-cancel-class="btn-danger"
+                                           data-popout="true"
+                                           data-singleton="true"
+                                           role="button">
+                                            Vender
+                                        </a>
+                                    <?php } else { ?>
+                                        <a href="<?= base_url('/inventory/sell_item_unique/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="btn btn-lg btn-danger btn-form" data-toggle="confirmation"
+                                           data-title="Vender Item?"
+                                           data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+                                           data-btn-ok-class="btn-success"
+                                           data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                           data-btn-cancel-class="btn-danger"
+                                           data-popout="true"
+                                           data-singleton="true"
+                                           role="button">
+                                            Vender
+                                        </a>
+                                        <?php
                                     }
-                                }
-                                ?>
-
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>

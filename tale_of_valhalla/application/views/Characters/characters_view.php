@@ -7,7 +7,7 @@
             <div class="panel-body panel-custom">
                 <?php
                 if (isset($warrior)) {
-                    $warrior_percentage = ($warrior->experience / $warrior->max_experience) * 100
+                    $warrior_percentage = ($warrior->experience / $warrior->max_experience) * 100;
                     ?>
 
                     <div class="row" style="margin-left: 0; margin-right: 0;">
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="<?= base_url('characters/select_character/' . $warrior->class_id . '') ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                    <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $warrior->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
                                         Selecionar
                                     </a>
                                 </div>
@@ -85,7 +85,7 @@
 
                         <?php
                         if (isset($archer)) {
-                            $archer_percentage = ($archer->experience / $archer->max_experience) * 100
+                            $archer_percentage = ($archer->experience / $archer->max_experience) * 100;
                             ?>
 
                             <div class="col-sm-6">
@@ -132,7 +132,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-footer">
-                                        <a href="<?= base_url('characters/select_character/' . $archer->class_id . '') ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                        <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $archer->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
                                             Selecionar
                                         </a>
                                     </div>
@@ -163,7 +163,7 @@
 
                 <?php
                 if (isset($mage)) {
-                    $mage_percentage = ($mage->experience / $mage->max_experience) * 100
+                    $mage_percentage = ($mage->experience / $mage->max_experience) * 100;
                     ?>
 
                     <div class="row" style="margin-left: 0; margin-right: 0;">
@@ -211,7 +211,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="<?= base_url('characters/select_character/' . $mage->class_id . '') ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                    <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $mage->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
                                         Selecionar
                                     </a>
                                 </div>
@@ -243,7 +243,7 @@
 
                         <?php
                         if (isset($assassin)) {
-                            $assassin_percentage = ($assassin->experience / $assassin->max_experience) * 100
+                            $assassin_percentage = ($assassin->experience / $assassin->max_experience) * 100;
                             ?>
 
                             <div class="col-sm-6">
@@ -290,7 +290,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-footer">
-                                        <a href="<?= base_url('characters/select_character/' . $assassin->class_id . '') ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                        <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $assassin->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
                                             Selecionar
                                         </a>
                                     </div>

@@ -199,16 +199,16 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`inventory` (
   `character_id` INT NOT NULL,
   `item_id` INT NOT NULL,
-  PRIMARY KEY (`character_id`),
   INDEX `fk_inventory_items1_idx` (`item_id` ASC),
-  CONSTRAINT `fk_inventory_characters1`
-    FOREIGN KEY (`character_id`)
-    REFERENCES `tale_of_valhalla`.`characters` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_inventory_characters1_idx` (`character_id` ASC),
   CONSTRAINT `fk_inventory_items1`
     FOREIGN KEY (`item_id`)
     REFERENCES `tale_of_valhalla`.`items` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_inventory_characters1`
+    FOREIGN KEY (`character_id`)
+    REFERENCES `tale_of_valhalla`.`characters` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
