@@ -35,12 +35,13 @@ class Home extends CI_Controller {
 
         if (isset($verify)) {
             $session['name'] = $verify->name;
+            $session['picture'] = $verify->picture;
             $session['id'] = $verify->id;
-            $session['logged'] = true;
             $session['gold'] = $verify->gold;
             $session['gems'] = $verify->gems;
             $session['selected_character'] = 0;
             $session['selected_class'] = 0;
+            $session['logged'] = true;
             $this->session->set_userdata($session);
         }
 

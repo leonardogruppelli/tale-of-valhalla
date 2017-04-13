@@ -141,53 +141,25 @@ ENGINE = InnoDB;
 -- Table `tale_of_valhalla`.`equipment`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`equipment` (
-  `characters_id` INT NOT NULL,
-  `helmet` INT NULL DEFAULT 0,
-  `armor` INT NULL DEFAULT 0,
-  `pants` INT NULL DEFAULT 0,
-  `gloves` INT NULL DEFAULT 0,
-  `boots` INT NULL DEFAULT 0,
-  `weapon` INT NULL DEFAULT 0,
-  INDEX `fk_equipment_items1_idx` (`helmet` ASC),
-  INDEX `fk_equipment_items2_idx` (`armor` ASC),
-  INDEX `fk_equipment_items3_idx` (`pants` ASC),
-  INDEX `fk_equipment_items4_idx` (`gloves` ASC),
-  INDEX `fk_equipment_items5_idx` (`boots` ASC),
-  PRIMARY KEY (`characters_id`),
-  INDEX `fk_equipment_items6_idx` (`weapon` ASC),
+  `character_id` INT NOT NULL,
+  `type_id` INT NULL,
+  `item_id` INT NULL,
+  INDEX `fk_equipment_types1_idx` (`type_id` ASC),
+  INDEX `fk_equipment_items1_idx` (`item_id` ASC),
+  INDEX `fk_equipment_characters1_idx` (`character_id` ASC),
+  CONSTRAINT `fk_equipment_types1`
+    FOREIGN KEY (`type_id`)
+    REFERENCES `tale_of_valhalla`.`types` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_equipment_items1`
-    FOREIGN KEY (`helmet`)
-    REFERENCES `tale_of_valhalla`.`items` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_equipment_items2`
-    FOREIGN KEY (`armor`)
-    REFERENCES `tale_of_valhalla`.`items` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_equipment_items3`
-    FOREIGN KEY (`pants`)
-    REFERENCES `tale_of_valhalla`.`items` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_equipment_items4`
-    FOREIGN KEY (`gloves`)
-    REFERENCES `tale_of_valhalla`.`items` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_equipment_items5`
-    FOREIGN KEY (`boots`)
+    FOREIGN KEY (`item_id`)
     REFERENCES `tale_of_valhalla`.`items` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_equipment_characters1`
-    FOREIGN KEY (`characters_id`)
+    FOREIGN KEY (`character_id`)
     REFERENCES `tale_of_valhalla`.`characters` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_equipment_items6`
-    FOREIGN KEY (`weapon`)
-    REFERENCES `tale_of_valhalla`.`items` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -199,6 +171,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`inventory` (
   `character_id` INT NOT NULL,
   `item_id` INT NOT NULL,
+  `equiped` INT NULL DEFAULT 0,
   INDEX `fk_inventory_items1_idx` (`item_id` ASC),
   INDEX `fk_inventory_characters1_idx` (`character_id` ASC),
   CONSTRAINT `fk_inventory_items1`
@@ -236,3 +209,41 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `tale_of_valhalla`.`managers`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `tale_of_valhalla`;
+INSERT INTO `tale_of_valhalla`.`managers` (`id`, `name`, `email`, `password`) VALUES (1, 'Leonardo Gruppelli', 'leonardo.gruppelli@gmail.com', md5('gruppelli'));
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `tale_of_valhalla`.`types`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `tale_of_valhalla`;
+INSERT INTO `tale_of_valhalla`.`types` (`id`, `name`) VALUES (1, 'Elmo');
+INSERT INTO `tale_of_valhalla`.`types` (`id`, `name`) VALUES (2, 'Armadura');
+INSERT INTO `tale_of_valhalla`.`types` (`id`, `name`) VALUES (3, 'Calças');
+INSERT INTO `tale_of_valhalla`.`types` (`id`, `name`) VALUES (4, 'Luvas');
+INSERT INTO `tale_of_valhalla`.`types` (`id`, `name`) VALUES (5, 'Botas');
+INSERT INTO `tale_of_valhalla`.`types` (`id`, `name`) VALUES (6, 'Arma');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `tale_of_valhalla`.`classes`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `tale_of_valhalla`;
+INSERT INTO `tale_of_valhalla`.`classes` (`id`, `name`) VALUES (1, 'Guerreiro');
+INSERT INTO `tale_of_valhalla`.`classes` (`id`, `name`) VALUES (2, 'Arqueiro');
+INSERT INTO `tale_of_valhalla`.`classes` (`id`, `name`) VALUES (3, 'Mago');
+INSERT INTO `tale_of_valhalla`.`classes` (`id`, `name`) VALUES (4, 'Assassino');
+
+COMMIT;
+

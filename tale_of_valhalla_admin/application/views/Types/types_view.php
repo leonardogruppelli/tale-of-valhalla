@@ -1,13 +1,18 @@
-<div class="row" style="padding-top: 20px;">
-    <div class="col-lg-12">
-        <div class="panel panel-base panel-default">
-            <div class="panel-heading">
-                Tabela de Tipos
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
-                    <span class="glyphicon glyphicon-plus"></span> Novo Tipo
-                </button>
-            </div>
-            <div class="panel-body">
+<!-- Main content -->
+<section class="content"> 
+
+    <!-- Types Table -->
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">Tipos</h3>
+
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
+                <span class="glyphicon glyphicon-plus"></span> Novo Tipo
+            </button>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="col-sm-12">
                 <?php
                 if ($this->session->has_userdata('message')) {
                     $message = $this->session->flashdata('message');
@@ -28,7 +33,6 @@
                             <tr>
                                 <th>Código</th>
                                 <th>Nome</th>
-                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,25 +49,6 @@
                                 <tr>
                                     <td style="vertical-align: middle" width="10%"> <center> <?= $type->id ?> </center> </td>
                             <td style="vertical-align: middle"> <?= $type->name ?> </td>
-                            <td style="vertical-align: middle" width="20%">
-                            <center>
-                                <a href="#" data-id="<?= $type->id ?>" class="alter-button btn btn-warning" role="button">
-                                    <span class="glyphicon glyphicon-pencil"></span>
-                                </a>
-
-                                <a href="<?= base_url('types/delete/' . $type->id . '') ?>" class="btn btn-danger" data-toggle="confirmation"
-                                   data-title="Deletar Tipo?"
-                                   data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-share-alt"
-                                   data-btn-ok-class="btn-success"
-                                   data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
-                                   data-btn-cancel-class="btn-danger"
-                                   data-popout="true"
-                                   data-singleton="true"
-                                   role="button">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </a>
-                            </center>
-                            </td>
                             </tr>
                         <?php } ?>
                         </tbody>
@@ -72,7 +57,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Modals -->
 
@@ -81,7 +66,7 @@
     <div class="modal-dialog">
 
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header bg-green">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Inserir Tipo</h4>
             </div>
@@ -120,7 +105,7 @@
     <div class="modal-dialog">
 
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header bg-yellow">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Alterar Tipo</h4>
             </div>

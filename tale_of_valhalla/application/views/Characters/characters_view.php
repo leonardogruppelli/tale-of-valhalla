@@ -1,22 +1,27 @@
-<div class="row" style="padding-top: 20px;">
-    <div class="col-lg-12">
-        <div class="panel panel-base panel-default">
-            <div class="panel-heading">
-                Personagens
-            </div>
-            <div class="panel-body panel-custom">
+<!-- Main content -->
+<section class="content"> 
+
+    <!-- Characters -->
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">Personagens</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="col-sm-12">
                 <?php
                 if (isset($warrior)) {
                     $warrior_percentage = ($warrior->experience / $warrior->max_experience) * 100;
                     ?>
 
-                    <div class="row" style="margin-left: 0; margin-right: 0;">
+                    <div class="row">
                         <div class="col-sm-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading text-center">
-                                    <strong><?= $warrior->class ?></strong>
+                            <div class="box box-danger">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title"><?= $warrior->class ?></h3>
                                 </div>
-                                <div class="panel-body panel-custom panel-warrior">
+                                <!-- /.box-header -->
+                                <div class="box-body">
                                     <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
 
                                     <hr>
@@ -53,30 +58,39 @@
                                     <div class="col-sm-6">
                                         <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $warrior->intelligence ?> </p>
                                     </div>
-                                </div>
-                                <div class="panel-footer">
-                                    <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $warrior->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
-                                        Selecionar
-                                    </a>
+
+                                    <hr>
+
+                                    <div class="col-sm-12">
+                                        <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $warrior->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                            Selecionar
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
 
                     <?php } else { ?>
 
-                        <div class="row" style="margin-left: 0; margin-right: 0;">
+                        <div class="row">
                             <div class="col-sm-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading text-center">
-                                        <strong>Guerreiro</strong>
+                                <div class="box box-danger">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Guerreiro</h3>
                                     </div>
-                                    <div class="panel-body panel-custom">
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
                                         <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <a href="<?= base_url('characters/create_warrior/' . $this->session->id . '/' . 1) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
-                                            Criar
-                                        </a>
+
+                                        <hr>
+
+                                        <div class="col-sm-12">
+                                            <a href="<?= base_url('characters/create_warrior/' . $this->session->id . '/' . 1) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
+                                                Criar
+                                            </a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -89,11 +103,12 @@
                             ?>
 
                             <div class="col-sm-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading text-center">
-                                        <strong><?= $archer->class ?></strong>
+                                <div class="box box-success">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title"><?= $archer->class ?></h3>
                                     </div>
-                                    <div class="panel-body panel-custom">
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
                                         <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
 
                                         <hr>
@@ -130,11 +145,14 @@
                                         <div class="col-sm-6">
                                             <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $archer->intelligence ?> </p>
                                         </div>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $archer->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
-                                            Selecionar
-                                        </a>
+
+                                        <hr>
+
+                                        <div class="col-sm-12">
+                                            <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $archer->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                                Selecionar
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -143,17 +161,21 @@
                     <?php } else { ?>
 
                         <div class="col-sm-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading text-center">
-                                    <strong>Arqueiro</strong>
+                            <div class="box box-success">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Arqueiro</h3>
                                 </div>
-                                <div class="panel-body panel-custom">
+                                <!-- /.box-header -->
+                                <div class="box-body">
                                     <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
-                                </div>
-                                <div class="panel-footer">
-                                    <a href="<?= base_url('characters/create_archer/' . $this->session->id . '/' . 2) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
-                                        Criar
-                                    </a>
+
+                                    <hr>
+
+                                    <div class="col-sm-12">
+                                        <a href="<?= base_url('characters/create_archer/' . $this->session->id . '/' . 2) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
+                                            Criar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -166,13 +188,14 @@
                     $mage_percentage = ($mage->experience / $mage->max_experience) * 100;
                     ?>
 
-                    <div class="row" style="margin-left: 0; margin-right: 0;">
+                    <div class="row">
                         <div class="col-sm-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading text-center">
-                                    <strong><?= $mage->class ?></strong>
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title"><?= $mage->class ?></h3>
                                 </div>
-                                <div class="panel-body panel-custom">
+                                <!-- /.box-header -->
+                                <div class="box-body">
                                     <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
 
                                     <hr>
@@ -209,11 +232,14 @@
                                     <div class="col-sm-6">
                                         <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $mage->intelligence ?> </p>
                                     </div>
-                                </div>
-                                <div class="panel-footer">
-                                    <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $mage->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
-                                        Selecionar
-                                    </a>
+
+                                    <hr>
+
+                                    <div class="col-sm-12">
+                                        <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $mage->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                            Selecionar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -221,19 +247,23 @@
 
                     <?php } else { ?>
 
-                        <div class="row" style="margin-left: 0; margin-right: 0;">
+                        <div class="row">
                             <div class="col-sm-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading text-center">
-                                        <strong>Mago</strong>
+                                <div class="box box-primary">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Mago</h3>
                                     </div>
-                                    <div class="panel-body panel-custom">
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
                                         <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <a href="<?= base_url('characters/create_mage/' . $this->session->id . '/' . 3) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
-                                            Criar
-                                        </a>
+
+                                        <hr>
+
+                                        <div class="col-sm-12">
+                                            <a href="<?= base_url('characters/create_mage/' . $this->session->id . '/' . 3) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
+                                                Criar
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -247,11 +277,12 @@
                             ?>
 
                             <div class="col-sm-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading text-center">
-                                        <strong><?= $assassin->class ?></strong>
+                                <div class="box box-warning">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title"><?= $assassin->class ?></h3>
                                     </div>
-                                    <div class="panel-body panel-custom">
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
                                         <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
 
                                         <hr>
@@ -288,31 +319,37 @@
                                         <div class="col-sm-6">
                                             <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $assassin->intelligence ?> </p>
                                         </div>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $assassin->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
-                                            Selecionar
-                                        </a>
+
+                                        <hr>
+
+                                        <div class="col-sm-12">
+                                            <a href="<?= base_url('characters/select_character/' . $this->session->id . '/' . $assassin->class_id) ?>" class="buy-button btn btn-lg btn-info btn-fill" role="button">
+                                                Selecionar
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-
                     <?php } else { ?>
 
                         <div class="col-sm-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading text-center">
-                                    <strong>Assassino</strong>
+                            <div class="box box-warning">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Assassino</h3>
                                 </div>
-                                <div class="panel-body panel-custom">
+                                <!-- /.box-header -->
+                                <div class="box-body">
                                     <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
-                                </div>
-                                <div class="panel-footer">
-                                    <a href="<?= base_url('characters/create_assassin/' . $this->session->id . '/' . 4) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
-                                        Criar
-                                    </a>
+
+                                    <hr>
+
+                                    <div class="col-sm-12">
+                                        <a href="<?= base_url('characters/create_assassin/' . $this->session->id . '/' . 4) ?>" class="buy-button btn btn-lg btn-success btn-fill" role="button">
+                                            Criar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -322,4 +359,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

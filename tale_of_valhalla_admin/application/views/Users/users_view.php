@@ -1,13 +1,18 @@
-<div class="row" style="padding-top: 20px;">
-    <div class="col-lg-12">
-        <div class="panel panel-base panel-default">
-            <div class="panel-heading">
-                Tabela de Usuários
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
-                    <span class="glyphicon glyphicon-plus"></span> Novo Usuário
-                </button>
-            </div>
-            <div class="panel-body">
+<!-- Main content -->
+<section class="content"> 
+
+    <!-- Users Table -->
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">Usuários</h3>
+
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
+                <span class="glyphicon glyphicon-plus"></span> Novo Usuário
+            </button>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="col-sm-12">
                 <?php
                 if ($this->session->has_userdata('message')) {
                     $message = $this->session->flashdata('message');
@@ -61,7 +66,7 @@
 
                                 <a href="<?= base_url('users/delete/' . $user->id . '') ?>" class="btn btn-danger" data-toggle="confirmation"
                                    data-title="Deletar Usuário?"
-                                   data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+                                   data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                    data-btn-ok-class="btn-success"
                                    data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
                                    data-btn-cancel-class="btn-danger"
@@ -80,7 +85,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Modals -->
 
@@ -89,7 +94,7 @@
     <div class="modal-dialog">
 
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header bg-green">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Inserir Usuário</h4>
             </div>
@@ -187,7 +192,7 @@
     <div class="modal-dialog">
 
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header bg-yellow">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Alterar Usuário</h4>
             </div>

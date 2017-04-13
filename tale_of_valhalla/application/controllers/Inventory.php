@@ -30,9 +30,12 @@ class Inventory extends CI_Controller {
     public function sell_item($character_id, $user_id, $item_id) {
         if ($this->inventory->sell_item($character_id, $user_id, $item_id)) {
             $this->load->model('Users_Model', 'users');
+            $this->load->model('Equipment_Model', 'equipment');
 
             $user = $this->users->find($user_id);
 
+            $this->equipment->unequip_item($character_id, $item_id);
+            
             $session['gold'] = $user->gold;
             $session['gems'] = $user->gems;
 
