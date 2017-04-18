@@ -103,10 +103,10 @@
                 <section class="sidebar">
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li><a href="<?= base_url('home') ?>"><i class="fa fa-play-circle-o"></i> <span>Jogar</span></a></li>
-                        <li><a href="<?= base_url('characters') ?>"><i class="fa fa-male"></i> <span>Personagens</span></a></li>
-                        <li><a href="<?= base_url('inventory') ?>"><i class="fa fa-briefcase"></i> <span>Inventário</span></a></li>
-                        <li><a href="<?= base_url('items') ?>"><i class="fa fa-dollar"></i> <span>Loja</span></a></li>
+                        <li <?= $this->session->navigation == "play" ? "class='active'" : "" ?>><a href="<?= base_url('home') ?>"><i class="fa fa-play-circle-o"></i> <span>Jogar</span></a></li>
+                        <li <?= $this->session->navigation == "characters" ? "class='active'" : "" ?>><a href="<?= base_url('characters') ?>"><i class="fa fa-male"></i> <span>Personagens</span></a></li>
+                        <li <?= $this->session->navigation == "inventory" ? "class='active'" : "" ?>><a href="<?= base_url('inventory') ?>"><i class="fa fa-briefcase"></i> <span>Inventário</span></a></li>
+                        <li <?= $this->session->navigation == "items" ? "class='active'" : "" ?>><a href="<?= base_url('items') ?>"><i class="fa fa-dollar"></i> <span>Loja</span></a></li>
                     </ul>
                 </section>
                 <!-- /.sidebar -->

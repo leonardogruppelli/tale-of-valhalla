@@ -15,7 +15,7 @@ class Items_Model extends CI_Model {
         $query_insert = $this->db->query($sql_insert);
         return $query_update + $query_insert;
     }
-    
+
     public function buy_item_unique($character_id, $user_id, $item_id) {
         $sql_update = "UPDATE users INNER JOIN items ON items.id = $item_id SET users.gems = users.gems - items.buy_price WHERE users.id = $user_id;";
         $query_update = $this->db->query($sql_update);
@@ -23,7 +23,7 @@ class Items_Model extends CI_Model {
         $query_insert = $this->db->query($sql_insert);
         return $query_update + $query_insert;
     }
-    
+
     public function find($id) {
         $sql = "SELECT * FROM items WHERE id = $id";
         $query = $this->db->query($sql);

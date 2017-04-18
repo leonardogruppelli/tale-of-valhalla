@@ -14,6 +14,10 @@ class Enemies extends CI_Controller {
 
     public function index() {
         $data['enemies'] = $this->enemies->select();
+        
+        $session['admin_navigation_tables'] = true;
+        $session['admin_navigation'] = "enemies";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Enemies/enemies_view', $data);

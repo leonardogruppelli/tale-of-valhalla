@@ -22,13 +22,13 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                    <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                    <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                     <hr>
 
                                     <div class="col-sm-12">
                                         <center>
-                                            <div class="number-circle"> <?= $warrior->level ?> </div>
+                                            <div class="level"> <?= $warrior->level ?> </div>
                                         </center>
                                     </div>
 
@@ -55,7 +55,7 @@
                                         <p> <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px;"> <strong>Agilidade: </strong> <?= $warrior->agility ?> </p>
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6" style="margin-bottom: 10px;">
                                         <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $warrior->intelligence ?> </p>
                                     </div>
 
@@ -81,7 +81,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                        <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
@@ -109,13 +109,13 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                        <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
                                         <div class="col-sm-12">
                                             <center>
-                                                <div class="number-circle"> <?= $warrior->level ?> </div>
+                                                <div class="level"> <?= $archer->level ?> </div>
                                             </center>
                                         </div>
 
@@ -142,7 +142,7 @@
                                             <p> <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px;"> <strong>Agilidade: </strong> <?= $archer->agility ?> </p>
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6" style="margin-bottom: 10px;">
                                             <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $archer->intelligence ?> </p>
                                         </div>
 
@@ -167,7 +167,7 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                    <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                    <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                     <hr>
 
@@ -196,13 +196,13 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                    <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                    <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                     <hr>
 
                                     <div class="col-sm-12">
                                         <center>
-                                            <div class="number-circle"> <?= $warrior->level ?> </div>
+                                            <div class="level"> <?= $warrior->level ?> </div>
                                         </center>
                                     </div>
 
@@ -229,7 +229,7 @@
                                         <p> <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px;"> <strong>Agilidade: </strong> <?= $mage->agility ?> </p>
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6" style="margin-bottom: 10px;">
                                         <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $mage->intelligence ?> </p>
                                     </div>
 
@@ -255,7 +255,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                        <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
@@ -283,13 +283,13 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                        <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
                                         <div class="col-sm-12">
                                             <center>
-                                                <div class="number-circle"> <?= $warrior->level ?> </div>
+                                                <div class="level"> <?= $warrior->level ?> </div>
                                             </center>
                                         </div>
 
@@ -316,7 +316,7 @@
                                             <p> <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px;"> <strong>Agilidade: </strong> <?= $assassin->agility ?> </p>
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6" style="margin-bottom: 10px;">
                                             <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $assassin->intelligence ?> </p>
                                         </div>
 
@@ -341,7 +341,7 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                    <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px;"> </center>
+                                    <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
 
                                     <hr>
 

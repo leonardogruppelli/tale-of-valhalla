@@ -91,6 +91,22 @@
     width: 100%;
     margin-bottom: 20px;
 }
+character-img {
+    margin-bottom: -5px;
+}
+.level {
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    border-radius: 50%; 
+    border: 2px solid black;
+    font-size: 20px;
+    color: #bfbfbf;
+    padding: 8px; 
+    width: 55px;
+    height: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+}
 hr {
     border: 0;
     clear: both;

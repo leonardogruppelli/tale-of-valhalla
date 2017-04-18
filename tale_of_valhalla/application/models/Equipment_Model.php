@@ -2,10 +2,10 @@
 
 class Equipment_Model extends CI_Model {
 
-    public function select($character_id) {
-        $sql = "SELECT equipment.*, items.*, classes.name AS class, types.name AS type FROM equipment INNER JOIN items ON equipment.item_id = items.id INNER JOIN classes ON items.class_id = classes.id INNER JOIN types ON items.type_id = types.id WHERE equipment.character_id = $character_id";
+    public function select_equipment($character_id, $type_id) {
+        $sql = "SELECT equipment.*, items.*, classes.name AS class, types.name AS type FROM equipment INNER JOIN items ON equipment.item_id = items.id INNER JOIN classes ON items.class_id = classes.id INNER JOIN types ON items.type_id = types.id WHERE equipment.character_id = $character_id AND equipment.type_id = $type_id";
         $query = $this->db->query($sql);
-        return $query->result();
+        return $query->row();
     }
 
     public function equip_item($character_id, $item_id, $type_id) {

@@ -21,6 +21,9 @@ class Items extends CI_Controller {
         $character_id = $this->session->selected_character;
 
         $data['items'] = $this->items->select($character_id);
+        
+        $session['navigation'] = "items";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Items/items_view', $data);

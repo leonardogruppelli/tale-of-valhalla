@@ -20,7 +20,15 @@ class Equipment extends CI_Controller {
     public function index() {
         $character_id = $this->session->selected_character;
 
-        $data['equipment'] = $this->equipment->select($character_id);
+        $data['helmet'] = $this->equipment->select_equipment($character_id, 1);
+        $data['armor'] = $this->equipment->select_equipment($character_id, 2);
+        $data['pants'] = $this->equipment->select_equipment($character_id, 3);
+        $data['gloves'] = $this->equipment->select_equipment($character_id, 4);
+        $data['boots'] = $this->equipment->select_equipment($character_id, 5);
+        $data['weapon'] = $this->equipment->select_equipment($character_id, 6);
+        
+        $session['navigation'] = "equipment";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Equipment/equipment_view', $data);

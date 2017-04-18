@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`users` (
   `picture` VARCHAR(42) NOT NULL,
   `gold` INT NULL DEFAULT 0,
   `gems` INT NULL DEFAULT 0,
+  `date` DATE NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC))
@@ -142,8 +143,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`equipment` (
   `character_id` INT NOT NULL,
-  `type_id` INT NULL,
-  `item_id` INT NULL,
+  `type_id` INT NOT NULL,
+  `item_id` INT NOT NULL,
   INDEX `fk_equipment_types1_idx` (`type_id` ASC),
   INDEX `fk_equipment_items1_idx` (`item_id` ASC),
   INDEX `fk_equipment_characters1_idx` (`character_id` ASC),
@@ -203,6 +204,99 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`enemies` (
   `mp_potions` INT NOT NULL,
   `image` VARCHAR(42) NOT NULL,
   PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `tale_of_valhalla`.`packages`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`packages` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `gems` INT NOT NULL,
+  `price` DECIMAL(9,2) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `tale_of_valhalla`.`transactions`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`transactions` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `package_id` INT NOT NULL,
+  `date` DATE NOT NULL,
+  `status` INT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  INDEX `fk_transactions_users1_idx` (`user_id` ASC),
+  INDEX `fk_transactions_packages1_idx` (`package_id` ASC),
+  CONSTRAINT `fk_transactions_users1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `tale_of_valhalla`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_transactions_packages1`
+    FOREIGN KEY (`package_id`)
+    REFERENCES `tale_of_valhalla`.`packages` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `tale_of_valhalla`.`ai_battle_history`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`ai_battle_history` (
+  `character_id` INT NOT NULL,
+  `enemy_id` INT NOT NULL,
+  `player_damage` INT NULL DEFAULT 0,
+  `player_damage_taken` INT NULL DEFAULT 0,
+  `enemy_damage` INT NULL DEFAULT 0,
+  `enemy_damage_taken` INT NULL DEFAULT 0,
+  `player_potions` INT NULL DEFAULT 0,
+  `enemy_potions` INT NULL DEFAULT 0,
+  `turns` INT NULL DEFAULT 0,
+  INDEX `fk_ai_battle_history_characters1_idx` (`character_id` ASC),
+  INDEX `fk_ai_battle_history_enemies1_idx` (`enemy_id` ASC),
+  CONSTRAINT `fk_ai_battle_history_characters1`
+    FOREIGN KEY (`character_id`)
+    REFERENCES `tale_of_valhalla`.`characters` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ai_battle_history_enemies1`
+    FOREIGN KEY (`enemy_id`)
+    REFERENCES `tale_of_valhalla`.`enemies` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `tale_of_valhalla`.`battle_history`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`battle_history` (
+  `player_one` INT NOT NULL,
+  `player_two` INT NOT NULL,
+  `player_one_damage` INT NULL DEFAULT 0,
+  `player_one_damage_taken` INT NULL DEFAULT 0,
+  `player_two_damage` INT NULL DEFAULT 0,
+  `player_two_damage_taken` INT NULL DEFAULT 0,
+  `player_one_potions` INT NULL DEFAULT 0,
+  `player_two_potions` INT NULL DEFAULT 0,
+  `turns` INT NULL DEFAULT 0,
+  INDEX `fk_battle_history_characters1_idx` (`player_one` ASC),
+  INDEX `fk_battle_history_characters2_idx` (`player_two` ASC),
+  CONSTRAINT `fk_battle_history_characters1`
+    FOREIGN KEY (`player_one`)
+    REFERENCES `tale_of_valhalla`.`characters` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_battle_history_characters2`
+    FOREIGN KEY (`player_two`)
+    REFERENCES `tale_of_valhalla`.`characters` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 

@@ -19,6 +19,10 @@ class Items extends CI_Controller {
         $data['items'] = $this->items->select();
         $data['types'] = $this->types->select();
         $data['classes'] = $this->classes->select();
+        
+        $session['admin_navigation_tables'] = true;
+        $session['admin_navigation'] = "items";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Items/items_view', $data);

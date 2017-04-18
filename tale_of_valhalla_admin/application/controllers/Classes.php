@@ -14,6 +14,10 @@ class Classes extends CI_Controller {
 
     public function index() {
         $data['classes'] = $this->classes->select();
+        
+        $session['admin_navigation_tables'] = true;
+        $session['admin_navigation'] = "classes";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Classes/classes_view', $data);

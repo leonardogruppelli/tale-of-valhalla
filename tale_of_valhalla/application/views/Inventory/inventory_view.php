@@ -60,12 +60,12 @@
                         <div class="col-sm-4">
                             <div class="box box-info">
                                 <div class="box-header with-border text-center">
-                                    <div class="col-sm-2 col-sm-offset-5 rarity"><img src="<?= base_url('/icons/' . $icon_rarity . '.png') ?>" style="width: 25px; height: 25px; margin-bottom: 5px"></div>
+                                    <div class="col-sm-2 col-sm-offset-5 rarity"><img src="<?= base_url('/icons/' . $icon_rarity . '.png') ?>" style="width: 25px; height: 25px; margin-bottom: 5px;"></div>
                                     <div class="col-sm-12"><h3 class="box-title"><?= $item->name ?></h3></div>
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                    <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $item->image ?>" class="img-rounded img-thumbnail" style="width: 115px; height: 95px;"> </center>
+                                    <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $item->image ?>" class="img-rounded img-thumbnail" style="width: 115px; height: 95px; margin-bottom: -5px;"> </center>
 
                                     <hr>
 
@@ -97,7 +97,7 @@
                                         <p> <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px;"> <strong>Agilidade: </strong> <?= $item->agility ?> </p>
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6" style="margin-bottom: 10px;">
                                         <p> <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px;"> <strong>Inteligência: </strong> <?= $item->intelligence ?> </p>
                                     </div>
 
@@ -149,4 +149,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>

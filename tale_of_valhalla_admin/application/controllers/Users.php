@@ -14,6 +14,10 @@ class Users extends CI_Controller {
 
     public function index() {
         $data['users'] = $this->users->select();
+        
+        $session['admin_navigation_tables'] = true;
+        $session['admin_navigation'] = "users";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Users/users_view', $data);

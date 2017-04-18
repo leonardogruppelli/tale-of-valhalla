@@ -5,10 +5,6 @@
     <div class="box box-default">
         <div class="box-header with-border">
             <h3 class="box-title">Tipos</h3>
-
-            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
-                <span class="glyphicon glyphicon-plus"></span> Novo Tipo
-            </button>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -17,16 +13,19 @@
                 if ($this->session->has_userdata('message')) {
                     $message = $this->session->flashdata('message');
                     if ($this->session->flashdata('situation') == '1') {
-                        echo "<div class = 'alert alert-success'>";
+                        echo "<div class='alert alert-success alert-dismissable'>";
+                        echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
                         echo $message;
                         echo "</div>";
                     } else {
-                        echo "<div class = 'alert alert-danger'>";
+                        echo "<div class='alert alert-danger alert-dismissable'>";
+                        echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
                         echo $message;
                         echo "</div>";
                     }
                 }
                 ?>
+                
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered table-hover">
                         <thead>

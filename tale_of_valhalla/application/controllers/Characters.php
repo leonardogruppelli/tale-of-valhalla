@@ -17,6 +17,9 @@ class Characters extends CI_Controller {
         $data['archer'] = $this->characters->select_character($this->session->id, 2);
         $data['mage'] = $this->characters->select_character($this->session->id, 3);
         $data['assassin'] = $this->characters->select_character($this->session->id, 4);
+        
+        $session['navigation'] = "characters";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Characters/characters_view', $data);

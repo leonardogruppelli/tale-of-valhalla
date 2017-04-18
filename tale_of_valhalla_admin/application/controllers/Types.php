@@ -15,6 +15,10 @@ class Types extends CI_Controller {
     public function index() {
         $data['types'] = $this->types->select();
 
+        $session['admin_navigation_tables'] = true;
+        $session['admin_navigation'] = "types";
+        $this->session->set_userdata($session);
+        
         $this->load->view('includes/header');
         $this->load->view('Types/types_view', $data);
         $this->load->view('includes/footer');

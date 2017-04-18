@@ -21,6 +21,9 @@ class Inventory extends CI_Controller {
         $character_id = $this->session->selected_character;
 
         $data['inventory'] = $this->inventory->select($character_id);
+        
+        $session['navigation'] = "inventory";
+        $this->session->set_userdata($session);
 
         $this->load->view('includes/header');
         $this->load->view('Inventory/inventory_view', $data);

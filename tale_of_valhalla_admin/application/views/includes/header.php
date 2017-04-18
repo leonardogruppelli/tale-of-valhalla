@@ -37,7 +37,7 @@
                 <!-- Logo -->
                 <a href="<?= base_url('home') ?>" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><img src="<?= base_url('icons/logo.png') ?>" class="logo-header"></span>
+                    <span class="logo-mini"><img src="<?= base_url('icons/logo.png') ?>" class="mini-logo-header"></span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg tittle-header"><img src="<?= base_url('icons/logo.png') ?>" class="logo-header"> Tale of Valhalla</span>
                 </a>
@@ -87,8 +87,8 @@
                 <section class="sidebar">
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li><a href="<?= base_url('home') ?>"><i class="fa fa-pie-chart"></i> <span>Dashboard</span></a></li>
-                        <li class="treeview">
+                        <li <?= $this->session->admin_navigation == "dashboard" ? "class='active'" : "" ?>><a href="<?= base_url('home') ?>"><i class="fa fa-pie-chart"></i> <span>Dashboard</span></a></li>
+                        <li class="treeview <?= $this->session->admin_navigation_tables == true ? " active" : "" ?>">
                             <a href="#">
                                 <i class="fa fa-table"></i>
                                 <span>Tabelas</span>
@@ -97,11 +97,11 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="<?= base_url('classes') ?>"><i class="fa fa-circle-o text-red"></i> Classes</a></li>
-                                <li><a href="<?= base_url('types') ?>"><i class="fa fa-circle-o text-red"></i> Tipos</a></li>
-                                <li><a href="<?= base_url('items') ?>"><i class="fa fa-circle-o text-red"></i> Items</a></li>
-                                <li><a href="<?= base_url('enemies') ?>"><i class="fa fa-circle-o text-red"></i> Inimigos</a></li>
-                                <li><a href="<?= base_url('users') ?>"><i class="fa fa-circle-o text-red"></i> Usuários</a></li>
+                                <li <?= $this->session->admin_navigation == "classes" ? "class='active'" : "" ?>><a href="<?= base_url('classes') ?>"><i class="fa fa-circle-o text-red"></i> Classes</a></li>
+                                <li <?= $this->session->admin_navigation == "types" ? "class='active'" : "" ?>><a href="<?= base_url('types') ?>"><i class="fa fa-circle-o text-red"></i> Tipos</a></li>
+                                <li <?= $this->session->admin_navigation == "items" ? "class='active'" : "" ?>><a href="<?= base_url('items') ?>"><i class="fa fa-circle-o text-red"></i> Items</a></li>
+                                <li <?= $this->session->admin_navigation == "enemies" ? "class='active'" : "" ?>><a href="<?= base_url('enemies') ?>"><i class="fa fa-circle-o text-red"></i> Inimigos</a></li>
+                                <li <?= $this->session->admin_navigation == "users" ? "class='active'" : "" ?>><a href="<?= base_url('users') ?>"><i class="fa fa-circle-o text-red"></i> Usuários</a></li>
                             </ul>
                         </li>
                     </ul>
