@@ -22,6 +22,8 @@
 <script src="<?= base_url('assets/plugins/slimScroll/slimscroll.min.js') ?>"></script>
 <!-- Tale of Valhalla JS -->
 <script src="<?= base_url('assets/js/tale-of-valhalla.js') ?>"></script>
+<!-- Equipment AJAX -->
+<script src="<?= base_url('assets/js/ajax/equipment.js') ?>"></script>
 <!-- Inventory AJAX -->
 <script src="<?= base_url('assets/js/ajax/inventory.js') ?>"></script>
 <!-- Items AJAX -->

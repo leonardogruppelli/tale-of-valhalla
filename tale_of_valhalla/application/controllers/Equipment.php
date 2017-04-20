@@ -18,6 +18,8 @@ class Equipment extends CI_Controller {
     }
 
     public function index() {
+        $this->load->model('Inventory_Model', 'inventory');
+
         $character_id = $this->session->selected_character;
 
         $data['helmet'] = $this->equipment->select_equipment($character_id, 1);
@@ -26,7 +28,9 @@ class Equipment extends CI_Controller {
         $data['gloves'] = $this->equipment->select_equipment($character_id, 4);
         $data['boots'] = $this->equipment->select_equipment($character_id, 5);
         $data['weapon'] = $this->equipment->select_equipment($character_id, 6);
-        
+
+        $data['inventory'] = $this->inventory->select_inventory($character_id);
+
         $session['navigation'] = "equipment";
         $this->session->set_userdata($session);
 
@@ -34,7 +38,7 @@ class Equipment extends CI_Controller {
         $this->load->view('Equipment/equipment_view', $data);
         $this->load->view('includes/footer');
     }
-    
+
     public function equip_item($character_id, $item_id, $type_id) {
         if ($this->equipment->equip_item($character_id, $item_id, $type_id)) {
             $situation = "1";
@@ -47,9 +51,13 @@ class Equipment extends CI_Controller {
         $this->session->set_flashdata('situation', $situation);
         $this->session->set_flashdata('message', $message);
 
-        redirect('inventory');
+        if ($this->session->navigation == "equipment") {
+            redirect('equipment');
+        } else {
+            redirect('inventory');
+        }
     }
-    
+
     public function unequip_item($character_id, $item_id) {
         if ($this->equipment->unequip_item($character_id, $item_id)) {
             $situation = "1";
@@ -62,7 +70,11 @@ class Equipment extends CI_Controller {
         $this->session->set_flashdata('situation', $situation);
         $this->session->set_flashdata('message', $message);
 
-        redirect('inventory');
+        if ($this->session->navigation == "equipment") {
+            redirect('equipment');
+        } else {
+            redirect('inventory');
+        }
     }
 
 }

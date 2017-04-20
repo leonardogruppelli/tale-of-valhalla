@@ -36,10 +36,15 @@
     font-weight: bold;
     margin-bottom: -5px;
 }
-.center-row {
-    padding-top: 8%;
+.center-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .login-card {
+    width: 55%;
     height: 400px;
 }
 .logo-card {

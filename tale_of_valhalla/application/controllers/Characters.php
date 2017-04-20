@@ -57,7 +57,7 @@ class Characters extends CI_Controller {
         $session['selected_class'] = $class_id;
         $this->session->set_userdata($session);
 
-        redirect('items');
+        redirect('equipment');
     }
 
 }

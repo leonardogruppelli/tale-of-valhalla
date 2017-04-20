@@ -34,37 +34,35 @@
 
     <body class="login-body">
 
-        <div class="row center-row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <div class="card horizontal login-card">
-                    <div class="card-content logo-card bg-gray">
-                        <img src="<?= base_url('icons/logo.png') ?>" class="logo-login">
-                        <p class="panel-title tittle">Tale</p>
-                        <p class="panel-title tittle">of</p>
-                        <p class="panel-title tittle">Valhalla</p>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content bg-black-gradient">
-                            <p class="login-header">BEM-VINDO DE VOLTA.</p>
-                            
-                            <form id="login_form" role="form" method="post" action="<?= base_url('home/login') ?>">
-                                <fieldset>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" required autofocus>
+        <div class="col-sm-12 center-div">
+            <div class="card horizontal login-card">
+                <div class="card-content logo-card bg-gray">
+                    <img src="<?= base_url('icons/logo.png') ?>" class="logo-login">
+                    <p class="panel-title tittle">Tale</p>
+                    <p class="panel-title tittle">of</p>
+                    <p class="panel-title tittle">Valhalla</p>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content bg-black-gradient">
+                        <p class="login-header">BEM-VINDO DE VOLTA.</p>
+
+                        <form id="login_form" role="form" method="post" action="<?= base_url('home/login') ?>">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Senha" name="password" id="password" required>
+                                </div>
+                                <div class="form-group has-error">
+                                    <div id="login_alert" class="alert alert-danger hidden">
+                                        <div id="help_login"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Senha" name="password" id="password" required>
-                                    </div>
-                                    <div class="form-group has-error">
-                                        <div id="login_alert" class="alert alert-danger hidden">
-                                            <div id="help_login"></div>
-                                        </div>
-                                    </div>
-                                    <button id="login_button" type="button" class="btn btn-lg btn-default btn-block">Entrar</button>
-                                </fieldset>
-                            </form>
-                        </div>              
-                    </div>
+                                </div>
+                                <button id="login_button" type="button" class="btn btn-lg btn-default btn-block">Entrar</button>
+                            </fieldset>
+                        </form>
+                    </div>              
                 </div>
             </div>
         </div>

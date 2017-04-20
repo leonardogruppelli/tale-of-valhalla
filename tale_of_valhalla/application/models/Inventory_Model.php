@@ -7,6 +7,12 @@ class Inventory_Model extends CI_Model {
         $query = $this->db->query($sql);
         return $query->result();
     }
+    
+    public function select_inventory($character_id) {
+        $sql = "SELECT inventory.*, items.*, classes.name AS class, types.name AS type FROM inventory INNER JOIN items ON inventory.item_id = items.id INNER JOIN classes ON items.class_id = classes.id INNER JOIN types ON items.type_id = types.id WHERE inventory.character_id = $character_id AND inventory.equiped = 0 ORDER BY inventory.item_id";
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 
     public function sell_item($character_id, $user_id, $item_id) {
         $sql_update = "UPDATE users INNER JOIN items ON items.id = $item_id SET users.gold = users.gold + items.sell_price WHERE users.id = $user_id;";

@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="<?= base_url('assets/dist/font-awesome/css/font-awesome.min.css') ?>">
         <!-- Ionicons -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/ionicons/css/ionicons.min.css') ?>">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="<?= base_url('assets/dist/whhg/css/whhg.css') ?>">
         <!-- Theme style -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/adminlte/css/adminlte.min.css') ?>">
         <!-- AdminLTE Skins. -->
@@ -105,6 +107,7 @@
                     <ul class="sidebar-menu">
                         <li <?= $this->session->navigation == "play" ? "class='active'" : "" ?>><a href="<?= base_url('home') ?>"><i class="fa fa-play-circle-o"></i> <span>Jogar</span></a></li>
                         <li <?= $this->session->navigation == "characters" ? "class='active'" : "" ?>><a href="<?= base_url('characters') ?>"><i class="fa fa-male"></i> <span>Personagens</span></a></li>
+                        <li <?= $this->session->navigation == "equipment" ? "class='active'" : "" ?>><a href="<?= base_url('equipment') ?>"><i class="icon icon-sword"></i> <span>Equipamento</span></a></li>
                         <li <?= $this->session->navigation == "inventory" ? "class='active'" : "" ?>><a href="<?= base_url('inventory') ?>"><i class="fa fa-briefcase"></i> <span>Inventário</span></a></li>
                         <li <?= $this->session->navigation == "items" ? "class='active'" : "" ?>><a href="<?= base_url('items') ?>"><i class="fa fa-dollar"></i> <span>Loja</span></a></li>
                     </ul>
