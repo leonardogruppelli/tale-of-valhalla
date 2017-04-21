@@ -22,13 +22,10 @@
     font-size: 12px;
 }
 .logo-login {
-    width: 60px;
-    height: 60px;
-    margin-top: 90px;
-    margin-bottom: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80px;
+    height: 80px;
+    margin-top: 50%;
+    margin-bottom: 20px;
 }
 .login-header {
     text-align: center;
@@ -45,10 +42,12 @@
 }
 .login-card {
     width: 55%;
-    height: 400px;
+    height: 60%;
 }
 .logo-card {
     width: 30%;
+    line-height: 200px;
+    text-align: center;
 }
 .login-body {
     overflow: auto;
@@ -75,8 +74,10 @@
 }
 .tittle {
     font-family: Woodwarrior;
-    font-size: 20px;
-    text-align: center;
+    font-size: 25px;
+    line-height: 1.8;
+    margin-top: 10%;
+    vertical-align: middle;
 }
 .avatar {
     width: 150px;
@@ -100,23 +101,24 @@ character-img {
     margin-bottom: -5px;
 }
 .level {
-    -webkit-border-radius: 50%; 
-    -moz-border-radius: 50%; 
-    border-radius: 50%; 
-    border: 2px solid black;
-    font-size: 20px;
-    color: #bfbfbf;
-    padding: 8px; 
-    width: 55px;
+    border-radius: 50%;
+
+    width: 50px;
     height: 50px;
+    padding: 8px;
     margin-bottom: 10px;
-    box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+
+    background: #fff;
+    border: 2px solid #a9a9a9;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 20px;
+    color: #212121;
+    font-weight: bold;
+    text-align: center;
 }
 hr {
-    border: 0;
+    border-bottom: 0.5px solid #d2d6de;
     clear: both;
     display: block;
-    width: 100%;               
-    background-color: #EAEAEA;
-    height: 1px;
+    width: 100%;
 }

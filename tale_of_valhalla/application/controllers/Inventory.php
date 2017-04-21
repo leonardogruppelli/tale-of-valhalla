@@ -11,6 +11,12 @@ class Inventory extends CI_Controller {
         }
 
         if ($this->session->selected_character == 0) {
+            $situation = "0";
+            $message = "Selecione um personagem.";
+
+            $this->session->set_flashdata('situation', $situation);
+            $this->session->set_flashdata('message', $message);
+            
             redirect('characters');
         }
 

@@ -38,9 +38,9 @@
             <div class="card horizontal login-card">
                 <div class="card-content logo-card bg-gray">
                     <img src="<?= base_url('icons/logo.png') ?>" class="logo-login">
-                    <p class="panel-title tittle">Tale</p>
-                    <p class="panel-title tittle">of</p>
-                    <p class="panel-title tittle">Valhalla</p>
+                    <p class="tittle">Tale</p>
+                    <p class="tittle">of</p>
+                    <p class="tittle">Valhalla</p>
                 </div>
                 <div class="card-stacked">
                     <div class="card-content bg-black-gradient">

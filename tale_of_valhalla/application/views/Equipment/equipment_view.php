@@ -35,7 +35,7 @@
 
                                 <!-- Helmet -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Elmo</h3>
                                         </div>
@@ -56,13 +56,13 @@
 
                                 <!-- Helmet -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Elmo</h3>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/helmet.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                            <center> <img src="<?= base_url('/equipments/helmet' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
 
                                 <!-- Armor -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Armadura</h3>
                                         </div>
@@ -96,13 +96,13 @@
 
                                 <!-- Armor -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Armadura</h3>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/armor.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                            <center> <img src="<?= base_url('/equipments/armor' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
 
                                 <!-- Pants -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Calças</h3>
                                         </div>
@@ -136,13 +136,13 @@
 
                                 <!-- Pants -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Calças</h3>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/pants.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                            <center> <img src="<?= base_url('/equipments/pants' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
                                         </div>
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
 
                                 <!-- Gloves -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Luvas</h3>
                                         </div>
@@ -176,13 +176,13 @@
 
                                 <!-- Gloves -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Luvas</h3>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/gloves.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                            <center> <img src="<?= base_url('/equipments/gloves' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
                                         </div>
                                     </div>
                                 </div> 
@@ -195,7 +195,7 @@
 
                                 <!-- Boots -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Botas</h3>
                                         </div>
@@ -216,13 +216,13 @@
 
                                 <!-- Boots -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Botas</h3>
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/boots.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                            <center> <img src="<?= base_url('/equipments/boots' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
 
                                 <!-- Weapon -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Arma</h3>
                                         </div>
@@ -256,13 +256,13 @@
 
                                 <!-- Weapon -->
                                 <div class="col-sm-6">
-                                    <div class="box box-default">
+                                    <div class="box box-danger">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">Arma</h3>  
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/weapon.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>                            
+                                            <center> <img src="<?= base_url('/equipments/weapon' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>                            
                                         </div>
                                     </div>
                                 </div>

@@ -1,10 +1,6 @@
 </div>
 <!-- /.content-wrapper -->
 
-<footer class="main-footer">
-    <strong>Copyright &copy; 2017 Tale of Valhalla.</strong> Todos os direitos reservados.
-</footer>
-
 </div>
 <!-- ./wrapper -->
 
