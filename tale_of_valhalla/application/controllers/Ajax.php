@@ -131,7 +131,7 @@ class Ajax extends CI_Controller {
         $data['item'] = $this->items->find($id);
 
         $name = $data['item']->name;
-        $type = $data['item']->type;
+        $type = $data['item']->type_id;
         $buy_price = $data['item']->buy_price;
         $sell_price = $data['item']->sell_price;
         $rarity = $data['item']->rarity;

@@ -34,75 +34,79 @@
                                 ?>
 
                                 <!-- Helmet -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Elmo</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $helmet->image ?>" class="img-rounded" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+                                <div class="row row-inside">
+                                    <div class="col-sm-6">
+                                        <div class="box box-danger">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Elmo</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <center> <img id="helmet" src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $helmet->image ?>" class="img-rounded" data-id="<?= $helmet->id ?>" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
 
-                                            <hr>        
+                                                <hr>        
 
-                                            <div class="col-sm-12">
-                                                <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $helmet->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                <div class="col-sm-12">
+                                                    <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $helmet->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            <?php } else { ?>
+                                <?php } else { ?>
 
-                                <!-- Helmet -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Elmo</h3>
+                                    <!-- Helmet -->
+                                    <div class="row row-inside">
+                                        <div class="col-sm-6">
+                                            <div class="box box-danger">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Elmo</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <center> <img src="<?= base_url('/equipments/helmet' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/helmet' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            <?php } ?>
+                                    <?php } ?>
 
-                            <?php
-                            if (isset($armor)) {
-                                ?>
+                                    <?php
+                                    if (isset($armor)) {
+                                        ?>
 
-                                <!-- Armor -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Armadura</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $armor->image ?>" class="img-rounded" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+                                        <!-- Armor -->
+                                        <div class="col-sm-6">
+                                            <div class="box box-danger">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Armadura</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <center> <img id="armor" src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $armor->image ?>" class="img-rounded" data-id="<?= $armor->id ?>" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
 
-                                            <hr>        
+                                                    <hr>        
 
-                                            <div class="col-sm-12">
-                                                <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $armor->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                    <div class="col-sm-12">
+                                                        <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $armor->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            <?php } else { ?>
+                                <?php } else { ?>
 
-                                <!-- Armor -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Armadura</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/armor' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                    <!-- Armor -->
+                                    <div class="col-sm-6">
+                                        <div class="box box-danger">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Armadura</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <center> <img src="<?= base_url('/equipments/armor' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -114,78 +118,82 @@
                                 ?>
 
                                 <!-- Pants -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Calças</h3>
+                                <div class="row row-inside">
+                                    <div class="col-sm-6">
+                                        <div class="box box-danger">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Calças</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <center> <img id="pants" src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $pants->image ?>" class="img-rounded" data-id="<?= $pants->id ?>" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+
+                                                <hr>        
+
+                                                <div class="col-sm-12">
+                                                    <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $pants->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $pants->image ?>" class="img-rounded" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+                                    </div>
 
-                                            <hr>        
+                                <?php } else { ?>
 
-                                            <div class="col-sm-12">
-                                                <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $pants->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                    <!-- Pants -->
+                                    <div class="row row-inside">
+                                        <div class="col-sm-6">
+                                            <div class="box box-danger">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Calças</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <center> <img src="<?= base_url('/equipments/pants' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <?php } ?>
+
+                                    <?php
+                                    if (isset($gloves)) {
+                                        ?>
+
+                                        <!-- Gloves -->
+                                        <div class="col-sm-6">
+                                            <div class="box box-danger">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Luvas</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <center> <img id="gloves" src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $gloves->image ?>" class="img-rounded" data-id="<?= $gloves->id ?>" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+
+                                                    <hr>        
+
+                                                    <div class="col-sm-12">
+                                                        <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $gloves->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php } else { ?>
+
+                                    <!-- Gloves -->
+                                    <div class="col-sm-6">
+                                        <div class="box box-danger">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Luvas</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <center> <img src="<?= base_url('/equipments/gloves' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                            <?php } else { ?>
-
-                                <!-- Pants -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Calças</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/pants' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <?php } ?>
-
-                            <?php
-                            if (isset($gloves)) {
-                                ?>
-
-                                <!-- Gloves -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Luvas</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $gloves->image ?>" class="img-rounded" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
-
-                                            <hr>        
-
-                                            <div class="col-sm-12">
-                                                <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $gloves->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <?php } else { ?>
-
-                                <!-- Gloves -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Luvas</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/gloves' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
-                                        </div>
-                                    </div>
-                                </div> 
 
                             <?php } ?>
 
@@ -194,75 +202,79 @@
                                 ?>
 
                                 <!-- Boots -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Botas</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $boots->image ?>" class="img-rounded" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+                                <div class="row row-inside">
+                                    <div class="col-sm-6">
+                                        <div class="box box-danger">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Botas</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <center> <img id="boots" src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $boots->image ?>" class="img-rounded" data-id="<?= $boots->id ?>" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
 
-                                            <hr>        
+                                                <hr>        
 
-                                            <div class="col-sm-12">
-                                                <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $boots->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                <div class="col-sm-12">
+                                                    <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $boots->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            <?php } else { ?>
+                                <?php } else { ?>
 
-                                <!-- Boots -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Botas</h3>
+                                    <!-- Boots -->
+                                    <div class="row row-inside">
+                                        <div class="col-sm-6">
+                                            <div class="box box-danger">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Botas</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <center> <img src="<?= base_url('/equipments/boots' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/boots' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            <?php } ?>
+                                    <?php } ?>
 
-                            <?php
-                            if (isset($weapon)) {
-                                ?>
+                                    <?php
+                                    if (isset($weapon)) {
+                                        ?>
 
-                                <!-- Weapon -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Arma</h3>
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $weapon->image ?>" class="img-rounded" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
+                                        <!-- Weapon -->
+                                        <div class="col-sm-6">
+                                            <div class="box box-danger">
+                                                <div class="box-header with-border">
+                                                    <h3 class="box-title">Arma</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <center> <img id="weapon" src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/items_images/<?= $weapon->image ?>" class="img-rounded" data-id="<?= $weapon->id ?>" style="width: 90px; height: 90px; margin-bottom: -5px;"> </center>
 
-                                            <hr>        
+                                                    <hr>        
 
-                                            <div class="col-sm-12">
-                                                <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $weapon->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                    <div class="col-sm-12">
+                                                        <a href="<?= base_url('/equipment/unequip_item/' . $this->session->selected_character . '/' . $weapon->id) ?>" class="btn btn-lg btn-warning btn-fill" role="button">Desequipar</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            <?php } else { ?>
+                                <?php } else { ?>
 
-                                <!-- Weapon -->
-                                <div class="col-sm-6">
-                                    <div class="box box-danger">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Arma</h3>  
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <center> <img src="<?= base_url('/equipments/weapon' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>                            
+                                    <!-- Weapon -->
+                                    <div class="col-sm-6">
+                                        <div class="box box-danger">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Arma</h3>  
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                                <center> <img src="<?= base_url('/equipments/weapon' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>                            
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
