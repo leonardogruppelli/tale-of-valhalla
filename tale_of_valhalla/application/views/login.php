@@ -37,14 +37,11 @@
         <div class="col-sm-12 center-div">
             <div class="card horizontal login-card">
                 <div class="card-content logo-card bg-gray">
-                    <img src="<?= base_url('icons/logo.png') ?>" class="logo-login">
-                    <p class="tittle">Tale</p>
-                    <p class="tittle">of</p>
-                    <p class="tittle">Valhalla</p>
+                    <p class="tittle"><img src="<?= base_url('icons/logo.png') ?>" class="logo-login"><br>Tale<br>of<br>Valhalla</p>
                 </div>
                 <div class="card-stacked">
                     <div class="card-content bg-black-gradient">
-                        <p class="login-header">BEM-VINDO DE VOLTA.</p>
+                        <p class="login-header">BEM-VINDO.</p>
 
                         <form id="login_form" role="form" method="post" action="<?= base_url('home/login') ?>">
                             <fieldset>

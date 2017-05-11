@@ -116,4 +116,4 @@
             </aside>
 
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper" style="height: 879px;">
+            <div class="content-wrapper">
