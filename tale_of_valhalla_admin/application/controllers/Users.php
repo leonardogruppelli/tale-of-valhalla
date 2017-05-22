@@ -48,8 +48,11 @@ class Users extends CI_Controller {
         } else {
             $archive = $this->upload->data();
             $data['picture'] = $archive['file_name'];
+            
+            $datetime = new DateTime();
+            $date = $datetime->format("Y-m-d");
 
-            $insert = $this->users->insert($name, $username, $email, $password, $data['picture'], $gold, $gems);
+            $insert = $this->users->insert($name, $username, $email, $password, $data['picture'], $gold, $gems, $date);
 
             if ($insert) {
                 $situation = "1";

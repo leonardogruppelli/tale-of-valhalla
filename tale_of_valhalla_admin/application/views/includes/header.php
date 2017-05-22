@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="<?= base_url('assets/dist/adminlte/css/adminlte.min.css') ?>">
         <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/adminlte/css/skins/skin-black.min.css') ?>">
+        <!-- Morris Charts -->
+        <link rel="stylesheet" href="<?= base_url('assets/dist/morris-charts/css/morris.css') ?>">
         <!-- Tale of Valhalla CSS -->
         <link rel="stylesheet" href="<?= base_url('assets/css/tale-of-valhalla.css') ?>">
 
@@ -60,7 +62,7 @@
                                     <!-- User image -->
                                     <li class="user-header">
                                         <img src="<?= base_url('icons/manager.jpg') ?>" class="img-circle" alt="Leonardo Gruppelli">
-                                        
+
                                         <p>
                                             <?= $this->session->admin_name ?>
                                         </p>

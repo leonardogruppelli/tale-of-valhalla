@@ -10,6 +10,16 @@
 <script src="<?= base_url('assets/dist/bootstrap/js/bootstrap.min.js') ?>"></script>
 <!-- Bootstrap Confirmation -->
 <script src="<?= base_url('assets/dist/bootstrap/js/bootstrap-confirmation.min.js') ?>"></script>
+<!-- Raphael -->
+<script src="<?= base_url('assets/dist/raphael/raphael.min.js') ?>"></script>
+<!-- Morris Charts -->
+<script src="<?= base_url('assets/dist/morris-charts/js/morris.min.js') ?>"></script>
+<!-- Users Chart -->
+<script src="<?= base_url('assets/js/charts/users-per-month.js') ?>"></script>
+<!-- Characters Chart -->
+<script src="<?= base_url('assets/js/charts/characters-per-class.js') ?>"></script>
+<!-- Items Chart -->
+<script src="<?= base_url('assets/js/charts/items-per-buy.js') ?>"></script>
 <!-- FastClick -->
 <script src="<?= base_url('assets/plugins/fastclick/fastclick.min.js') ?>"></script>
 <!-- AdminLTE App -->

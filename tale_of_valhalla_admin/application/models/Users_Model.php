@@ -7,8 +7,8 @@ class Users_Model extends CI_Model {
         return $this->db->get('users')->result();
     }
 
-    public function insert($name, $username, $email, $password, $picture, $gold, $gems) {
-        $sql = "INSERT INTO users (name, username, email, password, picture, gold, gems) VALUES('$name','$username', '$email', MD5('$password'), '$picture', '$gold', '$gems')";
+    public function insert($name, $username, $email, $password, $picture, $gold, $gems, $date) {
+        $sql = "INSERT INTO users (name, username, email, password, picture, gold, gems, date) VALUES('$name','$username', '$email', MD5('$password'), '$picture', '$gold', '$gems', '$date')";
         $query = $this->db->query($sql);
         return $query;
     }
