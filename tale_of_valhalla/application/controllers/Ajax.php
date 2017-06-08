@@ -9,13 +9,13 @@ class Ajax extends CI_Controller {
     // Login -------------------------------------------------------------------
 
     public function verify_user_information() {
-        $email = htmlspecialchars(trim($_GET['email']));
+        $username = htmlspecialchars(trim($_GET['username']));
         $password = htmlspecialchars(trim($_GET['password']));
 
         $this->load->model('Users_Model', 'users');
 
-        if (!$this->users->verify($email, $password)) {
-            echo 'E-mail ou senha incorretos.';
+        if (!$this->users->verify($username, $password)) {
+            echo 'Nome de usuário ou senha incorretos.';
         }
     }
 

@@ -3,7 +3,7 @@
 class Items_Model extends CI_Model {
 
     public function select() {
-        $sql = "SELECT items.*, types.name AS type, classes.name AS class FROM items INNER JOIN types ON items.type_id = types.id INNER JOIN classes ON items.class_id = classes.id ORDER BY id";
+        $sql = "SELECT items.*, types.name AS type, classes.name AS class FROM items INNER JOIN types ON items.type_id = types.id INNER JOIN classes ON items.class_id = classes.id WHERE deleted=0 ORDER BY id";
         $query = $this->db->query($sql);
         return $query->result();
     }
@@ -18,8 +18,9 @@ class Items_Model extends CI_Model {
     }
 
     public function delete($id) {
-        $this->db->where('id', $id);
-        return $this->db->delete('items');
+        $sql = "UPDATE items SET deleted=1 WHERE id=$id";
+        $query = $this->db->query($sql);
+        return $query;
     }
 
     public function find($id) {

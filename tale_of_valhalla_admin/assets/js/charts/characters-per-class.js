@@ -7,6 +7,8 @@ $(document).ready(function () {
         Morris.Donut({
             element: 'characters-per-class',
             data: data,
+            resize: true,
+            redraw: true,
             colors: [
                 '#DB0000',
                 '#00DB07',

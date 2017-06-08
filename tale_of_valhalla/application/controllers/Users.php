@@ -7,7 +7,7 @@ class Users extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if (!$this->session->logged) {
-            redirect('home/sign_in');
+            redirect('home/login');
         }
         
         if ($this->session->selected_character == 0) {
@@ -32,48 +32,6 @@ class Users extends CI_Controller {
         $this->load->view('includes/header');
         $this->load->view('Users/users_view', $data);
         $this->load->view('includes/footer');
-    }
-
-    public function insert() {
-        $data = $this->input->post();
-        $name = $data['name'];
-        $username = $data['username'];
-        $email = $data['email'];
-        $password = $data['password'];
-        $gold = $data['gold'];
-        $gems = $data['gems'];
-
-        $config['upload_path'] = './pictures/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = 2000;
-        $config['max_width'] = 3000;
-        $config['max_height'] = 2000;
-        $config['encrypt_name'] = true;
-
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('picture')) {
-            $type = "0";
-            $message = "Arquivo Inválido " . $this->upload->display_errors();
-        } else {
-            $archive = $this->upload->data();
-            $data['picture'] = $archive['file_name'];
-
-            $insert = $this->users->insert($name, $username, $email, $password, $data['picture'], $gold, $gems);
-
-            if ($insert) {
-                $type = "1";
-                $message = "Usuário cadastrado com sucesso.";
-            } else {
-                $type = "0";
-                $message = "Erro ao cadastrar usuário.";
-            }
-        }
-
-        $this->session->set_flashdata('type', $type);
-        $this->session->set_flashdata('message', $message);
-
-        redirect(base_url('users'));
     }
 
     public function alter() {

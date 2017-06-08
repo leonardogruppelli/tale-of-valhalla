@@ -7,7 +7,7 @@ class Items extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if (!$this->session->logged) {
-            redirect('home/sign_in');
+            redirect('home/login');
         }
 
         if ($this->session->selected_character == 0) {

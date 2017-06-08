@@ -7,7 +7,7 @@ class Characters extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if (!$this->session->logged) {
-            redirect('home/sign_in');
+            redirect('home/login');
         }
         $this->load->model('Characters_Model', 'characters');
     }

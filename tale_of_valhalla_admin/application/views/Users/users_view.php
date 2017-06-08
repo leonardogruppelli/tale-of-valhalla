@@ -5,10 +5,6 @@
     <div class="box box-default">
         <div class="box-header with-border">
             <h3 class="box-title">Usuários</h3>
-
-            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#insertModal" style="float: right; margin-top: -3px">
-                <span class="glyphicon glyphicon-plus"></span> Novo Usuário
-            </button>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -60,7 +56,7 @@
                             <td style="vertical-align: middle"> <?= $user->email ?> </td>
                             <td style="vertical-align: middle"> <center> <?= $user->gold ?> </center> </td>
                             <td style="vertical-align: middle"> <center> <?= $user->gems ?> </center> </td>
-                            <td> <center> <img src="<?= base_url('/pictures/' . $user->picture) ?>" class="img-circle img-thumbnail" style="width: 85px; height: 75px;"> </center> </td>
+                            <td> <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla/pictures/<?= $user->picture ?>" class="img-circle img-thumbnail" style="width: 85px; height: 75px;"> </center> </td>
                             <td style="vertical-align: middle" width="15%">
                             <center>
                                 <a href="#" data-id="<?= $user->id ?>" class="alter-button btn btn-warning" role="button">

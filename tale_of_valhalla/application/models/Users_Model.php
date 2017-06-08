@@ -7,8 +7,8 @@ class Users_Model extends CI_Model {
         return $this->db->get('users')->result();
     }
 
-    public function insert($name, $username, $email, $password, $picture, $gold, $gems) {
-        $sql = "INSERT INTO users (name, username, email, password, picture, gold, gems) VALUES('$name','$username', '$email', MD5('$password'), '$picture', '$gold', '$gems')";
+    public function insert($name, $username, $email, $password, $picture, $date) {
+        $sql = "INSERT INTO users (name, username, email, password, picture, date) VALUES('$name','$username', '$email', MD5('$password'), '$picture', '$date')";
         $query = $this->db->query($sql);
         return $query;
     }
@@ -36,9 +36,9 @@ class Users_Model extends CI_Model {
         return $query->row();
     }
 
-    public function verify($email, $password) {
-        $sql = "SELECT * FROM users WHERE email=? AND password=?";
-        $query = $this->db->query($sql, array($email, md5($password)));
+    public function verify($username, $password) {
+        $sql = "SELECT * FROM users WHERE username=? AND password=?";
+        $query = $this->db->query($sql, array($username, md5($password)));
         return $query->row();
     }
 

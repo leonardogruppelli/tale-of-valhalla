@@ -20,7 +20,7 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/adminlte/css/skins/skin-black.min.css') ?>">
         <!-- Materialize -->
-        <link rel="stylesheet" href="<?= base_url('assets/plugins/materialize/css/materialize.min.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('assets/dist/materialize/css/materialize.min.css') ?>">
         <!-- Tale of Valhalla CSS -->
         <link rel="stylesheet" href="<?= base_url('assets/css/tale-of-valhalla.css') ?>">
 
@@ -56,7 +56,7 @@
                                         <div id="help_login"></div>
                                     </div>
                                 </div>
-                                <button id="login_button" type="button" class="btn btn-lg btn-default btn-block">Entrar</button>
+                                <button id="login_button" type="button" class="waves-effect waves-light btn black btn-block">Entrar</button>
                             </fieldset>
                         </form>
                     </div>              
@@ -68,12 +68,10 @@
         <script src="<?= base_url('assets/dist/jquery/jquery.min.js') ?>"></script>
         <!-- Bootstrap 3.3.6 -->
         <script src="<?= base_url('assets/dist/bootstrap/js/bootstrap.min.js') ?>"></script>
-        <!-- FastClick -->
-        <script src="<?= base_url('assets/plugins/fastclick/fastclick.min.js') ?>"></script>
+        <!-- Materialize -->
+        <script src="<?= base_url('assets/dist/materialize/js/materialize.min.js') ?>"></script>
         <!-- AdminLTE App -->
         <script src="<?= base_url('assets/dist/adminlte/js/adminlte.min.js') ?>"></script>
-        <!-- SlimScroll 1.3.0 -->
-        <script src="<?= base_url('assets/plugins/slimScroll/slimscroll.min.js') ?>"></script>
         <!-- Managers AJAX -->
         <script src="<?= base_url('assets/js/ajax/managers.js') ?>"></script>
     </body>

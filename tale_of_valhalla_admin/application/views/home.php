@@ -10,20 +10,14 @@
         <div class="box-body">
             <div class="col-sm-12">
 
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Usuários Cadastrados por Mês</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="col-sm-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs pull-right ui-sortable-handle">
+                        <li class="pull-left header"> Usuários Cadastrados por Mês</li>
+                    </ul>
+                    <div class="tab-content">
 
-                            <div id="users-per-month" style="height: 250px"></div>
-
-                        </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-sm-6">
@@ -43,7 +37,7 @@
                 </div>
 
             </div>
-            
+
             <div class="col-sm-6">
 
                 <div class="box box-danger">
@@ -64,5 +58,3 @@
         </div>
     </div>
 </section>
-
-

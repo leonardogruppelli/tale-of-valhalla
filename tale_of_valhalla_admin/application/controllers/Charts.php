@@ -12,13 +12,27 @@ class Charts extends CI_Controller {
         $this->load->model('Charts_Model', 'charts');
     }
 
+    public function find_years() {
+        $data['years'] = $this->charts->find_years();
+
+        $json = array();
+        foreach ($data['years'] as $data) {
+            $json[] = array(
+                'year' => $data->year,
+            );
+        }
+
+        echo json_encode($json);
+    }
+    
     public function users_per_month() {
-        $data['users_per_month'] = $this->charts->users_per_month();
+        $year = htmlspecialchars(trim($_GET['year']));
+        $data['users_per_month'] = $this->charts->users_per_month($year);
 
         $json = array();
         foreach ($data['users_per_month'] as $data) {
             $json[] = array(
-                'date' => $data->year . "-" . $data->month,
+                'date' => $year . '-' . $data->month,
                 'users' => $data->users
             );
         }

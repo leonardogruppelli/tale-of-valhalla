@@ -71,16 +71,22 @@
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/pictures/<?= $this->session->picture ?>" class="user-image" alt="<?= $this->session->name ?>">
-                                    <span class="hidden-xs"><?= $this->session->name ?></span>
+                                    <img src="<?= base_url('/pictures/' . $this->session->picture) ?>" class="user-image" alt="<?= $this->session->username ?>">
+                                    <span class="hidden-xs"><?= $this->session->username ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src="http://localhost/tale_of_valhalla/tale_of_valhalla_admin/pictures/<?= $this->session->picture ?>" class="img-circle" alt="<?= $this->session->name ?>">
+                                        <img src="<?= base_url('/pictures/' . $this->session->picture) ?>" class="img-circle" alt="<?= $this->session->username ?>">
 
                                         <p>
+                                            <strong><?= $this->session->username ?></strong>
+                                            
+                                            <br>
+                                            
                                             <?= $this->session->name ?>
+
+                                            <small> Membro desde: <strong><?= $this->session->date ?></strong> </small>
                                         </p>
                                     </li>
                                     <!-- Menu Footer-->

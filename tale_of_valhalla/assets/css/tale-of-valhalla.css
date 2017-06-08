@@ -40,8 +40,10 @@
     justify-content: center;
 }
 .login-card {
-    width: 60%;
-    height: 70%;
+    min-width: 60%;
+    min-height: 70%;
+    width: auto;
+    height: auto;
 }
 .logo-card {
     width: 30%;

@@ -465,7 +465,7 @@ if (url.includes('users')) {
             $('.modal-body #alter_email').val(user_email);
             $('.modal-body #alter_gold').val(user_gold);
             $('.modal-body #alter_gems').val(user_gems);
-            $('.modal-body #alter_image').attr('src', './pictures/' + user_picture);
+            $('.modal-body #alter_image').attr('src', 'http://localhost/tale_of_valhalla/tale_of_valhalla/pictures/' + user_picture);
         });
 
         // Alter Name popover

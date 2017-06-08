@@ -1,9 +1,15 @@
 <?php
 
 class Charts_Model extends CI_Model {
+    
+    public function find_years() {
+        $sql = "SELECT YEAR(date) AS year FROM users GROUP BY YEAR(date)";
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 
-    public function users_per_month() {        
-        $sql = "SELECT YEAR(users.date) AS year, MONTH(users.date) AS month, COUNT(users.id) AS users FROM users GROUP BY YEAR(users.date), MONTH(users.date)";
+    public function users_per_month($year) {        
+        $sql = "SELECT MONTH(users.date) AS month, COUNT(users.id) AS users FROM users WHERE YEAR(date) = '$year' GROUP BY '$year', MONTH(users.date)";
         $query = $this->db->query($sql);
         return $query->result();        
     }

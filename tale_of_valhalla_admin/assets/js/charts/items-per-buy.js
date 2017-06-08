@@ -17,10 +17,12 @@ $(document).ready(function () {
         for (var i = 0; i < data.length; i++) {
             colors.push(get_random_color());
         }
-        
+
         Morris.Donut({
             element: 'items-per-buy',
             data: data,
+            resize: true,
+            redraw: true,
             colors: colors
         });
     });

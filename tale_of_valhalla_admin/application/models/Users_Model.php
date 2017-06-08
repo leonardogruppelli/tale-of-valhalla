@@ -3,8 +3,9 @@
 class Users_Model extends CI_Model {
     
     public function select() {
-        $this->db->order_by('id');
-        return $this->db->get('users')->result();
+        $sql = "SELECT * FROM users WHERE deleted = 0";
+        $query = $this->db->query($sql);
+        return $query->result();
     }
 
     public function insert($name, $username, $email, $password, $picture, $gold, $gems, $date) {
@@ -14,14 +15,15 @@ class Users_Model extends CI_Model {
     }
 
     public function update($id, $name, $username, $email, $picture, $gold, $gems) {
-        $sql = "UPDATE users SET name='$name', username='$username', email='$email', picture='$picture', gold='$gold', gems='$gems' WHERE id=$id";
+        $sql = "UPDATE users SET name = '$name', username = '$username', email = '$email', picture = '$picture', gold = '$gold', gems = '$gems' WHERE id = $id";
         $query = $this->db->query($sql);
         return $query;
     }
 
     public function delete($id) {
-        $this->db->where('id', $id);
-        return $this->db->delete('users');
+        $sql = "UPDATE users SET deleted = 1 WHERE id = $id";
+        $query = $this->db->query($sql);
+        return $query;
     }
     
     public function find($id) {
