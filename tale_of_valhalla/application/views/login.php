@@ -56,7 +56,7 @@
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Senha" name="password" id="password" required>
                                     </div>
-                                    <div class="form-group has-error">
+                                    <div class="form-group">
                                         <div id="login_alert" class="alert alert-danger hidden">
                                             <div id="help_login"></div>
                                         </div>
@@ -69,14 +69,14 @@
                             if ($this->session->has_userdata('message')) {
                                 $message = $this->session->flashdata('message');
                                 if ($this->session->flashdata('situation') == '1') {
-                                    echo "<div class='col s12' style='margin-top: 10px'>";
+                                    echo "<div class='col s12' style='margin-top: 10px; margin-left: 10px; margin-right: 10px'>";
                                     echo "<div class='alert alert-success alert-dismissable'>";
                                     echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
                                     echo $message;
                                     echo "</div>";
                                     echo "</div>";
                                 } else {
-                                    echo "<div class='col s12' style='margin-top: 10px'>";
+                                    echo "<div class='col s12' style='margin-top: 10px; margin-left: 10px; margin-right: 10px'>";
                                     echo "<div class='alert alert-danger alert-dismissable'>";
                                     echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
                                     echo $message;
@@ -91,37 +91,32 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <div id="form_name" class="form-group has-feedback">
-                                            <input type="text" class="form-control" placeholder="Nome" name="name" id="name" autofocus required>
-                                            <span id="icon_name" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Nome" name="name" id="register_name" autofocus required>
                                         </div>
                                     </div>
 
                                     <div class="col s6">
-                                        <div id="form_username" class="form-group has-feedback">
-                                            <input type="text" class="form-control" placeholder="Nome de Usuário" name="username" id="username" maxlength="15" required>
-                                            <span id="icon_username" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Nome de Usuário" name="username" id="register_username" required>
                                         </div>
                                     </div>
 
                                     <div class="col s12">
-                                        <div id="form_email" class="form-group has-feedback">
-                                            <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" required>
-                                            <span id="icon_email" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="E-mail" name="email" id="register_email" required>
                                         </div>
                                     </div>
 
                                     <div class="col s6">
-                                        <div id="form_password" class="form-group has-feedback">
-                                            <input type="password" class="form-control" placeholder="Senha" name="password" id="password" minlength="6" maxlength="20" required>
-                                            <span id="icon_password" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Senha" name="password" id="register_password" required>
                                         </div>
                                     </div>
 
                                     <div class="col s6">
-                                        <div id="form_confirm_password" class="form-group has-feedback">
-                                            <input type="password" class="form-control" placeholder="Confirmar Senha" name="confirm_password" id="confirm_password" required>
-                                            <span id="icon_confirm_password" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Confirmar Senha" name="confirm_password" id="register_confirm_password" required>
                                         </div>
                                     </div>
 
@@ -129,7 +124,7 @@
                                         <div class="col-sm-8 col-sm-offset-2">
                                             <div class="form-group">
                                                 <img id="image" src="<?= base_url('icons/user_icon.png') ?>" class="img-rounded img-thumbnail avatar" width="100px" height="100px">
-                                                <input type="file" name="picture" id="picture" class="form-control" accept=".gif,.jpg,.png" required>
+                                                <input type="file" class="form-control" name="picture" id="register_picture" accept=".gif,.jpg,.png" required>
                                             </div>
                                         </div>
                                     </center>

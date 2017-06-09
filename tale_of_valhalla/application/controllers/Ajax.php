@@ -5,7 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Ajax extends CI_Controller {
 
 // USERS ***********************************************************************
-    
     // Login -------------------------------------------------------------------
 
     public function verify_user_information() {
@@ -20,7 +19,6 @@ class Ajax extends CI_Controller {
     }
 
     // -------------------------------------------------------------------------
-
     // Insert ------------------------------------------------------------------
 
     public function verify_user_name() {
@@ -58,9 +56,8 @@ class Ajax extends CI_Controller {
     }
 
     // -------------------------------------------------------------------------
-    
     // Alter -------------------------------------------------------------------
-    
+
     public function find_user() {
         $id = htmlspecialchars(trim($_GET['id']));
         $this->load->model('Users_Model', 'users');
@@ -73,8 +70,8 @@ class Ajax extends CI_Controller {
         $gold = $data['user']->gold;
         $gems = $data['user']->gems;
         $picture = $data['user']->picture;
-        
-        echo $name . ',' . $username . ',' . $email . ','  . $gold . ',' . $gems . ',' . $picture;
+
+        echo $name . ',' . $username . ',' . $email . ',' . $gold . ',' . $gems . ',' . $picture;
     }
 
     public function verify_user_username_alter() {
@@ -97,56 +94,6 @@ class Ajax extends CI_Controller {
         }
     }
 
-// *****************************************************************************
-
-// Items ***********************************************************************
-    
-    // Insert ------------------------------------------------------------------
-    
-    public function verify_item_name() {
-        $name = htmlspecialchars(trim($_GET['name']));
-        $this->load->model('Items_Model', 'items');
-
-        if ($this->items->find_name($name)) {
-            echo 'Item já cadastrado';
-        }
-    }
-
-    public function update_sell_price() {
-        $buy_price = htmlspecialchars(trim($_GET['buy_price']));
-
-        $sell_price = $buy_price * 0.50;
-
-        echo $sell_price;
-    }
-
     // -------------------------------------------------------------------------
-    
-    // Alter -------------------------------------------------------------------
-    
-    public function find_item() {
-        $id = htmlspecialchars(trim($_GET['id']));
-        $this->load->model('Items_Model', 'items');
-
-        $data['item'] = $this->items->find($id);
-
-        $name = $data['item']->name;
-        $type = $data['item']->type_id;
-        $buy_price = $data['item']->buy_price;
-        $sell_price = $data['item']->sell_price;
-        $rarity = $data['item']->rarity;
-        $level = $data['item']->level;
-        $attack = $data['item']->attack;
-        $defense = $data['item']->defense;
-        $agility = $data['item']->agility;
-        $intelligence = $data['item']->intelligence;
-        $unique = $data['item']->unique;
-        $image = $data['item']->image;
-        
-        echo $name . ',' . $type . ','  . $buy_price . ',' . $sell_price . ',' . $rarity . ',' . $level . ','  . $attack . ',' . $defense . ',' . $agility . ','  . $intelligence . ',' . $unique . ',' . $image;
-    }
-    
-    // -------------------------------------------------------------------------
-    
 // *****************************************************************************
 }
