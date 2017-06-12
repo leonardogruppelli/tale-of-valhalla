@@ -90,34 +90,29 @@
                             <form id="sign_up_form" role="form" method="post" action="<?= base_url('home/sign_up') ?>" enctype="multipart/form-data">
                                 <div class="row">
 
-                                    <div class="col s6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nome" name="name" id="register_name" autofocus required>
-                                        </div>
+                                    <div class="input-field col s6">
+                                        <input type="text" name="name" id="register_name" required>
+                                        <label id="label_name" for="register_name">Nome</label>
                                     </div>
 
-                                    <div class="col s6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nome de Usuário" name="username" id="register_username" required>
-                                        </div>
+                                    <div class="input-field col s6">
+                                        <input type="text" name="username" id="register_username" required>
+                                        <label id="label_username" for="register_username">Nome de Usuário</label>
                                     </div>
 
-                                    <div class="col s12">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="E-mail" name="email" id="register_email" required>
-                                        </div>
+                                    <div class="input-field col s12">
+                                        <input type="email" name="email" id="register_email" required>
+                                        <label id="label_email" for="register_email">E-mail</label>
                                     </div>
 
-                                    <div class="col s6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Senha" name="password" id="register_password" required>
-                                        </div>
+                                    <div class="input-field col s6">
+                                        <input type="password" name="password" id="register_password" required>
+                                        <label id="label_password" for="register_password">Senha</label>
                                     </div>
 
-                                    <div class="col s6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Confirmar Senha" name="confirm_password" id="register_confirm_password" required>
-                                        </div>
+                                    <div class="input-field col s6">
+                                        <input type="password" name="confirm_password" id="register_confirm_password" required>
+                                        <label id="label_confirm_password" for="register_confirm_password">Confirmar Senha</label>
                                     </div>
 
                                     <center>

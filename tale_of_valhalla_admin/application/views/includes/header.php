@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/dist/ionicons/css/ionicons.min.css') ?>">
         <!-- Theme style -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/adminlte/css/adminlte.min.css') ?>">
-        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <!-- AdminLTE Skins -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/adminlte/css/skins/skin-black.min.css') ?>">
         <!-- Morris Charts -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/morris-charts/css/morris.css') ?>">

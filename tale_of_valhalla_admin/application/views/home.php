@@ -10,14 +10,16 @@
         <div class="box-body">
             <div class="col-sm-12">
 
-                <div class="nav-tabs-custom">
-                    <ul class="nav nav-tabs pull-right ui-sortable-handle">
-                        <li class="pull-left header"> Usuários Cadastrados por Mês</li>
-                    </ul>
-                    <div class="tab-content">
-
+                <div class="box box-info">
+                    <div class="users-box box-header with-border">
+                        
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="charts col-sm-12"></div>
                     </div>
                 </div>
+                
             </div>
 
             <div class="col-sm-6">

@@ -77,6 +77,8 @@ if (url.includes('home')) {
 
             $.get(path + 'ajax/verify_user_name', {name: $('#register_name').val()}, function (data) {
                 if (data) {
+                    $('#label_name').attr('data-error', data);
+                    
                     $('#register_name').removeClass('valid');
                     $('#register_name').addClass('invalid');
                     name_has_error = true;
@@ -97,6 +99,8 @@ if (url.includes('home')) {
             var username = $('#register_username').val();
 
             if (username.length < 3) {
+                $('#label_username').attr('data-error', 'Nome de usuário muito curto');
+                
                 $('#register_username').removeClass('valid');
                 $('#register_username').addClass('invalid');
                 username_has_error = true;
@@ -106,6 +110,8 @@ if (url.includes('home')) {
                 if (validate_username(username)) {
                     $.get(path + 'ajax/verify_user_username', {username: $('#register_username').val()}, function (data) {
                         if (data) {
+                            $('#label_username').attr('data-error', data);
+                            
                             $('#register_username').removeClass('valid');
                             $('#register_username').addClass('invalid');
                             username_has_error = true;
@@ -120,6 +126,8 @@ if (url.includes('home')) {
                         }
                     });
                 } else {
+                    $('#label_name').attr('data-error', 'Nome de usuário inválido');
+                    
                     $('#register_username').removeClass('valid');
                     $('#register_username').addClass('invalid');
                     username_has_error = true;
@@ -136,6 +144,8 @@ if (url.includes('home')) {
             if (validate_email(email)) {
                 $.get(path + 'ajax/verify_user_email', {email: $('#register_email').val()}, function (data) {
                     if (data) {
+                        $('#label_email').attr('data-error', data);
+                        
                         $('#register_email').removeClass('valid');
                         $('#register_email').addClass('invalid');
                         email_has_error = true;
@@ -150,6 +160,8 @@ if (url.includes('home')) {
                     }
                 });
             } else {
+                $('#label_email').attr('data-error', 'E-mail inválido');
+                
                 $('#register_email').removeClass('valid');
                 $('#register_email').addClass('invalid');
                 email_has_error = true;
@@ -163,6 +175,8 @@ if (url.includes('home')) {
             var password = $('#register_password').val();
             
             if (password.length < 6) {
+                $('#label_password').attr('data-error', 'Senha muito curta');
+                
                 $('#register_password').removeClass('valid');
                 $('#register_password').addClass('invalid');
                 password_has_error = true;
@@ -182,6 +196,8 @@ if (url.includes('home')) {
 
             $.get(path + 'ajax/verify_user_password', {confirm_password: $('#register_confirm_password').val(), password: $('#register_password').val()}, function (data) {
                 if (data) {
+                    $('#label_confirm_password').attr('data-error', data);
+                    
                     $('#register_confirm_password').removeClass('valid');
                     $('#register_confirm_password').addClass('invalid');
                     confirm_password_has_error = true;
