@@ -4,6 +4,10 @@
 
 A documentação do projeto pode ser encontrada na [Wiki](https://gitlab.com/leonardo.gruppelli/Tale-of-Valhalla/wikis/home).
 
+## Licensa
+
+O projeto está licenciado com a GNU Lesser General Public License v3.0. Na qual todos estão autorizados a copiar e distribuir cópias autênticas deste projeto, mas a alteração não é permitida.
+
 ## Tecnologias utilizadas
 - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [PHP 5.6](http://php.net/manual/pt_BR/)
