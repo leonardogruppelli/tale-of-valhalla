@@ -1,14 +1,14 @@
 ## Projeto Tale of Valhalla - Jogo baseado em turnos com temática nórdica
 
-## Documentação
+### **Documentação**
 
 A documentação do projeto pode ser encontrada na [Wiki](https://gitlab.com/leonardo.gruppelli/Tale-of-Valhalla/wikis/home).
 
-## Licensa
+### **Licensa**
 
 O projeto está licenciado com a GNU Lesser General Public License v3.0. Na qual todos estão autorizados a copiar e distribuir cópias autênticas deste projeto, mas a alteração não é permitida.
 
-## Tecnologias utilizadas
+### **Tecnologias utilizadas**
 - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [PHP 5.6](http://php.net/manual/pt_BR/)
 - [MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/)
@@ -18,7 +18,7 @@ O projeto está licenciado com a GNU Lesser General Public License v3.0. Na qual
 - [Bootstrap 3.3.6](http://getbootstrap.com.br/components/)
 - [jQuery 2.2.3](https://api.jquery.com/)
 
-## Execução no Netbeans
+### **Execução no Netbeans**
 1. Clone o projeto 
 
 <code>git clone git@gitlab.com:leonardo.gruppelli/Tale-of-Valhalla.git</code>
