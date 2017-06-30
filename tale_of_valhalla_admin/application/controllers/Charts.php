@@ -56,8 +56,8 @@ class Charts extends CI_Controller {
         for ($i = 1; $i < 13; $i++) {
             $json[] = array(
                 'month' => $year . '-0' . $i,
-                $year => preg_replace('/\D/', '', ${'current_year_' . $i}),
-                $year - 1 => preg_replace('/\D/', '', ${'last_year_' . $i})
+                $year => ${'current_year_' . $i},
+                $year - 1 => ${'last_year_' . $i}
             );
         }
 

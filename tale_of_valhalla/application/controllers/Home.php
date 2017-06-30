@@ -80,7 +80,7 @@ class Home extends CI_Controller {
 
         if (!$this->upload->do_upload('picture')) {
             $situation = "0";
-            $message = "Arquivo Inválido " . $this->upload->display_errors();
+            $message = "Arquivo Inválido.";
         } else {
             $archive = $this->upload->data();
             $data['picture'] = $archive['file_name'];

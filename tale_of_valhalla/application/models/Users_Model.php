@@ -37,9 +37,15 @@ class Users_Model extends CI_Model {
     }
 
     public function verify($username, $password) {
-        $sql = "SELECT * FROM users WHERE username=? AND password=?";
+        $sql = "SELECT * FROM users WHERE username=? AND password=? AND deleted=0";
         $query = $this->db->query($sql, array($username, md5($password)));
         return $query->row();
+    }
+    
+    public function is_blocked($username, $password) {
+        $sql = "SELECT deleted FROM users WHERE username=? AND password=?";
+        $query = $this->db->query($sql, array($username, md5($password)));
+        return $query->row('deleted');
     }
 
     public function find_username($username) {

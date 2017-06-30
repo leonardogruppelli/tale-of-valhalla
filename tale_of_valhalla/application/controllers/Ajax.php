@@ -14,7 +14,11 @@ class Ajax extends CI_Controller {
         $this->load->model('Users_Model', 'users');
 
         if (!$this->users->verify($username, $password)) {
-            echo 'Nome de usuário ou senha incorretos.';
+            if ($this->users->is_blocked($username, $password) == 0) {
+                echo 'Nome de usuário ou senha incorretos.';
+            } else {
+                echo 'Conta bloqueada.';
+            }
         }
     }
 

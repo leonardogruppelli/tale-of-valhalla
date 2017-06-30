@@ -10,7 +10,7 @@
         <div class="box-body">
             <div class="col-sm-12">
 
-                <div class="box box-info">
+                <div class="box box-primary">
                     <div class="users-box box-header with-border">
                         
                     </div>
