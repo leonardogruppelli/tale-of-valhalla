@@ -8,6 +8,12 @@ class Characters_Model extends CI_Model {
         return $query->row();
     }
     
+    public function select_stats($character_id) {
+        $sql = "SELECT * FROM characters WHERE id = $character_id";
+        $query = $this->db->query($sql);
+        return $query->row();
+    }
+    
     public function create_warrior($user_id, $class_id) {
         $sql = "INSERT INTO characters (user_id, class_id, attack, defense, agility, intelligence, health, mana, max_experience) VALUES('$user_id','$class_id', '50', '50', '25', '25', '250', '250', '50')";
         $query = $this->db->query($sql);

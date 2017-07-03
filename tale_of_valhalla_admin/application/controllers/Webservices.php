@@ -95,6 +95,6 @@ class Webservices extends CI_Controller {
             );
         }
 
-        echo json_encode($json, JSON_UNESCAPED_UNICODE);
+        echo json_encode(array('types' => $json), JSON_UNESCAPED_UNICODE);
     }
 }

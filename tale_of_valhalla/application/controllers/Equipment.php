@@ -24,6 +24,7 @@ class Equipment extends CI_Controller {
     }
 
     public function index() {
+        $this->load->model('Characters_Model', 'characters');
         $this->load->model('Inventory_Model', 'inventory');
 
         $character_id = $this->session->selected_character;
@@ -34,6 +35,8 @@ class Equipment extends CI_Controller {
         $data['gloves'] = $this->equipment->select_equipment($character_id, 4);
         $data['boots'] = $this->equipment->select_equipment($character_id, 5);
         $data['weapon'] = $this->equipment->select_equipment($character_id, 6);
+        
+        $data['stats'] = $this->characters->select_stats($character_id);
 
         $data['inventory'] = $this->inventory->select_inventory($character_id);
 

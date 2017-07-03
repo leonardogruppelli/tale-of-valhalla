@@ -287,8 +287,43 @@
             </div>
         </div>
 
+        <!-- Stats -->
+        <div class="col-sm-2" style="padding-left: 0;">                              
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Atributos</h3>
+                </div>
+                <div class="box-body">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <center>
+                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/attack.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                        <strong>Ataque:</strong> <?= $stats->attack ?> 
+                                        <img src="<?= base_url('/icons/attack.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                    </p>
+                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/defense.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                        <strong>Defesa:</strong> <?= $stats->defense ?> 
+                                        <img src="<?= base_url('/icons/defense.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                    </p>
+                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/agility.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                        <strong>Agilidade:</strong> <?= $stats->agility ?> 
+                                        <img src="<?= base_url('/icons/agility.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                    </p>
+                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                        <strong>Inteligência:</strong> <?= $stats->intelligence ?> 
+                                        <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                    </p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Inventory -->
-        <div class="col-sm-10" style="padding-left: 0; padding-right: 0;">                              
+        <div class="col-sm-8" style="padding-left: 0; padding-right: 0;">                              
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title">Inventário</h3>
@@ -350,7 +385,7 @@
                                         ?>
 
                                         <a data-html="true" data-toggle="popover" data-trigger="hover"
-                                           title="<center> <img src='<?= base_url('/icons/' . $icon_rarity . '.png') ?>' style='width: 20px; height: 20px; margin-bottom: 5px'> <br>
+                                           title="<center> <img src='<?= base_url('/icons/' . $icon_rarity . '.png') ?>' style='width: 18px; height: 20px; margin-bottom: 5px'> <br>
                                            <strong style='font-size: 16px'><?= $item->name ?></strong></center>" 
                                            data-content="<strong>Ataque:</strong> <?= $item->attack ?> <br>
                                            <strong>Defesa:</strong> <?= $item->defense ?> <br>
