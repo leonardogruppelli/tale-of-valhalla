@@ -113,7 +113,7 @@
 
                                             <?php if ($item->unique == 0) { ?>
                                                 <a href="<?= base_url('/inventory/sell_item/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="btn btn-lg btn-danger btn-form" data-toggle="confirmation"
-                                                   data-title="Vender Item?"
+                                                   data-title="Vender Item? (<?= $item->sell_price ?>g)"
                                                    data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                    data-btn-ok-class="btn-success"
                                                    data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
@@ -125,7 +125,7 @@
                                                 </a>
                                             <?php } else { ?>
                                                 <a href="<?= base_url('/inventory/sell_item_unique/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="btn btn-lg btn-danger btn-form" data-toggle="confirmation"
-                                                   data-title="Vender Item?"
+                                                   data-title="Vender Item? (<?= $item->sell_price ?>g)"
                                                    data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                    data-btn-ok-class="btn-success"
                                                    data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"

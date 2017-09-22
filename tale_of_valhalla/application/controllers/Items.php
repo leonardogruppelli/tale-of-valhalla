@@ -25,8 +25,9 @@ class Items extends CI_Controller {
 
     public function index() {
         $character_id = $this->session->selected_character;
+        $class_id = $this->session->selected_class;
 
-        $data['items'] = $this->items->select($character_id);
+        $data['items'] = $this->items->select($character_id, $class_id);
         
         $session['navigation'] = "items";
         $this->session->set_userdata($session);

@@ -3,7 +3,7 @@
     <div class="row row-inside">
 
         <!-- Equipment -->
-        <div class="col-sm-2" style="padding-left: 0;">
+        <div class="col-sm-1" style="padding-left: 0;">
             <div class="box box-default">
                 <div class="box-header with-border" style="margin-bottom: 10px;">
                     <h3 class="box-title">Equipamento</h3>
@@ -15,7 +15,7 @@
 
                     <!-- Helmet -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
+                        <div class="col-sm-12" style="margin-top: 5px">
                             <center>
                                 <?php
                                 if ($helmet->rarity == 1) {
@@ -49,8 +49,8 @@
 
                     <!-- Helmet -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <center> <img src="<?= base_url('/equipments/helmet' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                        <div class="col-sm-12" style="margin-top: 5px">
+                            <center> <img src="<?= base_url('/equipments/helmet.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@
 
                     <!-- Armor -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
+                        <div class="col-sm-12">
                             <center>
                                 <?php
                                 if ($armor->rarity == 1) {
@@ -94,8 +94,8 @@
                 <?php } else { ?>
 
                     <!-- Armor -->
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <center> <img src="<?= base_url('/equipments/armor' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                    <div class="col-sm-12">
+                        <center> <img src="<?= base_url('/equipments/armor.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                     </div>
 
                 <?php } ?>
@@ -106,7 +106,7 @@
 
                     <!-- Pants -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
+                        <div class="col-sm-12">
                             <center>
                                 <?php
                                 if ($pants->rarity == 1) {
@@ -139,8 +139,8 @@
 
                     <!-- Pants -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <center> <img src="<?= base_url('/equipments/pants' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                        <div class="col-sm-12">
+                            <center> <img src="<?= base_url('/equipments/pants.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                         </div>
                     </div>
 
@@ -152,7 +152,7 @@
 
                     <!-- Gloves -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
+                        <div class="col-sm-12">
                             <center>
                                 <?php
                                 if ($gloves->rarity == 1) {
@@ -185,8 +185,8 @@
 
                     <!-- Gloves -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <center> <img src="<?= base_url('/equipments/gloves' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>                                 
+                        <div class="col-sm-12">
+                            <center> <img src="<?= base_url('/equipments/gloves.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>                                 
                         </div>
                     </div>
 
@@ -198,7 +198,7 @@
 
                     <!-- Boots -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
+                        <div class="col-sm-12">
                             <center>
                                 <?php
                                 if ($boots->rarity == 1) {
@@ -231,8 +231,8 @@
 
                     <!-- Boots -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <center> <img src="<?= base_url('/equipments/boots' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>
+                        <div class="col-sm-12">
+                            <center> <img src="<?= base_url('/equipments/boots.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                         </div>
                     </div>
 
@@ -244,7 +244,7 @@
 
                     <!-- Weapon -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
+                        <div class="col-sm-12">
                             <center>
                                 <?php
                                 if ($weapon->rarity == 1) {
@@ -277,8 +277,8 @@
 
                     <!-- Weapon -->
                     <div class="row row-inside">
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <center> <img src="<?= base_url('/equipments/weapon' . $this->session->selected_class . '.png') ?>" class="img-rounded" style="width: 90px; height: 90px; margin-top: -5px; margin-bottom: 10px;"> </center>                                           
+                        <div class="col-sm-12">
+                            <center> <img src="<?= base_url('/equipments/weapon.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>                                           
                         </div>
                     </div>
 
@@ -298,21 +298,21 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <center>
-                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/attack.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                    <p style="font-size: 15px"><img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px; margin-right: 5px">
                                         <strong>Ataque:</strong> <?= $stats->attack ?> 
-                                        <img src="<?= base_url('/icons/attack.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                        <img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px; margin-left: 5px">
                                     </p>
-                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/defense.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                    <p style="font-size: 15px"><img src="<?= base_url('/icons/defense.png') ?>" style="width: 20px; height: 20px; margin-right: 5px">
                                         <strong>Defesa:</strong> <?= $stats->defense ?> 
-                                        <img src="<?= base_url('/icons/defense.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                        <img src="<?= base_url('/icons/defense.png') ?>" style="width: 20px; height: 20px; margin-left: 5px">
                                     </p>
-                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/agility.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                    <p style="font-size: 15px"><img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px; margin-right: 5px">
                                         <strong>Agilidade:</strong> <?= $stats->agility ?> 
-                                        <img src="<?= base_url('/icons/agility.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                        <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px; margin-left: 5px">
                                     </p>
-                                    <p style="font-size: 18px"><img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 30px; height: 30px; margin-right: 5px">
+                                    <p style="font-size: 15px"><img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px; margin-right: 5px">
                                         <strong>Inteligência:</strong> <?= $stats->intelligence ?> 
-                                        <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 30px; height: 30px; margin-left: 5px">
+                                        <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px; margin-left: 5px">
                                     </p>
                                 </center>
                             </div>
@@ -323,7 +323,7 @@
         </div>
 
         <!-- Inventory -->
-        <div class="col-sm-8" style="padding-left: 0; padding-right: 0;">                              
+        <div class="col-sm-9" style="width: 73%;padding-left: 0; padding-right: 0;">                              
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title">Inventário</h3>
@@ -332,23 +332,6 @@
                 <div class="box-body">
                     <div class="col-sm-12">
                         <div class="row">
-                            <?php
-                            if ($this->session->has_userdata('message')) {
-                                $message = $this->session->flashdata('message');
-                                if ($this->session->flashdata('situation') == '1') {
-                                    echo "<div class='alert alert-success alert-dismissable' style='margin-left: 15px; margin-right: 15px;'>";
-                                    echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-                                    echo $message;
-                                    echo "</div>";
-                                } else {
-                                    echo "<div class='alert alert-danger alert-dismissable' style='margin-left: 15px; margin-right: 15px;'>";
-                                    echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-                                    echo $message;
-                                    echo "</div>";
-                                }
-                            }
-                            ?>
-
                             <?php if (!$inventory) { ?>
                                 <h5 style="margin-left: 15px; margin-right: 15px;">Você não possui nenhum item no inventário.</h5>
                             <?php } ?>
@@ -369,7 +352,7 @@
                                 ?>
 
                                 <!-- Inventory -->
-                                <div class="col-sm-2">
+                                <div class="col-sm-1">
 
                                     <center>
                                         <?php

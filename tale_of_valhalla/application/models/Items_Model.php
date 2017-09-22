@@ -2,8 +2,8 @@
 
 class Items_Model extends CI_Model {
 
-    public function select($character_id) {
-        $sql = "SELECT items.*, classes.name AS class, types.name AS type FROM items INNER JOIN classes ON items.class_id = classes.id INNER JOIN types ON items.type_id = types.id WHERE items.deleted = 0 AND items.id NOT IN (SELECT inventory.item_id FROM inventory WHERE inventory.character_id = $character_id) ORDER BY id";
+    public function select($character_id, $class_id) {
+        $sql = "SELECT items.*, classes.name AS class, types.name AS type FROM items INNER JOIN classes ON items.class_id = classes.id INNER JOIN types ON items.type_id = types.id WHERE classes.id = $class_id AND items.deleted = 0 AND items.id NOT IN (SELECT inventory.item_id FROM inventory WHERE inventory.character_id = $character_id) ORDER BY id";
         $query = $this->db->query($sql);
         return $query->result();
     }

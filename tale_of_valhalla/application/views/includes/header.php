@@ -65,7 +65,7 @@
                                         <img src="<?= base_url('/icons/dagger.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"> <strong> Assassino </strong> &nbsp; &nbsp;
                                     <?php } ?>
                                     <img src="<?= base_url('/icons/gold.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Ouro: </strong> <?= $this->session->gold ?> &nbsp; &nbsp;
-                                    <img src="<?= base_url('/icons/gems.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Gemas: </strong> <?= $this->session->gems ?>
+                                    <img src="<?= base_url('/icons/runes.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Runas: </strong> <?= $this->session->gems ?>
                                 </a>
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->

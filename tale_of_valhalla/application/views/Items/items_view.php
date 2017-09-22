@@ -118,7 +118,7 @@
                                                     </a>
                                                 <?php } else { ?>
                                                     <a href="<?= base_url('/items/buy_item/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="buy-button btn btn-lg btn-success btn-fill" data-toggle="confirmation"
-                                                       data-title="Comprar Item?"
+                                                       data-title="Comprar Item? (<?= $item->buy_price ?>g)"
                                                        data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                        data-btn-ok-class="btn-success"
                                                        data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
@@ -140,7 +140,7 @@
                                                 } else {
                                                     ?>
                                                     <a href="<?= base_url('/items/buy_item_unique/' . $this->session->selected_character . '/' . $this->session->id . '/' . $item->id) ?>" class="buy-button btn btn-lg btn-success btn-fill" data-toggle="confirmation"
-                                                       data-title="Comprar Item?"
+                                                       data-title="Comprar Item? (<?= $item->buy_price ?>g)"
                                                        data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                        data-btn-ok-class="btn-success"
                                                        data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
