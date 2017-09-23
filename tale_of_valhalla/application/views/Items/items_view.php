@@ -133,7 +133,7 @@
                                             } else {
                                                 if ($this->session->gems < $item->buy_price) {
                                                     ?>
-                                                    <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Gemas suficientes." disabled>
+                                                    <a href="#" class="buy-button btn btn-lg btn-success btn-fill" role="button" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Você não possui Runas suficientes." disabled>
                                                         Comprar
                                                     </a>
                                                     <?php

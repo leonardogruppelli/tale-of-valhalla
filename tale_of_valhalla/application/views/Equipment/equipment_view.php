@@ -3,7 +3,7 @@
     <div class="row row-inside">
 
         <!-- Equipment -->
-        <div class="col-sm-1" style="padding-left: 0;">
+        <div class="col-sm-2" style="padding-left: 0;">
             <div class="box box-default">
                 <div class="box-header with-border" style="margin-bottom: 10px;">
                     <h3 class="box-title">Equipamento</h3>
@@ -15,7 +15,7 @@
 
                     <!-- Helmet -->
                     <div class="row row-inside">
-                        <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-10 col-sm-offset-1" style="margin-top: 5px">
                             <center>
                                 <?php
                                 if ($helmet->rarity == 1) {
@@ -49,7 +49,7 @@
 
                     <!-- Helmet -->
                     <div class="row row-inside">
-                        <div class="col-sm-12" style="margin-top: 5px">
+                        <div class="col-sm-10 col-sm-offset-1" style="margin-top: 5px">
                             <center> <img src="<?= base_url('/equipments/helmet.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
 
                     <!-- Armor -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center>
                                 <?php
                                 if ($armor->rarity == 1) {
@@ -94,7 +94,7 @@
                 <?php } else { ?>
 
                     <!-- Armor -->
-                    <div class="col-sm-12">
+                    <div class="col-sm-10 col-sm-offset-1">
                         <center> <img src="<?= base_url('/equipments/armor.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                     </div>
 
@@ -106,7 +106,7 @@
 
                     <!-- Pants -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center>
                                 <?php
                                 if ($pants->rarity == 1) {
@@ -139,7 +139,7 @@
 
                     <!-- Pants -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center> <img src="<?= base_url('/equipments/pants.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
 
                     <!-- Gloves -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center>
                                 <?php
                                 if ($gloves->rarity == 1) {
@@ -185,7 +185,7 @@
 
                     <!-- Gloves -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center> <img src="<?= base_url('/equipments/gloves.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>                                 
                         </div>
                     </div>
@@ -198,7 +198,7 @@
 
                     <!-- Boots -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center>
                                 <?php
                                 if ($boots->rarity == 1) {
@@ -231,7 +231,7 @@
 
                     <!-- Boots -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center> <img src="<?= base_url('/equipments/boots.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>
                         </div>
                     </div>
@@ -244,7 +244,7 @@
 
                     <!-- Weapon -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center>
                                 <?php
                                 if ($weapon->rarity == 1) {
@@ -277,7 +277,7 @@
 
                     <!-- Weapon -->
                     <div class="row row-inside">
-                        <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1">
                             <center> <img src="<?= base_url('/equipments/weapon.png') ?>" class="img-rounded" style="width: 60px; height: 60px; margin-top: -5px; margin-bottom: 10px;"> </center>                                           
                         </div>
                     </div>
@@ -323,7 +323,7 @@
         </div>
 
         <!-- Inventory -->
-        <div class="col-sm-9" style="width: 73%;padding-left: 0; padding-right: 0;">                              
+        <div class="col-sm-8" style="padding-left: 0; padding-right: 0;">                              
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title">Inventário</h3>
@@ -352,7 +352,7 @@
                                 ?>
 
                                 <!-- Inventory -->
-                                <div class="col-sm-1">
+                                <div class="col-sm-2">
 
                                     <center>
                                         <?php

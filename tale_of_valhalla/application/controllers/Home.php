@@ -49,7 +49,7 @@ class Home extends CI_Controller {
             $session['picture'] = $verify->picture;
             $session['id'] = $verify->id;
             $session['gold'] = $verify->gold;
-            $session['gems'] = $verify->gems;
+            $session['runes'] = $verify->runes;
             $session['date'] = date_format(date_create($verify->date), 'd/m/y');
             $session['selected_character'] = 0;
             $session['selected_class'] = 0;

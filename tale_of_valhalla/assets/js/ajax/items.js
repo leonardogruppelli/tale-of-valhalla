@@ -2,7 +2,7 @@ var url = window.location.href;
 
 if (url.includes('items')) {
     $(document).ready(function () {
-
+        
         $('.rarity').popover({
             html: true,
             trigger: 'hover',
