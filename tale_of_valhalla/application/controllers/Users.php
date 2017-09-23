@@ -41,7 +41,7 @@ class Users extends CI_Controller {
         $username = $data['username'];
         $email = $data['email'];
         $gold = $data['gold'];
-        $gems = $data['gems'];
+        $runes = $data['runes'];
 
         $user = $this->users->find($data['id']);
 
@@ -65,7 +65,7 @@ class Users extends CI_Controller {
             }
         }
 
-        $alter = $this->users->update($id, $name, $username, $email, $data['picture'], $gold, $gems);
+        $alter = $this->users->update($id, $name, $username, $email, $data['picture'], $gold, $runes);
 
         if ($alter) {
             $type = "1";

@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`users` (
   `password` VARCHAR(42) NOT NULL,
   `picture` VARCHAR(42) NOT NULL,
   `gold` INT NULL DEFAULT 0,
-  `gems` INT NULL DEFAULT 0,
+  `runes` INT NULL DEFAULT 0,
   `date` DATE NOT NULL,
   `deleted` INT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
@@ -216,7 +216,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`packages` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
-  `gems` INT NOT NULL,
+  `runes` INT NOT NULL,
   `price` DECIMAL(9,2) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -261,6 +261,7 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`ai_battle_history` (
   `player_potions` INT NULL DEFAULT 0,
   `enemy_potions` INT NULL DEFAULT 0,
   `turns` INT NULL DEFAULT 0,
+  `won` INT NULL DEFAULT 0,
   INDEX `fk_ai_battle_history_characters1_idx` (`character_id` ASC),
   INDEX `fk_ai_battle_history_enemies1_idx` (`enemy_id` ASC),
   CONSTRAINT `fk_ai_battle_history_characters1`
@@ -289,8 +290,10 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`battle_history` (
   `player_one_potions` INT NULL DEFAULT 0,
   `player_two_potions` INT NULL DEFAULT 0,
   `turns` INT NULL DEFAULT 0,
+  `winner` INT NOT NULL,
   INDEX `fk_battle_history_characters1_idx` (`player_one` ASC),
   INDEX `fk_battle_history_characters2_idx` (`player_two` ASC),
+  INDEX `fk_battle_history_characters3_idx` (`winner` ASC),
   CONSTRAINT `fk_battle_history_characters1`
     FOREIGN KEY (`player_one`)
     REFERENCES `tale_of_valhalla`.`characters` (`id`)
@@ -298,6 +301,11 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`battle_history` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_battle_history_characters2`
     FOREIGN KEY (`player_two`)
+    REFERENCES `tale_of_valhalla`.`characters` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_battle_history_characters3`
+    FOREIGN KEY (`winner`)
     REFERENCES `tale_of_valhalla`.`characters` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

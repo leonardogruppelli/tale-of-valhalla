@@ -13,8 +13,8 @@ class Users_Model extends CI_Model {
         return $query;
     }
 
-    public function update($id, $name, $username, $email, $picture, $gold, $gems) {
-        $sql = "UPDATE users SET name='$name', username='$username', email='$email', picture='$picture', gold='$gold', gems='$gems' WHERE id=$id";
+    public function update($id, $name, $username, $email, $picture, $gold, $runes) {
+        $sql = "UPDATE users SET name='$name', username='$username', email='$email', picture='$picture', gold='$gold', runes='$runes' WHERE id=$id";
         $query = $this->db->query($sql);
         return $query;
     }

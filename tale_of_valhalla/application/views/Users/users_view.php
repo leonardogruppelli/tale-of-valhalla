@@ -51,7 +51,7 @@
                             <td style="vertical-align: middle"> <?= $user->username ?> </td>
                             <td style="vertical-align: middle"> <?= $user->email ?> </td>
                             <td style="vertical-align: middle"> <center> <?= $user->gold ?> </center> </td>
-                            <td style="vertical-align: middle"> <center> <?= $user->gems ?> </center> </td>
+                            <td style="vertical-align: middle"> <center> <?= $user->runes ?> </center> </td>
                             <td> <center> <img src="<?= base_url('/pictures/' . $user->picture) ?>" class="img-circle img-thumbnail" style="width: 85px; height: 75px;"> </center> </td>
                             <td style="vertical-align: middle" width="15%">
                             <center>
@@ -146,8 +146,8 @@
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="gems"> Gemas: </label>
-                                <input type="number" class="form-control" name="gems" id="gems" value="0">
+                                <label for="runes"> Gemas: </label>
+                                <input type="number" class="form-control" name="runes" id="runes" value="0">
                             </div>
                         </div>
 
@@ -226,8 +226,8 @@
 
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="gems"> Gemas: </label>
-                                <input type="number" class="form-control" name="gems" id="alter_gems" value="0">
+                                <label for="runes"> Gemas: </label>
+                                <input type="number" class="form-control" name="runes" id="alter_runes" value="0">
                             </div>
                         </div>
 
