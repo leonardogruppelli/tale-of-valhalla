@@ -1,10 +1,16 @@
-## Projeto Tale of Valhalla - Jogo baseado em turnos com temática nórdica
+## Tale of Valhalla - Jogo baseado em turnos com temática nórdica
+
+### **Descrição**
+
+Tale of Valhalla é um jogo baseado em turnos, que possui a mitologia nórdica como sua temática. O jogo permite a evolução de personagens,
+batalhas contra inimigos controlados pelo sistema ou outros jogadores, *rankings*, compra de itens, venda de itens, utilização de itens,
+chat com outros jogadores e outras funcionalidades.
 
 ### **Documentação**
 
 A documentação do projeto pode ser encontrada na [Wiki](https://gitlab.com/leonardo.gruppelli/Tale-of-Valhalla/wikis/home).
 
-### **Licensa**
+### **Licença**
 
 O projeto está licenciado com a GNU Lesser General Public License v3.0. Na qual todos estão autorizados a copiar e distribuir cópias autênticas deste projeto, mas a alteração não é permitida.
 
