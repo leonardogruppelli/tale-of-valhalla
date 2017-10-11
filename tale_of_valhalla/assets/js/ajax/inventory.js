@@ -1,7 +1,7 @@
 var url = window.location.href;
 
 if (url.includes('inventory')) {
-    $(document).ready(function () {
+    (function ($) {
 
         $('.rarity').popover({
             html: true,
@@ -15,7 +15,5 @@ if (url.includes('inventory')) {
                     <img src="./icons/legendary.png" width="20px" height="20px" /> Lendário';
             }
         });
-
-    });
-
+    })(jQuery);
 }

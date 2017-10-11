@@ -70,7 +70,7 @@
                             <td style="vertical-align: middle"> <center> <?= $enemy->mana ?> </center> </td>
                             <td style="vertical-align: middle"> <center> <?= $enemy->hp_potions ?> </center> </td>
                             <td style="vertical-align: middle"> <center> <?= $enemy->mp_potions ?> </center> </td>
-                            <td style="vertical-align: middle"> <center> <img src="<?= base_url('/enemies_images/' . $enemy->image) ?>" class="img-rounded img-thumbnail" style="width: 85px; height: 75px;"> </center> </td>
+                            <td style="vertical-align: middle"> <center> <img src="<?= base_url('/enemies_images/' . $enemy->image) ?>" class="img-rounded img-thumbnail" style="width: 85px; height: 100px;"> </center> </td>
                             <td style="vertical-align: middle" width="15%">
                             <center>
                                 <a href="#" data-id="<?= $enemy->id ?>" class="alter-button btn btn-warning" role="button">

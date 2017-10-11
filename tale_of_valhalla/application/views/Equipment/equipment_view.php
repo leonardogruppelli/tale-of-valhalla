@@ -310,7 +310,7 @@
                                         <strong>Agilidade:</strong> <?= $stats->agility ?> 
                                         <img src="<?= base_url('/icons/agility.png') ?>" style="width: 20px; height: 20px; margin-left: 5px">
                                     </p>
-                                    <p style="font-size: 15px"><img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px; margin-right: 5px">
+                                    <p style="font-size: 15px; margin-bottom: 15px"><img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px; margin-right: 5px">
                                         <strong>Inteligência:</strong> <?= $stats->intelligence ?> 
                                         <img src="<?= base_url('/icons/intelligence.png') ?>" style="width: 20px; height: 20px; margin-left: 5px">
                                     </p>
@@ -352,7 +352,7 @@
                                 ?>
 
                                 <!-- Inventory -->
-                                <div class="col-sm-2">
+                                <div class="col-sm-2" style="margin-bottom: 15px">
 
                                     <center>
                                         <?php

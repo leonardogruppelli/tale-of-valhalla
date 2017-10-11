@@ -24,6 +24,54 @@ class Items_Model extends CI_Model {
         return $query_update + $query_insert;
     }
 
+    public function buy_hp_potions($user_id, $character_id, $quantity) {
+        $sql_update_users = "UPDATE users SET gold = gold - ($quantity * 25) WHERE id = $user_id;";
+        $query_update_users = $this->db->query($sql_update_users);
+        $sql_update_characters = "UPDATE characters SET hp_potions = hp_potions + $quantity WHERE id = $character_id;";
+        $query_update_characters = $this->db->query($sql_update_characters);
+        return $query_update_users + $query_update_characters;
+    }
+    
+    public function buy_mp_potions($user_id, $character_id, $quantity) {
+        $sql_update_users = "UPDATE users SET gold = gold - ($quantity * 25) WHERE id = $user_id;";
+        $query_update_users = $this->db->query($sql_update_users);
+        $sql_update_characters = "UPDATE characters SET mp_potions = mp_potions + $quantity WHERE id = $character_id;";
+        $query_update_characters = $this->db->query($sql_update_characters);
+        return $query_update_users + $query_update_characters;
+    }
+    
+    public function buy_large_hp_potions($user_id, $character_id, $quantity) {
+        $sql_update_users = "UPDATE users SET gold = gold - ($quantity * 50) WHERE id = $user_id;";
+        $query_update_users = $this->db->query($sql_update_users);
+        $sql_update_characters = "UPDATE characters SET large_hp_potions = large_hp_potions + $quantity WHERE id = $character_id;";
+        $query_update_characters = $this->db->query($sql_update_characters);
+        return $query_update_users + $query_update_characters;
+    }
+    
+    public function buy_large_mp_potions($user_id, $character_id, $quantity) {
+        $sql_update_users = "UPDATE users SET gold = gold - ($quantity * 50) WHERE id = $user_id;";
+        $query_update_users = $this->db->query($sql_update_users);
+        $sql_update_characters = "UPDATE characters SET large_mp_potions = large_mp_potions + $quantity WHERE id = $character_id;";
+        $query_update_characters = $this->db->query($sql_update_characters);
+        return $query_update_users + $query_update_characters;
+    }
+    
+    public function buy_dexterity_potions($user_id, $character_id, $quantity) {
+        $sql_update_users = "UPDATE users SET gold = gold - ($quantity * 100) WHERE id = $user_id;";
+        $query_update_users = $this->db->query($sql_update_users);
+        $sql_update_characters = "UPDATE characters SET dexterity_potions = dexterity_potions + $quantity WHERE id = $character_id;";
+        $query_update_characters = $this->db->query($sql_update_characters);
+        return $query_update_users + $query_update_characters;
+    }
+    
+    public function buy_luck_potions($user_id, $character_id, $quantity) {
+        $sql_update_users = "UPDATE users SET gold = gold - ($quantity * 100) WHERE id = $user_id;";
+        $query_update_users = $this->db->query($sql_update_users);
+        $sql_update_characters = "UPDATE characters SET luck_potions = luck_potions + $quantity WHERE id = $character_id;";
+        $query_update_characters = $this->db->query($sql_update_characters);
+        return $query_update_users + $query_update_characters;
+    }
+
     public function find($id) {
         $sql = "SELECT * FROM items WHERE id = $id";
         $query = $this->db->query($sql);

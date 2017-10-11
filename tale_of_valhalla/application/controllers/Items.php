@@ -16,7 +16,7 @@ class Items extends CI_Controller {
 
             $this->session->set_flashdata('situation', $situation);
             $this->session->set_flashdata('message', $message);
-            
+
             redirect('characters');
         }
 
@@ -28,7 +28,7 @@ class Items extends CI_Controller {
         $class_id = $this->session->selected_class;
 
         $data['items'] = $this->items->select($character_id, $class_id);
-        
+
         $session['navigation'] = "items";
         $this->session->set_userdata($session);
 
@@ -77,6 +77,192 @@ class Items extends CI_Controller {
         } else {
             $situation = "0";
             $message = "Erro ao comprar item.";
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect('items');
+    }
+
+    public function buy_hp_potions() {
+        $data = $this->input->post();
+
+        if (($data["quantity"] * 25) > $this->session->gold) {
+            $situation = "0";
+            $message = "Você não possui ouro suficiente.";
+        } else {
+            if ($this->items->buy_hp_potions($data["user_id"], $data["character_id"], $data["quantity"])) {
+                $this->load->model('Users_Model', 'users');
+
+                $user = $this->users->find($data["user_id"]);
+
+                $session['gold'] = $user->gold;
+                $session['gems'] = $user->gems;
+
+                $this->session->set_userdata($session);
+
+                $situation = "1";
+                $message = "Poções compradas com sucesso.";
+            } else {
+                $situation = "0";
+                $message = "Erro ao comprar poções.";
+            }
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect('items');
+    }
+    
+    public function buy_mp_potions() {
+        $data = $this->input->post();
+
+        if (($data["quantity"] * 25) > $this->session->gold) {
+            $situation = "0";
+            $message = "Você não possui ouro suficiente.";
+        } else {
+            if ($this->items->buy_mp_potions($data["user_id"], $data["character_id"], $data["quantity"])) {
+                $this->load->model('Users_Model', 'users');
+
+                $user = $this->users->find($data["user_id"]);
+
+                $session['gold'] = $user->gold;
+                $session['gems'] = $user->gems;
+
+                $this->session->set_userdata($session);
+
+                $situation = "1";
+                $message = "Poções compradas com sucesso.";
+            } else {
+                $situation = "0";
+                $message = "Erro ao comprar poções.";
+            }
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect('items');
+    }
+    
+    public function buy_large_hp_potions() {
+        $data = $this->input->post();
+
+        if (($data["quantity"] * 50) > $this->session->gold) {
+            $situation = "0";
+            $message = "Você não possui ouro suficiente.";
+        } else {
+            if ($this->items->buy_large_hp_potions($data["user_id"], $data["character_id"], $data["quantity"])) {
+                $this->load->model('Users_Model', 'users');
+
+                $user = $this->users->find($data["user_id"]);
+
+                $session['gold'] = $user->gold;
+                $session['gems'] = $user->gems;
+
+                $this->session->set_userdata($session);
+
+                $situation = "1";
+                $message = "Poções compradas com sucesso.";
+            } else {
+                $situation = "0";
+                $message = "Erro ao comprar poções.";
+            }
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect('items');
+    }
+    
+    public function buy_large_mp_potions() {
+        $data = $this->input->post();
+
+        if (($data["quantity"] * 50) > $this->session->gold) {
+            $situation = "0";
+            $message = "Você não possui ouro suficiente.";
+        } else {
+            if ($this->items->buy_large_mp_potions($data["user_id"], $data["character_id"], $data["quantity"])) {
+                $this->load->model('Users_Model', 'users');
+
+                $user = $this->users->find($data["user_id"]);
+
+                $session['gold'] = $user->gold;
+                $session['gems'] = $user->gems;
+
+                $this->session->set_userdata($session);
+
+                $situation = "1";
+                $message = "Poções compradas com sucesso.";
+            } else {
+                $situation = "0";
+                $message = "Erro ao comprar poções.";
+            }
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect('items');
+    }
+    
+    public function buy_dexterity_potions() {
+        $data = $this->input->post();
+
+        if (($data["quantity"] * 100) > $this->session->gold) {
+            $situation = "0";
+            $message = "Você não possui ouro suficiente.";
+        } else {
+            if ($this->items->buy_dexterity_potions($data["user_id"], $data["character_id"], $data["quantity"])) {
+                $this->load->model('Users_Model', 'users');
+
+                $user = $this->users->find($data["user_id"]);
+
+                $session['gold'] = $user->gold;
+                $session['gems'] = $user->gems;
+
+                $this->session->set_userdata($session);
+
+                $situation = "1";
+                $message = "Poções compradas com sucesso.";
+            } else {
+                $situation = "0";
+                $message = "Erro ao comprar poções.";
+            }
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect('items');
+    }
+    
+    public function buy_luck_potions() {
+        $data = $this->input->post();
+
+        if (($data["quantity"] * 100) > $this->session->gold) {
+            $situation = "0";
+            $message = "Você não possui ouro suficiente.";
+        } else {
+            if ($this->items->buy_luck_potions($data["user_id"], $data["character_id"], $data["quantity"])) {
+                $this->load->model('Users_Model', 'users');
+
+                $user = $this->users->find($data["user_id"]);
+
+                $session['gold'] = $user->gold;
+                $session['gems'] = $user->gems;
+
+                $this->session->set_userdata($session);
+
+                $situation = "1";
+                $message = "Poções compradas com sucesso.";
+            } else {
+                $situation = "0";
+                $message = "Erro ao comprar poções.";
+            }
         }
 
         $this->session->set_flashdata('situation', $situation);
