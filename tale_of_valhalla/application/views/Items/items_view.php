@@ -189,13 +189,14 @@
                                         <input type="number" id="quantity" name="quantity" value="0" style="width: 60px; height: 40px" min="1" />
                                         <button type="submit" class="btn btn-success" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
                                                 data-title="Comprar poções?"
-                                                data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
+                                                data-btn-ok-label="Sim"
                                                 data-btn-ok-class="btn-success"
-                                                data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                                data-btn-cancel-label="Não"
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
+                                                data-container="body"
                                                 data-singleton="true"
-                                                data-placement="bottom"
+                                                data-placement="left"
                                                 role="button">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>

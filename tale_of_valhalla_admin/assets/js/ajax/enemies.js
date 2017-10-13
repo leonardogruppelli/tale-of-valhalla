@@ -28,9 +28,21 @@ if (url.includes('enemies')) {
         var enemy_hp_potions;
         var hp_potions_has_error;
         var alter_hp_potions_has_error;
+        var enemy_large_hp_potions;
+        var large_hp_potions_has_error;
+        var alter_large_hp_potions_has_error;
         var enemy_mp_potions;
         var mp_potions_has_error;
         var alter_mp_potions_has_error;
+        var enemy_large_mp_potions;
+        var large_mp_potions_has_error;
+        var alter_large_mp_potions_has_error;
+        var enemy_dexterity_potions;
+        var dexterity_potions_has_error;
+        var alter_dexterity_potions_has_error;
+        var enemy_luck_potions;
+        var luck_potions_has_error;
+        var alter_luck_potions_has_error;
         var enemy_image;
 
         // Insert Modal --------------------------------------------------------
@@ -62,7 +74,7 @@ if (url.includes('enemies')) {
 
         // Verifies if insert form has errors
         function validate_form() {
-            if (name_has_error || attack_has_error || defense_has_error || agility_has_error || intelligence_has_error || health_has_error || mana_has_error || hp_potions_has_error || mp_potions_has_error) {
+            if (name_has_error || attack_has_error || defense_has_error || agility_has_error || intelligence_has_error || health_has_error || mana_has_error || hp_potions_has_error || large_hp_potions_has_error || large_mp_potions_has_error || mp_potions_has_error || dexterity_potions_has_error || luck_potions_has_error) {
                 $('.modal-body #insert_button').prop('disabled', true);
             } else {
                 $('.modal-body #insert_button').prop('disabled', false);
@@ -71,7 +83,7 @@ if (url.includes('enemies')) {
 
         // Verifies if alter form has errors
         function validate_form_alter() {
-            if (alter_name_has_error || alter_attack_has_error || alter_defense_has_error || alter_agility_has_error || alter_intelligence_has_error || alter_health_has_error || alter_mana_has_error || alter_hp_potions_has_error || alter_mp_potions_has_error) {
+            if (alter_name_has_error || alter_attack_has_error || alter_defense_has_error || alter_agility_has_error || alter_intelligence_has_error || alter_health_has_error || alter_mana_has_error || alter_hp_potions_has_error || alter_large_hp_potions_has_error || alter_large_mp_potions_has_error || alter_mp_potions_has_error || alter_dexterity_potions_has_error || alter_luck_potions_has_error) {
                 $('.modal-body #alter_button').prop('disabled', true);
             } else {
                 $('.modal-body #alter_button').prop('disabled', false);
@@ -361,7 +373,7 @@ if (url.includes('enemies')) {
         });
         
         // HP Potions popover
-        $('#hp_potions').popover({
+        $('#large_hp_potions').popover({
             placement: "bottom",
             trigger: "manual"
         });
@@ -396,8 +408,44 @@ if (url.includes('enemies')) {
             }
         });
         
-        // MP Potions popover
+        // Large HP Potions popover
         $('#hp_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Large HP Potions
+        $("#insertModal").on('keyup', '#large_hp_potions', function () {
+            var number = $('#large_hp_potions').val();
+            var popover = $('#large_hp_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #form_large_hp_potions').removeClass('has-error');
+                $('.modal-body #form_large_hp_potions').addClass('has-success');
+                $('.modal-body #icon_large_hp_potions').removeClass('glyphicon-remove');
+                $('.modal-body #icon_large_hp_potions').addClass('glyphicon-ok');
+                large_hp_potions_has_error = false;
+
+                validate_form();
+
+                $('#large_hp_potions').popover("hide");
+            } else {
+                $('.modal-body #form_large_hp_potions').removeClass('has-success');
+                $('.modal-body #form_large_hp_potions').addClass('has-error');
+                $('.modal-body #icon_large_hp_potions').removeClass('glyphicon-ok');
+                $('.modal-body #icon_large_hp_potions').addClass('glyphicon-remove');
+                large_hp_potions_has_error = true;
+
+                validate_form();
+
+                popover.options.content = "Poções Grandes de HP inválidas";
+
+                $('#large_hp_potions').popover("show");
+            }
+        });
+        
+        // MP Potions popover
+        $('#mp_potions').popover({
             placement: "bottom",
             trigger: "manual"
         });
@@ -429,6 +477,114 @@ if (url.includes('enemies')) {
                 popover.options.content = "Poções de MP inválidas";
 
                 $('#mp_potions').popover("show");
+            }
+        });
+        
+        // Large MP Potions popover
+        $('#large_mp_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Large MP Potions
+        $("#insertModal").on('keyup', '#large_mp_potions', function () {
+            var number = $('#large_mp_potions').val();
+            var popover = $('#large_mp_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #form_large_mp_potions').removeClass('has-error');
+                $('.modal-body #form_large_mp_potions').addClass('has-success');
+                $('.modal-body #icon_large_mp_potions').removeClass('glyphicon-remove');
+                $('.modal-body #icon_large_mp_potions').addClass('glyphicon-ok');
+                large_mp_potions_has_error = false;
+
+                validate_form();
+
+                $('#large_mp_potions').popover("hide");
+            } else {
+                $('.modal-body #form_large_mp_potions').removeClass('has-success');
+                $('.modal-body #form_large_mp_potions').addClass('has-error');
+                $('.modal-body #icon_large_mp_potions').removeClass('glyphicon-ok');
+                $('.modal-body #icon_large_mp_potions').addClass('glyphicon-remove');
+                large_mp_potions_has_error = true;
+
+                validate_form();
+
+                popover.options.content = "Poções Grandes de MP inválidas";
+
+                $('#large_mp_potions').popover("show");
+            }
+        });
+        
+        // Dexterity Potions popover
+        $('#dexterity_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Dexterity Potions
+        $("#insertModal").on('keyup', '#dexterity_potions', function () {
+            var number = $('#dexterity_potions').val();
+            var popover = $('#dexterity_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #form_dexterity_potions').removeClass('has-error');
+                $('.modal-body #form_dexterity_potions').addClass('has-success');
+                $('.modal-body #icon_dexterity_potions').removeClass('glyphicon-remove');
+                $('.modal-body #icon_dexterity_potions').addClass('glyphicon-ok');
+                dexterity_potions_has_error = false;
+
+                validate_form();
+
+                $('#dexterity_potions').popover("hide");
+            } else {
+                $('.modal-body #form_dexterity_potions').removeClass('has-success');
+                $('.modal-body #form_dexterity_potions').addClass('has-error');
+                $('.modal-body #icon_dexterity_potions').removeClass('glyphicon-ok');
+                $('.modal-body #icon_dexterity_potions').addClass('glyphicon-remove');
+                dexterity_potions_has_error = true;
+
+                validate_form();
+
+                popover.options.content = "Poções de Destreza inválidas";
+
+                $('#dexterity_potions').popover("show");
+            }
+        });
+        
+        // Luck Potions popover
+        $('#luck_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Luck Potions
+        $("#insertModal").on('keyup', '#luck_potions', function () {
+            var number = $('#luck_potions').val();
+            var popover = $('#luck_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #form_luck_potions').removeClass('has-error');
+                $('.modal-body #form_luck_potions').addClass('has-success');
+                $('.modal-body #icon_luck_potions').removeClass('glyphicon-remove');
+                $('.modal-body #icon_luck_potions').addClass('glyphicon-ok');
+                luck_potions_has_error = false;
+
+                validate_form();
+
+                $('#luck_potions').popover("hide");
+            } else {
+                $('.modal-body #form_luck_potions').removeClass('has-success');
+                $('.modal-body #form_luck_potions').addClass('has-error');
+                $('.modal-body #icon_luck_potions').removeClass('glyphicon-ok');
+                $('.modal-body #icon_luck_potions').addClass('glyphicon-remove');
+                luck_potions_has_error = true;
+
+                validate_form();
+
+                popover.options.content = "Poções de Sorte inválidas";
+
+                $('#luck_potions').popover("show");
             }
         });
 
@@ -463,9 +619,18 @@ if (url.includes('enemies')) {
             $('.modal-body #form_hp_potions').removeClass('has-success');
             $('.modal-body #form_hp_potions').removeClass('has-error');
             $('#hp_potions').popover("hide");
+            $('.modal-body #form_large_hp_potions').removeClass('has-success');
+            $('.modal-body #form_large_hp_potions').removeClass('has-error');
+            $('#large_hp_potions').popover("hide");
             $('.modal-body #form_mp_potions').removeClass('has-success');
             $('.modal-body #form_mp_potions').removeClass('has-error');
             $('#mp_potions').popover("hide");
+            $('.modal-body #form_large_mp_potions').removeClass('has-success');
+            $('.modal-body #form_large_mp_potions').removeClass('has-error');
+            $('#large_mp_potions').popover("hide");
+            $('.modal-body #form_dexterity_potions').removeClass('has-success');
+            $('.modal-body #form_dexterity_potions').removeClass('has-error');
+            $('#large_dexterity_potions').popover("hide");
             $('.modal-body #icon_name').removeClass('glyphicon-ok');
             $('.modal-body #icon_name').removeClass('glyphicon-remove');
             $('.modal-body #icon_attack').removeClass('glyphicon-ok');
@@ -482,8 +647,16 @@ if (url.includes('enemies')) {
             $('.modal-body #icon_mana').removeClass('glyphicon-remove');
             $('.modal-body #icon_hp_potions').removeClass('glyphicon-ok');
             $('.modal-body #icon_hp_potions').removeClass('glyphicon-remove');
+            $('.modal-body #icon_large_hp_potions').removeClass('glyphicon-ok');
+            $('.modal-body #icon_large_hp_potions').removeClass('glyphicon-remove');
             $('.modal-body #icon_mp_potions').removeClass('glyphicon-ok');
             $('.modal-body #icon_mp_potions').removeClass('glyphicon-remove');
+            $('.modal-body #icon_large_mp_potions').removeClass('glyphicon-ok');
+            $('.modal-body #icon_large_mp_potions').removeClass('glyphicon-remove');
+            $('.modal-body #icon_dexterity_potions').removeClass('glyphicon-ok');
+            $('.modal-body #icon_dexterity_potions').removeClass('glyphicon-remove');
+            $('.modal-body #icon_luck_potions').removeClass('glyphicon-ok');
+            $('.modal-body #icon_luck_potions').removeClass('glyphicon-remove');
             $('.modal-body #insert_button').prop('disabled', false);
         });
 
@@ -520,14 +693,18 @@ if (url.includes('enemies')) {
                 enemy_health = information[5];
                 enemy_mana = information[6];
                 enemy_hp_potions = information[7];
-                enemy_mp_potions = information[8];
-                enemy_image = information[9];
+                enemy_large_hp_potions = information[8];
+                enemy_mp_potions = information[9];
+                enemy_large_hp_potions = information[10];
+                enemy_dexterity_potions = information[11];
+                enemy_luck_potions = information[12];
+                enemy_image = information[13];
 
                 $('#alterModal').modal('show');
             });
         });
 
-        // Updates the Alter Modal inputs with user information
+        // Updates the Alter Modal inputs with enemy information
         $('#alterModal').on("show.bs.modal", function () {
             $('.modal-body #alter_id').val(enemy_id);
             $('.modal-body #alter_name').val(enemy_name);
@@ -538,7 +715,11 @@ if (url.includes('enemies')) {
             $('.modal-body #alter_health').val(enemy_health);
             $('.modal-body #alter_mana').val(enemy_mana);
             $('.modal-body #alter_hp_potions').val(enemy_hp_potions);
+            $('.modal-body #alter_large_hp_potions').val(enemy_large_hp_potions);
             $('.modal-body #alter_mp_potions').val(enemy_mp_potions);
+            $('.modal-body #alter_large_mp_potions').val(enemy_large_mp_potions);
+            $('.modal-body #alter_dexterity_potions').val(enemy_dexterity_potions);
+            $('.modal-body #alter_luck_potions').val(enemy_luck_potions);
             $('.modal-body #alter_picture').attr('src', './enemies_images/' + enemy_image);
         });
 
@@ -831,9 +1012,9 @@ if (url.includes('enemies')) {
         });
 
         // Verify HP Potions
-        $("#alterModal").on('keyup', 'alter_#hp_potions', function () {
-            var number = $('#alter_hp_potions').val();
-            var popover = $('#alter_hp_potions').data('bs.popover');
+        $("#alterModal").on('keyup', '#alter_hp_potionshp_potions', function () {
+            var number = $('#alter_hp_potionshp_potions').val();
+            var popover = $('#alter_hp_potionshp_potions').data('bs.popover');
 
             if (validate_number(number)) {
                 $('.modal-body #alter_form_hp_potions').removeClass('has-error');
@@ -860,8 +1041,44 @@ if (url.includes('enemies')) {
             }
         });
         
+        // Large HP Potions popover
+        $('#alter_large_hp_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Large HP Potions
+        $("#alterModal").on('keyup', '#alter_large_hp_potions', function () {
+            var number = $('#alter_large_hp_potions').val();
+            var popover = $('#alter_large_hp_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #alter_form_large_hp_potions').removeClass('has-error');
+                $('.modal-body #alter_form_large_hp_potions').addClass('has-success');
+                $('.modal-body #alter_icon_large_hp_potions').removeClass('glyphicon-remove');
+                $('.modal-body #alter_icon_large_hp_potions').addClass('glyphicon-ok');
+                alter_large_hp_potions_has_error = false;
+
+                validate_form_alter();
+
+                $('#alter_large_hp_potions').popover("hide");
+            } else {
+                $('.modal-body #alter_form_large_hp_potions').removeClass('has-success');
+                $('.modal-body #alter_form_large_hp_potions').addClass('has-error');
+                $('.modal-body #alter_icon_large_hp_potions').removeClass('glyphicon-ok');
+                $('.modal-body #alter_icon_large_hp_potions').addClass('glyphicon-remove');
+                alter_large_hp_potions_has_error = true;
+
+                validate_form_alter();
+
+                popover.options.content = "Poções Grandes de HP inválidas";
+
+                $('#alter_large_hp_potions').popover("show");
+            }
+        });
+        
         // MP Potions popover
-        $('#alter_hp_potions').popover({
+        $('#alter_mp_potions').popover({
             placement: "bottom",
             trigger: "manual"
         });
@@ -886,13 +1103,121 @@ if (url.includes('enemies')) {
                 $('.modal-body #alter_form_mp_potions').addClass('has-error');
                 $('.modal-body #alter_icon_mp_potions').removeClass('glyphicon-ok');
                 $('.modal-body #alter_icon_mp_potions').addClass('glyphicon-remove');
-                alter_mp_potions_has_error = true;
+                mp_potions_has_error = true;
 
-                validate_form_alter_();
+                validate_form_alter();
 
                 popover.options.content = "Poções de MP inválidas";
 
                 $('#alter_mp_potions').popover("show");
+            }
+        });
+        
+        // Large MP Potions popover
+        $('#alter_large_mp_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Large MP Potions
+        $("#alterModal").on('keyup', '#alter_large_mp_potions', function () {
+            var number = $('#alter_large_mp_potions').val();
+            var popover = $('#alter_large_mp_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #alter_form_large_mp_potions').removeClass('has-error');
+                $('.modal-body #alter_form_large_mp_potions').addClass('has-success');
+                $('.modal-body #alter_icon_large_mp_potions').removeClass('glyphicon-remove');
+                $('.modal-body #alter_icon_large_mp_potions').addClass('glyphicon-ok');
+                alter_large_mp_potions_has_error = false;
+
+                validate_form_alter();
+
+                $('#alter_large_mp_potions').popover("hide");
+            } else {
+                $('.modal-body #alter_form_large_mp_potions').removeClass('has-success');
+                $('.modal-body #alter_form_large_mp_potions').addClass('has-error');
+                $('.modal-body #alter_icon_large_mp_potions').removeClass('glyphicon-ok');
+                $('.modal-body #alter_icon_large_mp_potions').addClass('glyphicon-remove');
+                alter_large_mp_potions_has_error = true;
+
+                validate_form_alter();
+
+                popover.options.content = "Poções Grandes de MP inválidas";
+
+                $('#alter_large_mp_potions').popover("show");
+            }
+        });
+        
+        // Dexterity Potions popover
+        $('#alter_dexterity_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Dexterity Potions
+        $("#alterModal").on('keyup', '#alter_dexterity_potions', function () {
+            var number = $('#alter_dexterity_potions').val();
+            var popover = $('#alter_dexterity_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #alter_form_dexterity_potions').removeClass('has-error');
+                $('.modal-body #alter_form_dexterity_potions').addClass('has-success');
+                $('.modal-body #alter_icon_dexterity_potions').removeClass('glyphicon-remove');
+                $('.modal-body #alter_icon_dexterity_potions').addClass('glyphicon-ok');
+                alter_dexterity_potions_has_error = false;
+
+                validate_form_alter();
+
+                $('#alter_dexterity_potions').popover("hide");
+            } else {
+                $('.modal-body #alter_form_dexterity_potions').removeClass('has-success');
+                $('.modal-body #alter_form_dexterity_potions').addClass('has-error');
+                $('.modal-body #alter_icon_dexterity_potions').removeClass('glyphicon-ok');
+                $('.modal-body #alter_icon_dexterity_potions').addClass('glyphicon-remove');
+                alter_dexterity_potions_has_error = true;
+
+                validate_form_alter();
+
+                popover.options.content = "Poções de Destreza inválidas";
+
+                $('#alter_dexterity_potions').popover("show");
+            }
+        });
+        
+        // Luck Potions popover
+        $('#alter_luck_potions').popover({
+            placement: "bottom",
+            trigger: "manual"
+        });
+
+        // Verify Luck Potions
+        $("#alterModal").on('keyup', '#alter_luck_potions', function () {
+            var number = $('#alter_luck_potions').val();
+            var popover = $('#alter_luck_potions').data('bs.popover');
+
+            if (validate_number(number)) {
+                $('.modal-body #alter_form_luck_potions').removeClass('has-error');
+                $('.modal-body #alter_form_luck_potions').addClass('has-success');
+                $('.modal-body #alter_icon_luck_potions').removeClass('glyphicon-remove');
+                $('.modal-body #alter_icon_luck_potions').addClass('glyphicon-ok');
+                luck_potions_has_error = false;
+
+                validate_form_alter();
+
+                $('#luck_potions').popover("hide");
+            } else {
+                $('.modal-body #alter_form_luck_potions').removeClass('has-success');
+                $('.modal-body #alter_form_luck_potions').addClass('has-error');
+                $('.modal-body #alter_icon_luck_potions').removeClass('glyphicon-ok');
+                $('.modal-body #alter_icon_luck_potions').addClass('glyphicon-remove');
+                luck_potions_has_error = true;
+
+                validate_form_alter();
+
+                popover.options.content = "Poções de Sorte inválidas";
+
+                $('#alter_luck_potions').popover("show");
             }
         });
 
@@ -927,9 +1252,21 @@ if (url.includes('enemies')) {
             $('.modal-body #alter_form_hp_potions').removeClass('has-success');
             $('.modal-body #alter_form_hp_potions').removeClass('has-error');
             $('#alter_hp_potions').popover("hide");
+            $('.modal-body #alter_form_large_hp_potions').removeClass('has-success');
+            $('.modal-body #alter_form_large_hp_potions').removeClass('has-error');
+            $('#alter_large_hp_potions').popover("hide");
             $('.modal-body #alter_form_mp_potions').removeClass('has-success');
             $('.modal-body #alter_form_mp_potions').removeClass('has-error');
             $('#alter_mp_potions').popover("hide");
+            $('.modal-body #alter_form_large_mp_potions').removeClass('has-success');
+            $('.modal-body #alter_form_large_mp_potions').removeClass('has-error');
+            $('#alter_large_mp_potions').popover("hide");
+            $('.modal-body #alter_form_dexterity_potions').removeClass('has-success');
+            $('.modal-body #alter_form_dexterity_potions').removeClass('has-error');
+            $('#alter_dexterity_potions').popover("hide");
+            $('.modal-body #alter_form_luck_potions').removeClass('has-success');
+            $('.modal-body #alter_form_luck_potions').removeClass('has-error');
+            $('#alter_luck_potions').popover("hide");
             $('.modal-body #alter_icon_name').removeClass('glyphicon-ok');
             $('.modal-body #alter_icon_name').removeClass('glyphicon-remove');
             $('.modal-body #alter_icon_attack').removeClass('glyphicon-ok');
@@ -946,8 +1283,16 @@ if (url.includes('enemies')) {
             $('.modal-body #alter_icon_mana').removeClass('glyphicon-remove');
             $('.modal-body #alter_icon_hp_potions').removeClass('glyphicon-ok');
             $('.modal-body #alter_icon_hp_potions').removeClass('glyphicon-remove');
+            $('.modal-body #alter_icon_large_hp_potions').removeClass('glyphicon-ok');
+            $('.modal-body #alter_icon_large_hp_potions').removeClass('glyphicon-remove');
             $('.modal-body #alter_icon_mp_potions').removeClass('glyphicon-ok');
             $('.modal-body #alter_icon_mp_potions').removeClass('glyphicon-remove');
+            $('.modal-body #alter_icon_large_mp_potions').removeClass('glyphicon-ok');
+            $('.modal-body #alter_icon_large_mp_potions').removeClass('glyphicon-remove');
+            $('.modal-body #alter_icon_dexterity_potions').removeClass('glyphicon-ok');
+            $('.modal-body #alter_icon_dexterity_potions').removeClass('glyphicon-remove');
+            $('.modal-body #alter_icon_luck_potions').removeClass('glyphicon-ok');
+            $('.modal-body #alter_icon_luck_potions').removeClass('glyphicon-remove');
             $('.modal-body #alter_button').prop('disabled', false);
         });
 
