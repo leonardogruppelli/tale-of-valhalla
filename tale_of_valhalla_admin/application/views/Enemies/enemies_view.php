@@ -42,8 +42,6 @@
                                 <th>Inteligência</th>
                                 <th>Vida</th>
                                 <th>Mana</th>
-                                <th>Poções de HP</th>
-                                <th>Poções de MP</th>
                                 <th>Imagem</th>
                                 <th>Ações</th>
                             </tr>
@@ -68,8 +66,6 @@
                             <td style="vertical-align: middle"> <center> <?= $enemy->intelligence ?> </center> </td>
                             <td style="vertical-align: middle"> <center> <?= $enemy->health ?> </center> </td>
                             <td style="vertical-align: middle"> <center> <?= $enemy->mana ?> </center> </td>
-                            <td style="vertical-align: middle"> <center> <?= $enemy->hp_potions ?> </center> </td>
-                            <td style="vertical-align: middle"> <center> <?= $enemy->mp_potions ?> </center> </td>
                             <td style="vertical-align: middle"> <center> <img src="<?= base_url('/enemies_images/' . $enemy->image) ?>" class="img-rounded img-thumbnail" style="width: 85px; height: 100px;"> </center> </td>
                             <td style="vertical-align: middle" width="15%">
                             <center>
@@ -322,7 +318,7 @@
                         <div class="col-sm-6">
                             <div id="alter_form_hp_potions" class="form-group has-feedback">
                                 <label for="hp_potions"> Poções de HP: </label>
-                                <input type="number" class="form-control" name="hp_potions" id="alter_hp_potions" min="0" value="0" required>
+                                <input type="number" class="form-control" name="hp_potions" id="alter_hp_potions" min="0" required>
                                 <span id="alter_icon_hp_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -330,7 +326,7 @@
                         <div class="col-sm-6">
                             <div id="alter_form_mp_potions" class="form-group has-feedback">
                                 <label for="mp_potions"> Poções de MP: </label>
-                                <input type="number" class="form-control" name="mp_potions" id="alter_mp_potions" min="0" value="0" required>
+                                <input type="number" class="form-control" name="mp_potions" id="alter_mp_potions" min="0" required>
                                 <span id="alter_icon_mp_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -338,7 +334,7 @@
                         <div class="col-sm-6">
                             <div id="alter_form_large_hp_potions" class="form-group has-feedback">
                                 <label for="large_hp_potions"> Poções Grandes de HP: </label>
-                                <input type="number" class="form-control" name="large_hp_potions" id="alter_large_hp_potions" min="0" value="0" required>
+                                <input type="number" class="form-control" name="large_hp_potions" id="alter_large_hp_potions" min="0" required>
                                 <span id="alter_icon_large_hp_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -346,7 +342,7 @@
                         <div class="col-sm-6">
                             <div id="alter_form_large_mp_potions" class="form-group has-feedback">
                                 <label for="large_mp_potions"> Poções Grandes de MP: </label>
-                                <input type="number" class="form-control" name="large_mp_potions" id="alter_large_mp_potions" min="0" value="0" required>
+                                <input type="number" class="form-control" name="large_mp_potions" id="alter_large_mp_potions" min="0" required>
                                 <span id="alter_icon_large_mp_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -354,7 +350,7 @@
                         <div class="col-sm-6">
                             <div id="alter_form_dexterity_potions" class="form-group has-feedback">
                                 <label for="dexterity_potions"> Poções de Destreza: </label>
-                                <input type="number" class="form-control" name="dexterity_potions" id="alter_dexterity_potions" min="0" value="0" required>
+                                <input type="number" class="form-control" name="dexterity_potions" id="alter_dexterity_potions" min="0" required>
                                 <span id="alter_icon_dexterity_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -362,7 +358,7 @@
                         <div class="col-sm-6">
                             <div id="alter_form_luck_potions" class="form-group has-feedback">
                                 <label for="luck_potions"> Poções de Sorte: </label>
-                                <input type="number" class="form-control" name="luck_potions" id="alter_luck_potions" min="0" value="0" required>
+                                <input type="number" class="form-control" name="luck_potions" id="alter_luck_potions" min="0" required>
                                 <span id="alter_icon_luck_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>

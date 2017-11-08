@@ -35,7 +35,7 @@
                                 <th>Nome de Usuário</th>
                                 <th>E-mail</th>
                                 <th>Ouro</th>
-                                <th>Gemas</th>
+                                <th>Runas</th>
                                 <th>Foto</th>
                                 <th>Ações</th>
                             </tr>
@@ -55,7 +55,7 @@
                             <td style="vertical-align: middle"> <?= $user->username ?> </td>
                             <td style="vertical-align: middle"> <?= $user->email ?> </td>
                             <td style="vertical-align: middle"> <center> <?= $user->gold ?> </center> </td>
-                            <td style="vertical-align: middle"> <center> <?= $user->gems ?> </center> </td>
+                            <td style="vertical-align: middle"> <center> <?= $user->runes ?> </center> </td>
                             <td> <center> <img src="http://localhost/tale_of_valhalla/tale_of_valhalla/pictures/<?= $user->picture ?>" class="img-circle img-thumbnail" style="width: 85px; height: 75px;"> </center> </td>
                             <td style="vertical-align: middle" width="15%">
                             <center>

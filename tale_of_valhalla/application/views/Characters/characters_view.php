@@ -40,7 +40,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                        <center> <img src="<?= base_url('/characters_images/1.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
@@ -99,7 +99,7 @@
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/backgrounds/warrior.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                            <center> <img src="<?= base_url('/characters_images/1.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                             <hr>
 
@@ -127,7 +127,7 @@
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                            <center> <img src="<?= base_url('/characters_images/2.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                             <hr>
 
@@ -185,7 +185,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/archer.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                        <center> <img src="<?= base_url('/characters_images/2.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
@@ -214,7 +214,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                        <center> <img src="<?= base_url('/characters_images/3.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 
@@ -273,7 +273,7 @@
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/backgrounds/mage.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                            <center> <img src="<?= base_url('/characters_images/3.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                             <hr>
 
@@ -301,7 +301,7 @@
                                         </div>
                                         <!-- /.box-header -->
                                         <div class="box-body">
-                                            <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                            <center> <img src="<?= base_url('/characters_images/4.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                             <hr>
 
@@ -359,7 +359,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <center> <img src="<?= base_url('/backgrounds/assassin.jpg') ?>" class="img-rounded img-thumbnail" style="width: 100px; height: 150px; margin-bottom: -5px;"> </center>
+                                        <center> <img src="<?= base_url('/characters_images/4.png') ?>" class="img-rounded img-thumbnail" style="width: 200px; height: 250px; margin-bottom: -5px;"> </center>
 
                                         <hr>
 

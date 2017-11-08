@@ -26,5 +26,7 @@
 <script src="<?= base_url('assets/js/ajax/items.js') ?>"></script>
 <!-- Users AJAX -->
 <script src="<?= base_url('assets/js/ajax/users.js') ?>"></script>
+<!-- AI Battle -->
+<script src="<?= base_url('assets/js/battle/ai_battle.js') ?>"></script>
 </body>
 </html>

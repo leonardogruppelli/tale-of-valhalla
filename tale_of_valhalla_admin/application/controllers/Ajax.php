@@ -204,6 +204,7 @@ class Ajax extends CI_Controller {
         $mp_potions = $data['enemy']->mp_potions;
         $large_mp_potions = $data['enemy']->large_mp_potions;
         $dexterity_potions = $data['enemy']->dexterity_potions;
+        $luck_potions = $data['enemy']->luck_potions;
         $image = $data['enemy']->image;
         
         echo $name . ',' . $attack . ',' . $defense . ',' . $agility . ',' . $intelligence . ',' . $health . ',' . $mana . ',' . $hp_potions . ',' . $large_hp_potions . ',' . $mp_potions . ',' . $large_mp_potions . ',' . $dexterity_potions . ',' . $luck_potions . ',' . $image;

@@ -219,7 +219,7 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="bottom"
+                                                data-placement="left"
                                                 role="button">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
@@ -242,7 +242,7 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="bottom"
+                                                data-placement="left"
                                                 role="button">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
@@ -265,7 +265,7 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="bottom"
+                                                data-placement="left"
                                                 role="button">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
@@ -288,7 +288,7 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="bottom"
+                                                data-placement="left"
                                                 role="button">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
@@ -311,7 +311,7 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="bottom"
+                                                data-placement="left"
                                                 role="button">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>

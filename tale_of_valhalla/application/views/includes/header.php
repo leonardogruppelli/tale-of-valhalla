@@ -64,8 +64,8 @@
                                     <?php } else if ($this->session->selected_class == 4) { ?>
                                         <img src="<?= base_url('/icons/dagger.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"> <strong> Assassino </strong> &nbsp; &nbsp;
                                     <?php } ?>
-                                    <img src="<?= base_url('/icons/gold.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Ouro: </strong> <?= $this->session->gold ?> &nbsp; &nbsp;
-                                    <img src="<?= base_url('/icons/runes.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Runas: </strong> <?= $this->session->runes ?>
+                                    <img src="<?= base_url('/icons/gold.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Ouro: </strong> <?= $riches->gold ?> &nbsp; &nbsp;
+                                    <img src="<?= base_url('/icons/runes.png') ?>" style="margin-right: 5px; margin-top: -10px; margin-bottom: -5px;" width="20px" height="20px"><strong>Runas: </strong> <?= $riches->runes ?>
                                 </a>
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
@@ -81,9 +81,9 @@
 
                                         <p>
                                             <strong><?= $this->session->username ?></strong>
-                                            
+
                                             <br>
-                                            
+
                                             <?= $this->session->name ?>
 
                                             <small> Membro desde: <strong><?= $this->session->date ?></strong> </small>
@@ -116,6 +116,18 @@
                         <li <?= $this->session->navigation == "equipment" ? "class='active'" : "" ?>><a href="<?= base_url('equipment') ?>"><i class="icon icon-sword"></i> <span>Equipamento</span></a></li>
                         <li <?= $this->session->navigation == "inventory" ? "class='active'" : "" ?>><a href="<?= base_url('inventory') ?>"><i class="fa fa-briefcase"></i> <span>Inventário</span></a></li>
                         <li <?= $this->session->navigation == "items" ? "class='active'" : "" ?>><a href="<?= base_url('items') ?>"><i class="fa fa-dollar"></i> <span>Loja</span></a></li>
+                        <li class="treeview <?= $this->session->navigation == "ai_battle_history" ? "class='active'" : "" ?>">
+                            <a href="#">
+                                <i class="fa fa-table"></i>
+                                <span>Histórico</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li <?= $this->session->navigation == "ai_battle_history" ? "class='active'" : "" ?>><a href="<?= base_url('ai_battle_history') ?>"><i class="fa fa-table"></i> <span>Histórico Contra IA</span></a></li>    
+                            </ul>
+                        </li>
                     </ul>
                 </section>
                 <!-- /.sidebar -->

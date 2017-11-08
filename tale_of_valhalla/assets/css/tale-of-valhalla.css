@@ -127,3 +127,42 @@ hr {
     display: block;
     width: 100%;
 }
+.disabled-li {
+    pointer-events: none;
+    opacity: 0.6;
+}
+.stats {
+    border: 2px solid black;
+    margin: 10px;
+}
+.img-block {
+    position: relative;
+    max-width: 150px;
+}
+.img-animation {
+    padding: 5px
+}
+#character_damage_animation {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 5px;
+    max-width: 100px;
+}
+#enemy_damage_animation {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 5px;
+    max-width: 100px;
+}

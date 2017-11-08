@@ -29,7 +29,10 @@ class Home extends CI_Controller {
         $session['navigation'] = "play";
         $this->session->set_userdata($session);
         
-        $this->load->view('includes/header');
+        $this->load->model('Users_Model', 'users');
+        $riches['riches'] = $this->users->select_riches($this->session->id);
+
+        $this->load->view('includes/header', $riches);
         $this->load->view('home', $data);
         $this->load->view('includes/footer');
     }

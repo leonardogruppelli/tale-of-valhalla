@@ -51,7 +51,7 @@
                                     <div class="col-sm-6">
                                         <p> <img src="<?= base_url('/icons/mana.png') ?>" style="width: 20px; height: 20px;"> <strong>Mana: </strong> <?= $enemy->mana ?> </p>
                                     </div>
-                                    
+
                                     <div class="col-sm-6">
                                         <p> <img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px;">  <strong>Ataque: </strong> <?= $enemy->attack ?> </p>
                                     </div>
@@ -71,17 +71,20 @@
                                     <hr>
 
                                     <div class="col-sm-12">
-                                        <a href="<?= base_url('/battle_ai/load/' . $this->session->selected_character . '/' . $enemy->id) ?>" class="buy-button btn btn-lg btn-danger btn-fill" data-toggle="confirmation"
-                                           data-title="Iniciar batalha com <?= $enemy->name ?>?"
-                                           data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
-                                           data-btn-ok-class="btn-success"
-                                           data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
-                                           data-btn-cancel-class="btn-danger"
-                                           data-popout="true"
-                                           data-singleton="true"
-                                           role="button">
-                                            Batalhar
-                                        </a>
+                                        <form role="form" method="post" action="<?= base_url('battle_ai') ?>">
+                                            <input type="hidden" id="enemy_id" name="enemy_id" value="<?= $enemy->id ?>"/>
+                                            <button type="submit" class="btn btn-lg btn-danger btn-fill" data-toggle="confirmation"
+                                                    data-title="Iniciar batalha com <?= $enemy->name ?>?"
+                                                    data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
+                                                    data-btn-ok-class="btn-success"
+                                                    data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                                    data-btn-cancel-class="btn-danger"
+                                                    data-popout="true"
+                                                    data-singleton="true"
+                                                    role="button">
+                                                Batalhar
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

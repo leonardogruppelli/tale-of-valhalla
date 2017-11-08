@@ -6,6 +6,12 @@ class Users_Model extends CI_Model {
         $this->db->order_by('id');
         return $this->db->get('users')->result();
     }
+    
+    public function select_riches($user_id) {
+        $sql = "SELECT gold, runes FROM users WHERE id = $user_id";
+        $query = $this->db->query($sql);
+        return $query->row();
+    }
 
     public function insert($name, $username, $email, $password, $picture, $date) {
         $sql = "INSERT INTO users (name, username, email, password, picture, date) VALUES('$name','$username', '$email', MD5('$password'), '$picture', '$date')";

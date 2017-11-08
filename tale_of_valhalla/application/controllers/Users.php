@@ -9,27 +9,29 @@ class Users extends CI_Controller {
         if (!$this->session->logged) {
             redirect('home/login');
         }
-        
+
         if ($this->session->selected_character == 0) {
             $situation = "0";
             $message = "Selecione um personagem.";
 
             $this->session->set_flashdata('situation', $situation);
             $this->session->set_flashdata('message', $message);
-            
+
             redirect('characters');
         }
-        
+
         $this->load->model('Users_Model', 'users');
     }
 
     public function index() {
         $data['users'] = $this->users->select();
-        
+
         $session['navigation'] = "users";
         $this->session->set_userdata($session);
 
-        $this->load->view('includes/header');
+        $riches['riches'] = $this->users->select_riches($this->session->id);
+
+        $this->load->view('includes/header', $riches);
         $this->load->view('Users/users_view', $data);
         $this->load->view('includes/footer');
     }
@@ -89,7 +91,7 @@ class Users extends CI_Controller {
         if ($delete) {
             unlink('./pictures/' . $user->picture);
         }
-        
+
         redirect(base_url('users'));
     }
 

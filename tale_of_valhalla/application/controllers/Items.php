@@ -32,7 +32,10 @@ class Items extends CI_Controller {
         $session['navigation'] = "items";
         $this->session->set_userdata($session);
 
-        $this->load->view('includes/header');
+        $this->load->model('Users_Model', 'users');
+        $riches['riches'] = $this->users->select_riches($this->session->id);
+
+        $this->load->view('includes/header', $riches);
         $this->load->view('Items/items_view', $data);
         $this->load->view('includes/footer');
     }

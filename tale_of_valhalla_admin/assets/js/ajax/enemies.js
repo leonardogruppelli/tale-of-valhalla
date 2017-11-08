@@ -695,7 +695,7 @@ if (url.includes('enemies')) {
                 enemy_hp_potions = information[7];
                 enemy_large_hp_potions = information[8];
                 enemy_mp_potions = information[9];
-                enemy_large_hp_potions = information[10];
+                enemy_large_mp_potions = information[10];
                 enemy_dexterity_potions = information[11];
                 enemy_luck_potions = information[12];
                 enemy_image = information[13];
@@ -1012,9 +1012,9 @@ if (url.includes('enemies')) {
         });
 
         // Verify HP Potions
-        $("#alterModal").on('keyup', '#alter_hp_potionshp_potions', function () {
-            var number = $('#alter_hp_potionshp_potions').val();
-            var popover = $('#alter_hp_potionshp_potions').data('bs.popover');
+        $("#alterModal").on('keyup', '#alter_hp_potions', function () {
+            var number = $('#alter_hp_potions').val();
+            var popover = $('#alter_hp_potions').data('bs.popover');
 
             if (validate_number(number)) {
                 $('.modal-body #alter_form_hp_potions').removeClass('has-error');
