@@ -26,6 +26,9 @@ class Users extends CI_Controller {
     public function index() {
         $data['users'] = $this->users->select();
 
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
         $session['navigation'] = "users";
         $this->session->set_userdata($session);
 

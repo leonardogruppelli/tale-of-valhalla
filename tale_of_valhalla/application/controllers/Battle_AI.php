@@ -33,7 +33,10 @@ class Battle_AI extends CI_Controller {
         $data['character'] = $this->battle_ai->select_character($character_id);
         $data['enemy'] = $this->battle_ai->select_enemy($enemy_id);
 
-        $session['navigation'] = "play";
+        $session['navigation_battle'] = true;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
+        $session['navigation'] = "ai_battle";
         $this->session->set_userdata($session);
 
         $this->load->model('Users_Model', 'users');
@@ -49,6 +52,12 @@ class Battle_AI extends CI_Controller {
         $potion = htmlspecialchars(trim($_GET['potion']));
 
         $this->battle_ai->remove_potion($character_id, $potion);
+    }
+
+    public function increase_wins() {
+        $character_id = htmlspecialchars(trim($_GET['character_id']));
+
+        $this->battle_ai->increase_wins($character_id);
     }
 
     public function save_history() {

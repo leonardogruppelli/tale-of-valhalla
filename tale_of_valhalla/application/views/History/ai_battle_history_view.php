@@ -4,7 +4,7 @@
     <!-- AI Battle History Table -->
     <div class="box box-default">
         <div class="box-header with-border">
-            <h3 class="box-title">Histórico de Batalhas contra Inteligência Artificial</h3>
+            <h3 class="box-title">Histórico de Aventuras</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -28,7 +28,7 @@
                         <tbody>
                             <?php if (!$ai_battle_history) { ?>
                                 <tr>
-                                    <td colspan="10">Nenhuma batalha encontrada.</td>
+                                    <td colspan="10">Nenhuma aventura encontrada.</td>
                                 </tr>
                             <?php } ?>
                             <?php

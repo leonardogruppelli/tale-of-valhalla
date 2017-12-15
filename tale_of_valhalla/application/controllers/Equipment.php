@@ -40,6 +40,9 @@ class Equipment extends CI_Controller {
 
         $data['inventory'] = $this->inventory->select_inventory($character_id);
 
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
         $session['navigation'] = "equipment";
         $this->session->set_userdata($session);
 

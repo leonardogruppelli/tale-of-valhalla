@@ -18,6 +18,9 @@ class Characters extends CI_Controller {
         $data['mage'] = $this->characters->select_character($this->session->id, 3);
         $data['assassin'] = $this->characters->select_character($this->session->id, 4);
         
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
         $session['navigation'] = "characters";
         $this->session->set_userdata($session);
 
@@ -58,9 +61,10 @@ class Characters extends CI_Controller {
         
         $session['selected_character'] = $data['character']->id;
         $session['selected_class'] = $class_id;
+        $session['level'] = $data['character']->level;
         $this->session->set_userdata($session);
 
-        redirect('equipment');
+        redirect('home');
     }
 
 }

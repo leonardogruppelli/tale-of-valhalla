@@ -32,6 +32,12 @@ class Battle_AI_Model extends CI_Model {
         return $query;
     }
 
+    public function increase_wins($character_id) {
+        $sql = "UPDATE characters SET ai_battle_wins = ai_battle_wins + 1 WHERE id = $character_id";
+        $query = $this->db->query($sql);
+        return $query;
+    }
+
     public function save_history($character_id, $enemy_id, $player_damage, $player_damage_taken, $enemy_damage, $enemy_damage_taken, $player_hp_potions, $player_large_hp_potions, $player_mp_potions, $player_large_mp_potions, $player_dexterity_potions, $player_luck_potions, $enemy_hp_potions, $enemy_large_hp_potions, $enemy_mp_potions, $enemy_large_mp_potions, $enemy_dexterity_potions, $enemy_luck_potions, $experience_earned, $gold_earned, $turns, $won, $date) {
         $sql = "INSERT INTO ai_battle_history (character_id, enemy_id, player_damage, player_damage_taken, enemy_damage, enemy_damage_taken, player_hp_potions, player_large_hp_potions, player_mp_potions, player_large_mp_potions, player_dexterity_potions, player_luck_potions, enemy_hp_potions, enemy_large_hp_potions, enemy_mp_potions, enemy_large_mp_potions, enemy_dexterity_potions, enemy_luck_potions, experience_earned, gold_earned, turns, won, date) VALUES ($character_id, $enemy_id, $player_damage, $player_damage_taken, $enemy_damage, $enemy_damage_taken, $player_hp_potions, $player_large_hp_potions, $player_mp_potions, $player_large_mp_potions, $player_dexterity_potions, $player_luck_potions, $enemy_hp_potions, $enemy_large_hp_potions, $enemy_mp_potions, $enemy_large_mp_potions, $enemy_dexterity_potions, $enemy_luck_potions, $experience_earned, $gold_earned, $turns, $won, '$date')";
         $query = $this->db->query($sql);

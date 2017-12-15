@@ -2,6 +2,12 @@
 
 class Characters_Model extends CI_Model {
     
+    public function select($user_id) {
+        $sql = "SELECT characters.*, classes.name AS class, users.username AS user FROM characters INNER JOIN classes ON characters.class_id = classes.id INNER JOIN users ON characters.user_id = users.id WHERE characters.user_id != $user_id ORDER BY characters.level DESC";
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
+    
     public function select_character($user_id, $class_id) {
         $sql = "SELECT characters.*, classes.name AS class FROM characters INNER JOIN classes ON characters.class_id = classes.id WHERE user_id = $user_id AND class_id = $class_id";
         $query = $this->db->query($sql);

@@ -62,6 +62,14 @@
                                         <hr>
 
                                         <div class="col-sm-6">
+                                            <p> <img src="<?= base_url('/icons/health.png') ?>" style="width: 20px; height: 20px;">  <strong>Vida: </strong> <?= $warrior->health ?> </p>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <p> <img src="<?= base_url('/icons/mana.png') ?>" style="width: 20px; height: 20px;"> <strong>Mana: </strong> <?= $warrior->mana ?> </p>
+                                        </div>
+
+                                        <div class="col-sm-6">
                                             <p> <img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px;">  <strong>Ataque: </strong> <?= $warrior->attack ?> </p>
                                         </div>
 
@@ -147,6 +155,14 @@
                                             </div>
 
                                             <hr>
+
+                                            <div class="col-sm-6">
+                                                <p> <img src="<?= base_url('/icons/health.png') ?>" style="width: 20px; height: 20px;">  <strong>Vida: </strong> <?= $archer->health ?> </p>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <p> <img src="<?= base_url('/icons/mana.png') ?>" style="width: 20px; height: 20px;"> <strong>Mana: </strong> <?= $archer->mana ?> </p>
+                                            </div>
 
                                             <div class="col-sm-6">
                                                 <p> <img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px;">  <strong>Ataque: </strong> <?= $archer->attack ?> </p>
@@ -236,6 +252,14 @@
                                         <hr>
 
                                         <div class="col-sm-6">
+                                            <p> <img src="<?= base_url('/icons/health.png') ?>" style="width: 20px; height: 20px;">  <strong>Vida: </strong> <?= $mage->health ?> </p>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <p> <img src="<?= base_url('/icons/mana.png') ?>" style="width: 20px; height: 20px;"> <strong>Mana: </strong> <?= $mage->mana ?> </p>
+                                        </div>
+
+                                        <div class="col-sm-6">
                                             <p> <img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px;">  <strong>Ataque: </strong> <?= $mage->attack ?> </p>
                                         </div>
 
@@ -321,6 +345,14 @@
                                             </div>
 
                                             <hr>
+
+                                            <div class="col-sm-6">
+                                                <p> <img src="<?= base_url('/icons/health.png') ?>" style="width: 20px; height: 20px;">  <strong>Vida: </strong> <?= $assassin->health ?> </p>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <p> <img src="<?= base_url('/icons/mana.png') ?>" style="width: 20px; height: 20px;"> <strong>Mana: </strong> <?= $assassin->mana ?> </p>
+                                            </div>
 
                                             <div class="col-sm-6">
                                                 <p> <img src="<?= base_url('/icons/attack.png') ?>" style="width: 20px; height: 20px;">  <strong>Ataque: </strong> <?= $assassin->attack ?> </p>

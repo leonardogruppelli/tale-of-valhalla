@@ -29,6 +29,9 @@ class Items extends CI_Controller {
 
         $data['items'] = $this->items->select($character_id, $class_id);
 
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
         $session['navigation'] = "items";
         $this->session->set_userdata($session);
 

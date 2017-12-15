@@ -23,10 +23,18 @@ class Home extends CI_Controller {
     public function index() {
         $this->verify();
         
-        $this->load->model('Enemies_Model', 'enemies');
-        $data['enemies'] = $this->enemies->select();
+        $this->load->model('Characters_Model', 'characters');
+        $this->load->model('Ranking_Model', 'ranking');
         
-        $session['navigation'] = "play";
+        $data['character'] = $this->characters->select_stats($this->session->selected_character);
+        $data['top_stats'] = $this->ranking->top_stats();
+        $data['top_ai_wins'] = $this->ranking->top_ai_wins();
+        $data['top_wins'] = $this->ranking->top_wins();
+        
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
+        $session['navigation'] = "home";
         $this->session->set_userdata($session);
         
         $this->load->model('Users_Model', 'users');

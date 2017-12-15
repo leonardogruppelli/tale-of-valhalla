@@ -165,36 +165,41 @@
                         <div class="row">
 
                             <div class="col-sm-12" style="margin-bottom: 10px">
-                                <center>
-                                    <form role="form" method="post" action="<?= base_url('inventory/sell_hp_potions') ?>">
-                                        <img src="<?= base_url('/icons/hp_potion.png') ?>" style="width: 40px; height: 40px; margin-left: -5px; margin-right: 5px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de HP" data-content="Recupera uma pequena porcentagem da vida do personagem.">
-                                        <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
-                                        <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
-                                        <input type="number" id="quantity" name="quantity" value="<?= $character->hp_potions ?>" min="1" max="<?= $character->hp_potions ?>" style="width: 60px; height: 40px" />
-                                        <button class="btn btn-danger" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
+                                <form role="form" method="post" action="<?= base_url('inventory/sell_hp_potions') ?>">
+                                    <div class="col-sm-2" style="margin-top: -10px"><i class="ra ra-heart-bottle ra-3x" style="margin-left: -20px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de HP" data-content="Recupera uma pequena porcentagem da vida do personagem."></i></div>
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
+                                    <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
+                                    <div class="col-sm-6" style="margin-left: -5px">
+                                        <input type="number" id="quantity" name="quantity" style="width: 160%; height: 40px" value="<?= $character->hp_potions ?>" min="1" max="<?= $character->hp_potions ?>" />
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left: 5px">
+                                        <button type="submit" class="btn btn-danger" style="width: 40px; height: 40px" data-toggle="confirmation"
                                                 data-title="Vender poções?"
-                                                data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
+                                                data-btn-ok-label="Sim"
                                                 data-btn-ok-class="btn-success"
-                                                data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                                data-btn-cancel-label="Não"
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
+                                                data-container="body"
                                                 data-singleton="true"
-                                                data-placement="left"
+                                                data-placement="top"
                                                 role="button">
                                             <span class="glyphicon glyphicon-minus"></span>
                                         </button>
-                                    </form>
-                                </center>
+                                    </div>
+                                </form>
                             </div>
 
                             <div class="col-sm-12" style="margin-bottom: 10px">
-                                <center>
-                                    <form role="form" method="post" action="<?= base_url('inventory/sell_mp_potions') ?>">
-                                        <img src="<?= base_url('/icons/mp_potion.png') ?>" style="width: 40px; height: 40px; margin-left: -5px; margin-right: 5px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de MP" data-content="Recupera uma pequena porcentagem da mana do personagem.">
-                                        <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
-                                        <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
-                                        <input type="number" id="quantity" name="quantity" value="<?= $character->mp_potions ?>" min="1" max="<?= $character->mp_potions ?>" style="width: 60px; height: 40px" />
-                                        <button class="btn btn-danger" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
+                                <form role="form" method="post" action="<?= base_url('inventory/sell_mp_potions') ?>">
+                                    <div class="col-sm-2" style="margin-top: -10px"><i class="ra ra-corked-tube ra-3x" style="margin-left: -20px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de MP" data-content="Recupera uma pequena porcentagem da mana do personagem."></i></div>
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
+                                    <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
+                                    <div class="col-sm-6" style="margin-left: -5px">
+                                        <input type="number" id="quantity" name="quantity" style="width: 160%; height: 40px" value="<?= $character->mp_potions ?>" min="1" max="<?= $character->mp_potions ?>" />
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left: 5px">
+                                        <button class="btn btn-danger" style="width: 40px; height: 40px" data-toggle="confirmation"
                                                 data-title="Vender poções?"
                                                 data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                 data-btn-ok-class="btn-success"
@@ -202,45 +207,49 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="left"
+                                                data-placement="top"
                                                 role="button">
                                             <span class="glyphicon glyphicon-minus"></span>
                                         </button>
-                                    </form>
-                                </center>
+                                    </div>
+                                </form>
                             </div>
 
                             <div class="col-sm-12" style="margin-bottom: 10px">
-                                <center>
-                                    <form role="form" method="post" action="<?= base_url('inventory/sell_large_hp_potions') ?>">
-                                        <img src="<?= base_url('/icons/large_hp_potion.png') ?>" style="width: 40px; height: 40px; margin-left: -5px; margin-right: 5px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção Grande de HP" data-content="Recupera uma grande porcentagem da vida do personagem.">
-                                        <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
-                                        <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
-                                        <input type="number" id="quantity" name="quantity" value="<?= $character->large_hp_potions ?>" min="1" max="<?= $character->large_hp_potions ?>" style="width: 60px; height: 40px" />
-                                        <button class="btn btn-danger" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
-                                                data-title="Vender poções?"
+                                <form role="form" method="post" action="<?= base_url('inventory/sell_large_hp_potions') ?>">
+                                    <div class="col-sm-2" style="margin-top: -10px"><i class="ra ra-round-bottom-flask ra-3x" style="margin-left: -20px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de Grande HP" data-content="Recupera uma grande porcentagem da vida do personagem."></i></div>
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
+                                    <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
+                                    <div class="col-sm-6" style="margin-left: -5px">
+                                        <input type="number" id="quantity" name="quantity" style="width: 160%; height: 40px" value="<?= $character->large_hp_potions ?>" min="1" max="<?= $character->large_hp_potions ?>" />
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left: 5px">
+                                        <button class="btn btn-danger" style="width: 40px; height: 40px" data-toggle="confirmation"
+                                                data-title="Comprar poções?"
                                                 data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                 data-btn-ok-class="btn-success"
                                                 data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="left"
+                                                data-placement="top"
                                                 role="button">
                                             <span class="glyphicon glyphicon-minus"></span>
                                         </button>
-                                    </form>
-                                </center>
+                                    </div>
+                                </form>
                             </div>
 
                             <div class="col-sm-12" style="margin-bottom: 10px">
-                                <center>
-                                    <form role="form" method="post" action="<?= base_url('inventory/sell_large_mp_potions') ?>">
-                                        <img src="<?= base_url('/icons/large_mp_potion.png') ?>" style="width: 40px; height: 40px; margin-left: -5px; margin-right: 5px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção Grande de MP" data-content="Recupera uma grande porcentagem da mana do personagem.">
-                                        <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
-                                        <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
-                                        <input type="number" id="quantity" name="quantity" value="<?= $character->large_mp_potions ?>" min="1" max="<?= $character->large_mp_potions ?>" style="width: 60px; height: 40px" />
-                                        <button class="btn btn-danger" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
+                                <form role="form" method="post" action="<?= base_url('inventory/sell_large_mp_potions') ?>">
+                                    <div class="col-sm-2" style="margin-top: -10px"><i class="ra ra-flask ra-3x" style="margin-left: -20px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de Grande MP" data-content="Recupera uma grande porcentagem da mana do personagem."></i></div>
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
+                                    <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
+                                    <div class="col-sm-6" style="margin-left: -5px">
+                                        <input type="number" id="quantity" name="quantity" style="width: 160%; height: 40px" value="<?= $character->large_mp_potions ?>" min="1" max="<?= $character->large_mp_potions ?>" />
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left: 5px">
+                                        <button class="btn btn-danger" style="width: 40px; height: 40px" data-toggle="confirmation"
                                                 data-title="Vender poções?"
                                                 data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                 data-btn-ok-class="btn-success"
@@ -248,22 +257,24 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="left"
+                                                data-placement="top"
                                                 role="button">
                                             <span class="glyphicon glyphicon-minus"></span>
                                         </button>
-                                    </form>
-                                </center>
+                                    </div>
+                                </form>
                             </div>
 
                             <div class="col-sm-12" style="margin-bottom: 10px">
-                                <center>
-                                    <form role="form" method="post" action="<?= base_url('inventory/sell_dexterity_potions') ?>">
-                                        <img src="<?= base_url('/icons/dexterity_potion.png') ?>" style="width: 40px; height: 40px; margin-left: -5px; margin-right: 5px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de Destreza" data-content="Aumenta as chances de esquiva do personagem por 3 turnos.">
-                                        <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
-                                        <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
-                                        <input type="number" id="quantity" name="quantity" value="<?= $character->dexterity_potions ?>" min="1" max="<?= $character->dexterity_potions ?>" style="width: 60px; height: 40px" />
-                                        <button class="btn btn-danger" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
+                                <form role="form" method="post" action="<?= base_url('inventory/sell_dexterity_potions') ?>">
+                                    <div class="col-sm-2" style="margin-top: -10px"><i class="ra ra-player-dodge ra-3x" style="margin-left: -20px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de Destreza" data-content="Aumenta as chances de esquiva do personagem"></i></div>
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
+                                    <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>                                    
+                                    <div class="col-sm-6" style="margin-left: -5px">
+                                        <input type="number" id="quantity" name="quantity" style="width: 160%; height: 40px" value="<?= $character->dexterity_potions ?>" min="1" max="<?= $character->dexterity_potions ?>" />
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left: 5px">
+                                        <button class="btn btn-danger" style="width: 40px; height: 40px" data-toggle="confirmation"
                                                 data-title="Vender poções?"
                                                 data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                 data-btn-ok-class="btn-success"
@@ -271,22 +282,24 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="left"
+                                                data-placement="top"
                                                 role="button">
                                             <span class="glyphicon glyphicon-minus"></span>
                                         </button>
-                                    </form>
-                                </center>
+                                    </div>
+                                </form>
                             </div>
 
-                            <div class="col-sm-12" style="margin-bottom: 20px">
-                                <center>
-                                    <form role="form" method="post" action="<?= base_url('inventory/sell_luck_potions') ?>">
-                                        <img src="<?= base_url('/icons/luck_potion.png') ?>" style="width: 40px; height: 40px; margin-left: -5px; margin-right: 5px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de Sorte" data-content="Aumenta as chances de acerto crítico do personagem por 1 turno.">
-                                        <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
-                                        <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
-                                        <input type="number" id="quantity" name="quantity" value="<?= $character->luck_potions ?>" min="1" max="<?= $character->luck_potions ?>" style="width: 60px; height: 40px" />
-                                        <button class="btn btn-danger" style="margin-top: -3px; width: 40px; height: 40px" data-toggle="confirmation"
+                            <div class="col-sm-12" style="margin-bottom: 10px">
+                                <form role="form" method="post" action="<?= base_url('inventory/sell_luck_potions') ?>">
+                                    <div class="col-sm-2" style="margin-top: -10px"><i class="ra ra-player-thunder-struck ra-3x" style="margin-left: -20px" data-toggle="popover" data-placement="top" data-container="body" data-trigger="hover" title="Poção de Sorte" data-content="Aumenta as chances de acerto crítico do personagem."></i></div>
+                                    <input type="hidden" id="user_id" name="user_id" value="<?= $this->session->id ?>"/>
+                                    <input type="hidden" id="character_id" name="character_id" value="<?= $this->session->selected_character ?>"/>
+                                    <div class="col-sm-6" style="margin-left: -5px">
+                                        <input type="number" id="quantity" name="quantity" style="width: 160%; height: 40px" value="<?= $character->luck_potions ?>" min="1" max="<?= $character->luck_potions ?>" />
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left: 5px">
+                                        <button class="btn btn-danger" style="width: 40px; height: 40px" data-toggle="confirmation"
                                                 data-title="Vender poções?"
                                                 data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
                                                 data-btn-ok-class="btn-success"
@@ -294,12 +307,12 @@
                                                 data-btn-cancel-class="btn-danger"
                                                 data-popout="true"
                                                 data-singleton="true"
-                                                data-placement="left"
+                                                data-placement="top"
                                                 role="button">
                                             <span class="glyphicon glyphicon-minus"></span>
                                         </button>
-                                    </form>
-                                </center>
+                                    </div>
+                                </form>
                             </div>
 
                         </div>

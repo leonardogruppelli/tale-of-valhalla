@@ -28,6 +28,9 @@ class AI_Battle_History extends CI_Controller {
         
         $data['ai_battle_history'] = $this->ai_battle_history->select($character_id);
 
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = true;
+        $session['navigation_ranking'] = false;
         $session['navigation'] = "ai_battle_history";
         $this->session->set_userdata($session);
 

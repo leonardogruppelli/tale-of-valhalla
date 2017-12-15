@@ -30,6 +30,9 @@ class Inventory extends CI_Controller {
         $data['inventory'] = $this->inventory->select($character_id);
         $data['character'] = $this->characters->select_stats($this->session->selected_character);
 
+        $session['navigation_battle'] = false;
+        $session['navigation_history'] = false;
+        $session['navigation_ranking'] = false;
         $session['navigation'] = "inventory";
         $this->session->set_userdata($session);
 

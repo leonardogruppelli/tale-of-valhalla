@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="<?= base_url('assets/dist/bootstrap/css/bootstrap.min.css') ?>">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/font-awesome/css/font-awesome.min.css') ?>">
+        <!-- RPG Awesome -->
+        <link rel="stylesheet" href="<?= base_url('assets/dist/rpg-awesome/css/rpg-awesome.min.css') ?>">
         <!-- Ionicons -->
         <link rel="stylesheet" href="<?= base_url('assets/dist/ionicons/css/ionicons.min.css') ?>">
         <!-- Ionicons -->
@@ -111,21 +113,49 @@
                 <section class="sidebar">
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li <?= $this->session->navigation == "play" ? "class='active'" : "" ?>><a href="<?= base_url('home') ?>"><i class="fa fa-play-circle-o"></i> <span>Jogar</span></a></li>
+                        <li class="treeview <?= $this->session->navigation_battle == true ? " active" : "" ?>">
+                            <a href="#">
+                                <i class="fa fa-play"></i>
+                                <span>Jogar</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li <?= $this->session->navigation == "ai_battle" ? "class='active'" : "" ?>><a href="<?= base_url('play/adventures') ?>"><i class="fa fa-circle-o text-yellow"></i> <span>Aventuras</span></a></li>
+                                <li <?= $this->session->navigation == "battle" ? "class='active'" : "" ?>><a href="<?= base_url('play/battles') ?>"><i class="fa fa-circle-o text-red"></i> <span>Batalhas</span></a></li>
+                            </ul>
+                        </li>
+                        <li <?= $this->session->navigation == "home" ? "class='active'" : "" ?>><a href="<?= base_url('home') ?>"><i class="fa fa-list"></i> <span>Status</span></a></li>
                         <li <?= $this->session->navigation == "characters" ? "class='active'" : "" ?>><a href="<?= base_url('characters') ?>"><i class="fa fa-male"></i> <span>Personagens</span></a></li>
                         <li <?= $this->session->navigation == "equipment" ? "class='active'" : "" ?>><a href="<?= base_url('equipment') ?>"><i class="icon icon-sword"></i> <span>Equipamento</span></a></li>
                         <li <?= $this->session->navigation == "inventory" ? "class='active'" : "" ?>><a href="<?= base_url('inventory') ?>"><i class="fa fa-briefcase"></i> <span>Inventário</span></a></li>
                         <li <?= $this->session->navigation == "items" ? "class='active'" : "" ?>><a href="<?= base_url('items') ?>"><i class="fa fa-dollar"></i> <span>Loja</span></a></li>
-                        <li class="treeview <?= $this->session->navigation == "ai_battle_history" ? "class='active'" : "" ?>">
+                        <li class="treeview <?= $this->session->navigation_history == true ? " active" : "" ?>">
                             <a href="#">
-                                <i class="fa fa-table"></i>
+                                <i class="fa fa-history"></i>
                                 <span>Histórico</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li <?= $this->session->navigation == "ai_battle_history" ? "class='active'" : "" ?>><a href="<?= base_url('ai_battle_history') ?>"><i class="fa fa-table"></i> <span>Histórico Contra IA</span></a></li>    
+                                <li <?= $this->session->navigation == "ai_battle_history" ? "class='active'" : "" ?>><a href="<?= base_url('ai_battle_history') ?>"><i class="fa fa-circle-o text-yellow"></i> <span>Aventuras</span></a></li>    
+                                <li <?= $this->session->navigation == "battle_history" ? "class='active'" : "" ?>><a href="<?= base_url('battle_history') ?>"><i class="fa fa-circle-o text-red"></i> <span>Batalhas</span></a></li>   
+                            </ul>
+                        </li>
+                        <li class="treeview <?= $this->session->navigation_ranking == true ? " active" : "" ?>">
+                            <a href="#">
+                                <i class="fa fa-list-ol"></i>
+                                <span>Ranking</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li <?= $this->session->navigation == "ranking_stats" ? "class='active'" : "" ?>><a href="<?= base_url('ranking_stats') ?>"><i class="fa fa-circle-o text-aqua"></i> <span>Força</span></a></li>
+                                <li <?= $this->session->navigation == "ranking_ai_wins" ? "class='active'" : "" ?>><a href="<?= base_url('ranking_ai_wins') ?>"><i class="fa fa-circle-o text-yellow"></i> <span>Aventuras Vencidas</span></a></li>
+                                <li <?= $this->session->navigation == "ranking_wins" ? "class='active'" : "" ?>><a href="<?= base_url('ranking_wins') ?>"><i class="fa fa-circle-o text-red"></i> <span>Batalhas Vencidas</span></a></li>
                             </ul>
                         </li>
                     </ul>
