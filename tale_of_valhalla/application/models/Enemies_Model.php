@@ -3,8 +3,9 @@
 class Enemies_Model extends CI_Model {
 
     public function select() {
-        $this->db->order_by('id');
-        return $this->db->get('enemies')->result();
+        $sql = "SELECT * FROM enemies WHERE deleted = 0";
+        $query = $this->db->query($sql);
+        return $query->result();
     }
 
     public function find($id) {

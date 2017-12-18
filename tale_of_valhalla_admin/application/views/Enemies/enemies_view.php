@@ -57,7 +57,7 @@
                                 $id = $enemy->id;
                                 ?>
 
-                                <tr>
+                                <tr class="<?= $enemy->deleted == 0 ? "success" : "danger" ?>">
                                     <td style="vertical-align: middle"> <center> <?= $enemy->id ?> </center> </td>
                             <td style="vertical-align: middle"> <?= $enemy->name ?> </td>
                             <td style="vertical-align: middle"> <center> <?= $enemy->attack ?> </center> </td>
@@ -73,17 +73,31 @@
                                     <span class="glyphicon glyphicon-pencil"></span>
                                 </a>
 
-                                <a href="<?= base_url('enemies/delete/' . $enemy->id . '') ?>" class="btn btn-danger" data-toggle="confirmation"
-                                   data-title="Deletar Inimigo?"
-                                   data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
-                                   data-btn-ok-class="btn-success"
-                                   data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
-                                   data-btn-cancel-class="btn-danger"
-                                   data-popout="true"
-                                   data-singleton="true"
-                                   role="button">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </a>
+                                <?php if ($enemy->deleted == 0) { ?>
+                                    <a href="<?= base_url('enemies/delete/' . $enemy->id . '') ?>" class="btn btn-danger" data-toggle="confirmation"
+                                       data-title="Deletar Inimigo?"
+                                       data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
+                                       data-btn-ok-class="btn-success"
+                                       data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                       data-btn-cancel-class="btn-danger"
+                                       data-popout="true"
+                                       data-singleton="true"
+                                       role="button">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                <?php } else { ?>
+                                    <a href="<?= base_url('enemies/ativate/' . $enemy->id . '') ?>" class="btn btn-success" data-toggle="confirmation"
+                                       data-title="Ativar Inimigo?"
+                                       data-btn-ok-label="Sim" data-btn-ok-icon="glyphicon glyphicon-ok"
+                                       data-btn-ok-class="btn-success"
+                                       data-btn-cancel-label="Não" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                                       data-btn-cancel-class="btn-danger"
+                                       data-popout="true"
+                                       data-singleton="true"
+                                       role="button">
+                                        <span class="fa fa-check"></span>
+                                    </a>
+                                <?php } ?>
                             </center>
                             </td>
                             </tr>
@@ -182,7 +196,7 @@
                                 <span id="icon_mp_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-6">
                             <div id="form_large_hp_potions" class="form-group has-feedback">
                                 <label for="large_hp_potions"> Poções Grandes de HP: </label>
@@ -330,7 +344,7 @@
                                 <span id="alter_icon_mp_potions" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-6">
                             <div id="alter_form_large_hp_potions" class="form-group has-feedback">
                                 <label for="large_hp_potions"> Poções Grandes de HP: </label>

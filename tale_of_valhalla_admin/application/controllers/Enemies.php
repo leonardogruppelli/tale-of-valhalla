@@ -117,5 +117,22 @@ class Enemies extends CI_Controller {
 
         redirect(base_url('enemies'));
     }
+    
+    public function ativate($id) {
+        $ativate = $this->enemies->ativate($id);
+
+        if ($ativate) {
+            $situation = "1";
+            $message = "Inimigo ativado com sucesso.";
+        } else {
+            $situation = "0";
+            $message = "Erro ao ativar inimigo.";
+        }
+
+        $this->session->set_flashdata('situation', $situation);
+        $this->session->set_flashdata('message', $message);
+
+        redirect(base_url('enemies'));
+    }
 
 }

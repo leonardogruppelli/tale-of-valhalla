@@ -213,10 +213,10 @@ class Ajax extends CI_Controller {
     public function verify_enemy_name_alter() {
         $name = htmlspecialchars(trim($_GET['name']));
         $id = htmlspecialchars(trim($_GET['id']));
-        $this->load->model('Types_Model', 'types');
+        $this->load->model('Enemies_Model', 'enemies');
 
-        if (strtolower($name) !== strtolower($this->types->find_name_alter($id)) && $this->types->find_name($name)) {
-            echo 'Tipo já cadastrado';
+        if (strtolower($name) !== strtolower($this->enemies->find_name_alter($id)) && $this->enemies->find_name($name)) {
+            echo 'Inimigo já cadastrado';
         }
     }
 
