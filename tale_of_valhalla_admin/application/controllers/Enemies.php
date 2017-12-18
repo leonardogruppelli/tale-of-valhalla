@@ -102,14 +102,11 @@ class Enemies extends CI_Controller {
     }
 
     public function delete($id) {
-        $enemy = $this->enemies->find($id);
-
         $delete = $this->enemies->delete($id);
 
         if ($delete) {
             $situation = "1";
             $message = "Inimigo excluído com sucesso.";
-            unlink('./enemies_images/' . $enemy->picture);
         } else {
             $situation = "0";
             $message = "Erro ao excluir inimigo.";

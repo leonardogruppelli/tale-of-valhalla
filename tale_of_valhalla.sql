@@ -213,6 +213,7 @@ CREATE TABLE IF NOT EXISTS `tale_of_valhalla`.`enemies` (
   `dexterity_potions` INT NULL DEFAULT 0,
   `luck_potions` INT NULL DEFAULT 0,
   `image` VARCHAR(42) NOT NULL,
+  `deleted` INT NULL DEFAULT 0,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

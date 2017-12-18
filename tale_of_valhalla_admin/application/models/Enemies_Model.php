@@ -17,8 +17,9 @@ class Enemies_Model extends CI_Model {
     }
 
     public function delete($id) {
-        $this->db->where('id', $id);
-        return $this->db->delete('enemies');
+        $sql = "UPDATE enemies SET deleted=1 WHERE id=$id";
+        $query = $this->db->query($sql);
+        return $query;
     }
 
     public function find($id) {

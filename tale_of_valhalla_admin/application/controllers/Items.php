@@ -107,14 +107,11 @@ class Items extends CI_Controller {
     }
 
     public function delete($id) {
-        $item = $this->items->find($id);
-
         $delete = $this->items->delete($id);
 
         if ($delete) {
             $situation = "1";
             $message = "Item excluído com sucesso.";
-            unlink('./items_images/' . $item->image);
         } else {
             $situation = "0";
             $message = "Erro ao excluir item.";
